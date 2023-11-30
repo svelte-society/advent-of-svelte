@@ -1,8 +1,11 @@
 <script lang="ts">
     // import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
+    import Countdown from '$lib/components/Countdown.svelte'
     import santaLogo from "$lib/images/santa-svelte.png";
     import { AccordionItem, Accordion } from "flowbite-svelte";
     import { onMount } from "svelte";
+
+    let mounted = false;
     let snowCanvas;
 
     const challenges = [
@@ -115,6 +118,7 @@
 
     onMount(() => {
         letThereBeSnow();
+        mounted = true;
     })
 </script>
 
@@ -236,7 +240,25 @@
                     {#each challenges as challenge}
                         {#if challenge.locked}
                             <AccordionItem classInactive="locked-tab">
-                                <span slot="header">{challenge.title}</span>
+                                <span slot="header">
+                                    {challenge.title}
+                                    {#if mounted}
+                                        <Countdown from="2023-12-01 00:00:00" dateFormat="YYYY-MM-DD H:m:s" zone="America/Porto_Velho" let:remaining>
+                                                {JSON.stringify(remaining)}
+                                                {#if remaining.done === false}
+                                                    <span>(Opens in</span>
+                                                    <span>{remaining.hours} hours</span>
+                                                    <span>{remaining.minutes} minutes</span>
+                                                    <span>{remaining.seconds} seconds</span>
+                                                    <span>)</span>
+                                                {:else if remaining.started !== true}
+                                                {:else}
+                                                    <h2>The time has come!</h2>
+                                                {/if}
+                                        </Countdown>
+                                    {/if}
+                                </span>
+                                
                             </AccordionItem>
                         {:else}
                         <AccordionItem open={challenge.active}>
