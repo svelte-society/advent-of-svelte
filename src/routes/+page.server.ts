@@ -10,6 +10,8 @@ import tz from 'dayjs/plugin/timezone.js';
 import utc from 'dayjs/plugin/utc.js';
 import dayjs from 'dayjs';
 
+import { dev } from '$app/environment';
+
 dayjs.extend(duration);
 dayjs.extend(utc);
 dayjs.extend(tz);
@@ -32,10 +34,15 @@ export const load: PageServerLoad = async () => {
 				'YYYY-MM-DD H:m:s Z',
 				TIMEZONE,
 			);
-			const isLocked = unlockDate.isAfter(currentDayJSDateInCET);
+
+			const isLocked = dev
+				? false
+				: unlockDate.isAfter(currentDayJSDateInCET);
+
 			const active = currentMonthIsDecember2023
 				? currentDayNumber1Indexed === i + 1
 				: i === 0;
+
 			return {
 				...challenge,
 				tomorrowsChallenge: false,
