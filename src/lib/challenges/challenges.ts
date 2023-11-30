@@ -25,7 +25,7 @@ export const challengesRaw: Challenge[] = [
 	{
 		body: render(dayOne),
 		discordLink: DEFAULT_DISCORD_LINK,
-		unlockDate: '2023-12-01 00:00:00 +02:00',
+		unlockDate: '2023-12-01 00:00:00 +00:00',
 	},
 	{
 		unlockDate: '2023-12-02 00:00:00 +00:00',
