@@ -1,144 +1,21 @@
 <script lang="ts">
 	// import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
-	import Countdown from '$lib/components/Countdown.svelte';
-	import santaLogo from '$lib/images/santa-svelte.png';
-	import { AccordionItem, Accordion } from 'flowbite-svelte';
-	import { onMount } from 'svelte';
+	import { AccordionItem, Accordion } from 'flowbite-svelte'
+	import Countdown from '$lib/components/Countdown.svelte'
+	import santaLogo from '$lib/images/santa-svelte.png'
+	import Snow from '$lib/components/Snow.svelte'
+	import { onMount } from 'svelte'
 
-	let mounted = false;
-	let snowCanvas: HTMLCanvasElement | undefined;
+	export let data
 
-	export let data;
-
-	let windowWidth;
-	let windowHeight;
-	let canvas;
-	let particles = [];
-
-	let ctx;
-
-	const letThereBeSnow = () => {
-		//canvas init
-		canvas = snowCanvas!;
-		ctx = canvas.getContext('2d')!;
-
-		//canvas dimensions
-		var W = window.innerWidth;
-		var H = window.innerHeight;
-		canvas.width = W;
-		canvas.height = H;
-
-		//snowflake particles
-		var mp = 50; //max particles
-		var particles: any[] = [];
-		for (var i = 0; i < mp; i++) {
-			particles.push({
-				x: Math.random() * W, //x-coordinate
-				y: Math.random() * H, //y-coordinate
-				r: Math.random() * 4 + 1, //radius
-				d: Math.random() * mp, //density
-			});
-		}
-
-		//Lets draw the flakes
-		function draw() {
-			ctx.clearRect(0, 0, windowWidth, windowHeight);
-
-			ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-			ctx.beginPath();
-			for (var i = 0; i < mp; i++) {
-				var p = particles[i];
-				ctx.moveTo(p.x, p.y);
-				ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
-			}
-			ctx.fill();
-			update();
-		}
-
-		//Function to move the snowflakes
-		//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
-		var angle = 0;
-		function update() {
-			angle += 0.01;
-			for (var i = 0; i < mp; i++) {
-				var p = particles[i];
-				//Updating X and Y coordinates
-				//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
-				//Every particle has its own density which can be used to make the downward movement different for each flake
-				//Lets make it more random by adding in the radius
-				p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
-				p.x += Math.sin(angle) * 2;
-
-				//Sending flakes back from the top when it exits
-				//Lets make it a bit more organic and let flakes enter from the left and right also.
-				if (p.x > windowWidth + 5 || p.x < -5 || p.y > windowHeight) {
-					if (i % 3 > 0) {
-						//66.67% of the flakes
-						particles[i] = {
-							x: Math.random() * windowWidth,
-							y: -10,
-							r: p.r,
-							d: p.d,
-						};
-					} else {
-						//If the flake is exitting from the right
-						if (Math.sin(angle) > 0) {
-							//Enter from the left
-							particles[i] = {
-								x: -5,
-								y: Math.random() * windowHeight,
-								r: p.r,
-								d: p.d,
-							};
-						} else {
-							//Enter from the right
-							particles[i] = {
-								x: windowWidth + 5,
-								y: Math.random() * windowHeight,
-								r: p.r,
-								d: p.d,
-							};
-						}
-					}
-				}
-			}
-		}
-
-		//animation loop
-		setInterval(draw, 33);
-	};
+	let mounted = false
 
 	onMount(() => {
-		windowWidth = window.innerWidth;
-		windowHeight = window.innerHeight;
-		letThereBeSnow();
-		mounted = true;
-	});
-
-	// $: console.log(data);
-
-	$: {
-		if (canvas) {
-			canvas.width = windowWidth;
-			canvas.height = windowHeight;
-
-			const mp = 50; //max particles
-			particles = [];
-			for (let i = 0; i < mp; i++) {
-				particles.push({
-					x: Math.random() * windowWidth, //x-coordinate
-					y: Math.random() * windowHeight, //y-coordinate
-					r: Math.random() * 4 + 1, //radius
-					d: Math.random() * mp, //density
-				});
-			}
-		}
-	}
+		mounted = true
+	})
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
-
-<canvas bind:this={snowCanvas}></canvas>
+<Snow />
 
 <!-- <AnimationFrameSnow />-->
 <!-- https://github.com/themesberg/tailwind-landing-page -->
@@ -180,13 +57,15 @@
 		<div class="place-self-center lg:col-span-7">
 			<h1
 				class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white">
-				A Svelte challenge for every day of December
+				A Svelte challenge for each day of December
 			</h1>
+
 			<p
 				class="mb-6 max-w-2xl font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
 				Join the festivities and participate in a daily frontend
 				challenge using Svelte.
 			</p>
+
 			<a
 				href="#challenges"
 				class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-900">
@@ -243,7 +122,7 @@
 
 			<p class="text-gray-400 mb-2">
 				Every year Santa and his elves work around the clock to prepare
-				for Christmas. However this year he faces an unprecedented
+				for Christmas. This year, however, he faces an unprecedented
 				challenge. The Magical Christmas Code, which powers Santa's
 				Sleigh and ensures the smooth delivery of presents, was
 				shattered into 24 fragments.
@@ -251,7 +130,7 @@
 
 			<p class="text-gray-400 mb-2">
 				Santa immediately called upon his sentient robot assistant
-				Svelte Bot to get the sleigh operational but they can't do it
+				Svelte Bot to get the sleigh operational, but they can't do it
 				alone. Each day, a new challenge awaits - a unique puzzle that,
 				when solved, will unlock a fragment of the Magical Christmas
 				Code. Will you help Santa and Svelte Bot fix the Sleigh and save
@@ -432,11 +311,6 @@
 </footer>
 
 <style>
-	canvas {
-		position: fixed;
-		pointer-events: none;
-	}
-
 	a {
 		cursor: pointer;
 	}
