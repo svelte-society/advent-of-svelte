@@ -16,9 +16,6 @@ dayjs.extend(tz);
 dayjs.extend(customParseFormat);
 
 export const load: PageServerLoad = async () => {
-	const DEFAULT_DISCORD_LINK =
-		'https://discord.com/channels/457912077277855764/1158027748699279430';
-
 	const TIMEZONE = 'Europe/London';
 
 	const currentDayJSDateInCET = dayjs().tz(TIMEZONE);
@@ -43,7 +40,7 @@ export const load: PageServerLoad = async () => {
 				...challenge,
 				tomorrowsChallenge: false,
 				active,
-				discordLink: challenge.discordLink || DEFAULT_DISCORD_LINK,
+				discordLink: challenge.discordLink,
 				// hide challenge
 				// description: isLocked ? '' : challenge.description,
 				body: isLocked ? '' : challenge.body,
