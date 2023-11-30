@@ -240,7 +240,7 @@
 			</h2>
 			<p class="mb-6 font-light text-gray-400 md:text-lg">
 				<Accordion>
-					{#each data?.challenges as challenge}
+					{#each data?.challenges as challenge, index}
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab">
 								<span slot="header">
@@ -270,7 +270,7 @@
 							</AccordionItem>
 						{:else}
 							<AccordionItem open={challenge.active}>
-								<span slot="header">{challenge.title}</span>
+								<span slot="header">Day {index + 1}</span>
 								<p
 									class="text-left space-y-3 mb-6 text-gray-400">
 									{@html challenge.body}
