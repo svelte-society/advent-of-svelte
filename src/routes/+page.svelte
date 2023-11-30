@@ -130,7 +130,7 @@
             <a href="https://flowbite.com" class="flex items-center">
                 <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
                 <span
-                    class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+                    class="self-center text-xl font-semibold whitespace-nowrap text-white"
                     >Advent of Svelte</span
                 >
             </a>
@@ -144,7 +144,7 @@
                     <li>
                         <a
                             href="/"
-                            class="block py-2 pr-4 pl-3 text-white rounded lg:bg-transparent lg:p-0 dark:text-white"
+                            class="block py-2 pr-4 pl-3 text-white rounded lg:bg-transparent lg:p-0 "
                             aria-current="page">2023</a
                         >
                     </li>
@@ -154,25 +154,25 @@
     </nav>
 </header>
 
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-gray-900">
     <div
         class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
     >
         <div class="place-self-center mr-auto lg:col-span-7">
             <h1
-                class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white"
+                class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white"
             >
                 A new Svelte challenge for every day of December
             </h1>
             <p
-                class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+                class="mb-6 max-w-2xl font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
             >
                 Join the festivities and participate in a daily frontend
                 challenge using Svelte.
             </p>
             <a
-                href="#"
-                class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+                href="#challenges"
+                class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4  focus:ring-primary-900"
             >
                 See the challenges
                 <svg
@@ -189,7 +189,8 @@
             </a>
             <a
                 href="https://www.sveltelab.dev/"
-                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+                target="_blank"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center  rounded-lg border focus:ring-4  text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
             >
                 Launch SvelteLab
             </a>
@@ -203,15 +204,15 @@
     </div>
 </section>
 
-<section class="bg-gray-50 dark:bg-gray-800">
+<section class="bg-gray-800">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="max-w-screen-md text-center mx-auto">
             <h2
-                class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white"
+                class="mb-4 text-4xl font-extrabold text-white"
             >
                 How do I participate?
             </h2>
-            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="sm:text-xl text-gray-400">
                 Check this page every day of December to find the daily channel.
                 Join the <a href="#">Discord channel</a> and share your solution
                 in the daily thread. That's it!
@@ -220,16 +221,16 @@
     </div>
 </section>
 
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-gray-900" id="challenges">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center">
             <h2
-                class="mb-8 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white"
+                class="mb-8 text-4xl font-extrabold leading-tight text-white"
             >
                 The challenges
             </h2>
             <p
-                class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg"
+                class="mb-6 font-light text-gray-400 md:text-lg"
             >
                 <Accordion>
                     {#each challenges as challenge}
@@ -240,7 +241,7 @@
                         {:else}
                         <AccordionItem open={challenge.active}>
                             <span slot="header">{challenge.title}</span>
-                            <p class="mb-6 text-gray-500 dark:text-gray-400">
+                            <p class="mb-6 text-gray-400">
                                 {challenge.description}
                             </p>
                             <div class="mb-4">
@@ -267,27 +268,29 @@
     </div>
 </section>
 
-<footer class="p-4 bg-gray-50 sm:p-6 dark:bg-gray-800">
+<footer class="p-4 sm:p-6 bg-gray-800">
     <div class="mx-auto max-w-screen-xl">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="https://sveltesociety.dev/" class="flex items-center">
                     <span
-                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                        class="self-center text-2xl font-semibold whitespace-nowrap text-white"
                         >Advent of Code</span
                     >
                 </a>
             </div>
         </div>
         <hr
-            class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+            class="my-6  sm:mx-auto border-gray-700 lg:my-8"
         />
         <div class="sm:flex sm:items-center sm:justify-between">
             <span
-                class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+                class="text-sm sm:text-center text-gray-400"
                 >
-                Advent of Code is made <a href="https://sveltesociety.dev/">by Svelte Society</a>
+                Advent of Code is created <a href="https://sveltesociety.dev/">by Svelte Society</a>. <br/>
+                Santa Hat illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
             </span>
+            <!--
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <a
                     href="#"
@@ -368,6 +371,7 @@
                     >
                 </a>
             </div>
+            -->
         </div>
     </div>
 </footer>
