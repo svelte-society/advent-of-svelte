@@ -244,7 +244,6 @@
                                     {challenge.title}
                                     {#if mounted}
                                         <Countdown from="2023-12-01 00:00:00" dateFormat="YYYY-MM-DD H:m:s" zone="America/Porto_Velho" let:remaining>
-                                                {JSON.stringify(remaining)}
                                                 {#if remaining.done === false}
                                                     <span>(Opens in</span>
                                                     <span>{remaining.hours} hours</span>
