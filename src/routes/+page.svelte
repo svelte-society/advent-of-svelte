@@ -271,8 +271,9 @@
 						{:else}
 							<AccordionItem open={challenge.active}>
 								<span slot="header">{challenge.title}</span>
-								<p class="mb-6 text-gray-400">
-									{challenge.description}
+								<p
+									class="text-left space-y-3 mb-6 text-gray-400">
+									{@html challenge.body}
 								</p>
 								<div class="mb-4">
 									<div class="flex justify-center gap-2">

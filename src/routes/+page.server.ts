@@ -45,7 +45,8 @@ export const load: PageServerLoad = async () => {
 				active,
 				discordLink: challenge.discordLink || DEFAULT_DISCORD_LINK,
 				// hide challenge
-				description: isLocked ? '' : challenge.description,
+				// description: isLocked ? '' : challenge.description,
+				body: isLocked ? '' : challenge.body,
 				locked: isLocked,
 			};
 		},
