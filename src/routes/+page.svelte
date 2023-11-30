@@ -1,139 +1,139 @@
 <script lang="ts">
-    // import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
-    import Countdown from "$lib/components/Countdown.svelte";
-    import santaLogo from "$lib/images/santa-svelte.png";
-    import { AccordionItem, Accordion } from "flowbite-svelte";
-    import { onMount } from "svelte";
+	// import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
+	import Countdown from '$lib/components/Countdown.svelte';
+	import santaLogo from '$lib/images/santa-svelte.png';
+	import { AccordionItem, Accordion } from 'flowbite-svelte';
+	import { onMount } from 'svelte';
 
-    let mounted = false;
-    let snowCanvas: HTMLCanvasElement | undefined;
+	let mounted = false;
+	let snowCanvas: HTMLCanvasElement | undefined;
 
-    export let data;
+	export let data;
 
-    let windowWidth;
-    let windowHeight;
-    let canvas;
-    let particles = [];
+	let windowWidth;
+	let windowHeight;
+	let canvas;
+	let particles = [];
 
-    let ctx;
+	let ctx;
 
-    const letThereBeSnow = () => {
-        //canvas init
-        canvas = snowCanvas!;
-        ctx = canvas.getContext("2d")!;
+	const letThereBeSnow = () => {
+		//canvas init
+		canvas = snowCanvas!;
+		ctx = canvas.getContext('2d')!;
 
-        //canvas dimensions
-        var W = window.innerWidth;
-        var H = window.innerHeight;
-        canvas.width = W;
-        canvas.height = H;
+		//canvas dimensions
+		var W = window.innerWidth;
+		var H = window.innerHeight;
+		canvas.width = W;
+		canvas.height = H;
 
-        //snowflake particles
-        var mp = 50; //max particles
-        var particles: any[] = [];
-        for (var i = 0; i < mp; i++) {
-            particles.push({
-                x: Math.random() * W, //x-coordinate
-                y: Math.random() * H, //y-coordinate
-                r: Math.random() * 4 + 1, //radius
-                d: Math.random() * mp, //density
-            });
-        }
+		//snowflake particles
+		var mp = 50; //max particles
+		var particles: any[] = [];
+		for (var i = 0; i < mp; i++) {
+			particles.push({
+				x: Math.random() * W, //x-coordinate
+				y: Math.random() * H, //y-coordinate
+				r: Math.random() * 4 + 1, //radius
+				d: Math.random() * mp, //density
+			});
+		}
 
-        //Lets draw the flakes
-        function draw() {
-            ctx.clearRect(0, 0, windowWidth, windowHeight);
+		//Lets draw the flakes
+		function draw() {
+			ctx.clearRect(0, 0, windowWidth, windowHeight);
 
-            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
-            ctx.beginPath();
-            for (var i = 0; i < mp; i++) {
-                var p = particles[i];
-                ctx.moveTo(p.x, p.y);
-                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
-            }
-            ctx.fill();
-            update();
-        }
+			ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+			ctx.beginPath();
+			for (var i = 0; i < mp; i++) {
+				var p = particles[i];
+				ctx.moveTo(p.x, p.y);
+				ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+			}
+			ctx.fill();
+			update();
+		}
 
-        //Function to move the snowflakes
-        //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
-        var angle = 0;
-        function update() {
-            angle += 0.01;
-            for (var i = 0; i < mp; i++) {
-                var p = particles[i];
-                //Updating X and Y coordinates
-                //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
-                //Every particle has its own density which can be used to make the downward movement different for each flake
-                //Lets make it more random by adding in the radius
-                p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
-                p.x += Math.sin(angle) * 2;
+		//Function to move the snowflakes
+		//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+		var angle = 0;
+		function update() {
+			angle += 0.01;
+			for (var i = 0; i < mp; i++) {
+				var p = particles[i];
+				//Updating X and Y coordinates
+				//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+				//Every particle has its own density which can be used to make the downward movement different for each flake
+				//Lets make it more random by adding in the radius
+				p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+				p.x += Math.sin(angle) * 2;
 
-                //Sending flakes back from the top when it exits
-                //Lets make it a bit more organic and let flakes enter from the left and right also.
-                if (p.x > windowWidth + 5 || p.x < -5 || p.y > windowHeight) {
-                    if (i % 3 > 0) {
-                        //66.67% of the flakes
-                        particles[i] = {
-                            x: Math.random() * windowWidth,
-                            y: -10,
-                            r: p.r,
-                            d: p.d,
-                        };
-                    } else {
-                        //If the flake is exitting from the right
-                        if (Math.sin(angle) > 0) {
-                            //Enter from the left
-                            particles[i] = {
-                                x: -5,
-                                y: Math.random() * windowHeight,
-                                r: p.r,
-                                d: p.d,
-                            };
-                        } else {
-                            //Enter from the right
-                            particles[i] = {
-                                x: windowWidth + 5,
-                                y: Math.random() * windowHeight,
-                                r: p.r,
-                                d: p.d,
-                            };
-                        }
-                    }
-                }
-            }
-        }
+				//Sending flakes back from the top when it exits
+				//Lets make it a bit more organic and let flakes enter from the left and right also.
+				if (p.x > windowWidth + 5 || p.x < -5 || p.y > windowHeight) {
+					if (i % 3 > 0) {
+						//66.67% of the flakes
+						particles[i] = {
+							x: Math.random() * windowWidth,
+							y: -10,
+							r: p.r,
+							d: p.d,
+						};
+					} else {
+						//If the flake is exitting from the right
+						if (Math.sin(angle) > 0) {
+							//Enter from the left
+							particles[i] = {
+								x: -5,
+								y: Math.random() * windowHeight,
+								r: p.r,
+								d: p.d,
+							};
+						} else {
+							//Enter from the right
+							particles[i] = {
+								x: windowWidth + 5,
+								y: Math.random() * windowHeight,
+								r: p.r,
+								d: p.d,
+							};
+						}
+					}
+				}
+			}
+		}
 
-        //animation loop
-        setInterval(draw, 33);
-    };
+		//animation loop
+		setInterval(draw, 33);
+	};
 
-    onMount(() => {
-        windowWidth = window.innerWidth;
-        windowHeight = window.innerHeight;
-        letThereBeSnow();
-        mounted = true;
-    });
+	onMount(() => {
+		windowWidth = window.innerWidth;
+		windowHeight = window.innerHeight;
+		letThereBeSnow();
+		mounted = true;
+	});
 
-    // $: console.log(data);
+	// $: console.log(data);
 
-    $: {
-        if (canvas) {
-            canvas.width = windowWidth;
-            canvas.height = windowHeight;
+	$: {
+		if (canvas) {
+			canvas.width = windowWidth;
+			canvas.height = windowHeight;
 
-            const mp = 50; //max particles
-            particles = [];
-            for (let i = 0; i < mp; i++) {
-                particles.push({
-                    x: Math.random() * windowWidth, //x-coordinate
-                    y: Math.random() * windowHeight, //y-coordinate
-                    r: Math.random() * 4 + 1, //radius
-                    d: Math.random() * mp, //density
-                });
-            }
-        }
-    }
+			const mp = 50; //max particles
+			particles = [];
+			for (let i = 0; i < mp; i++) {
+				particles.push({
+					x: Math.random() * windowWidth, //x-coordinate
+					y: Math.random() * windowHeight, //y-coordinate
+					r: Math.random() * 4 + 1, //radius
+					d: Math.random() * mp, //density
+				});
+			}
+		}
+	}
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
@@ -143,204 +143,183 @@
 <!-- <AnimationFrameSnow />-->
 <!-- https://github.com/themesberg/tailwind-landing-page -->
 <header>
-    <nav class="border-gray-200 px-4 lg:px-6 py-2 bg-[#ff3e00]">
-        <div
-            class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
-        >
-            <a href="/" class="flex items-center">
-                <span
-                    class="self-center text-xl font-semibold whitespace-nowrap text-white"
-                    >Advent of Svelte</span
-                >
-            </a>
-            <div
-                class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-                id="mobile-menu-2"
-            >
-                <ul
-                    class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
-                >
-                    <li>
-                        <a
-                            href="/"
-                            class="block py-2 pr-4 pl-3 text-white rounded lg:bg-transparent lg:p-0"
-                            aria-current="page">2023</a
-                        >
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<nav class="border-gray-200 px-4 lg:px-6 py-2 bg-[#ff3e00]">
+		<div
+			class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+			<a href="/" class="flex items-center">
+				<span
+					class="self-center text-xl font-semibold whitespace-nowrap text-white"
+					>Advent of Svelte</span>
+			</a>
+			<div
+				class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+				id="mobile-menu-2">
+				<ul
+					class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+					<li>
+						<a
+							href="/"
+							class="block py-2 pr-4 pl-3 text-white rounded lg:bg-transparent lg:p-0"
+							aria-current="page">2023</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 </header>
 
 <section class="bg-gray-900">
-    <div
-        class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 text-center"
-    >
-        <div class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden">
-            <img
-                style="max-width: 300px;"
-                src={santaLogo}
-                alt="Svelte logo with a santa hat on top of it"
-            />
-        </div>
-        <div class="place-self-center lg:col-span-7">
-            <h1
-                class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white"
-            >
-                A Svelte challenge for every day of December
-            </h1>
-            <p
-                class="mb-6 max-w-2xl font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
-            >
-                Join the festivities and participate in a daily frontend
-                challenge using Svelte.
-            </p>
-            <a
-                href="#challenges"
-                class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-900"
-            >
-                See the challenges
-                <svg
-                    class="ml-2 -mr-1 w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                        fill-rule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                    ></path></svg
-                >
-            </a>
-            <a
-                href="https://www.sveltelab.dev/"
-                target="_blank"
-                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
-            >
-                Launch SvelteLab
-            </a>
-        </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img
-                src={santaLogo}
-                alt="Svelte logo with a santa hat on top of it"
-            />
-        </div>
-    </div>
+	<div
+		class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 text-center">
+		<div class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden">
+			<img
+				style="max-width: 300px;"
+				src={santaLogo}
+				alt="Svelte logo with a santa hat on top of it" />
+		</div>
+		<div class="place-self-center lg:col-span-7">
+			<h1
+				class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white">
+				A Svelte challenge for every day of December
+			</h1>
+			<p
+				class="mb-6 max-w-2xl font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
+				Join the festivities and participate in a daily frontend
+				challenge using Svelte.
+			</p>
+			<a
+				href="#challenges"
+				class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-900">
+				See the challenges
+				<svg
+					class="ml-2 -mr-1 w-5 h-5"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path
+					></svg>
+			</a>
+			<a
+				href="https://www.sveltelab.dev/"
+				target="_blank"
+				class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800">
+				Launch SvelteLab
+			</a>
+		</div>
+		<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+			<img
+				src={santaLogo}
+				alt="Svelte logo with a santa hat on top of it" />
+		</div>
+	</div>
 </section>
 
 <section class="bg-gray-800">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="max-w-screen-md text-center mx-auto">
-            <h2 class="mb-4 text-4xl font-extrabold text-white">
-                How do I participate?
-            </h2>
-            <p class="sm:text-xl text-gray-400">
-                Check this page every day of December to find the daily channel.
-                Join the <a href="#">Discord channel</a> and share your solution
-                in the daily thread. That's it!
-            </p>
-        </div>
-    </div>
+	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+		<div class="max-w-screen-md text-center mx-auto">
+			<h2 class="mb-4 text-4xl font-extrabold text-white">
+				How do I participate?
+			</h2>
+			<p class="sm:text-xl text-gray-400">
+				Check this page every day of December to find the daily channel.
+				Join the <a href="#">Discord channel</a> and share your solution
+				in the daily thread. That's it!
+			</p>
+		</div>
+	</div>
 </section>
 
 <section class="bg-gray-900" id="challenges">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-sm text-center">
-            <h2 class="mb-8 text-4xl font-extrabold leading-tight text-white">
-                The challenges
-            </h2>
-            <p class="mb-6 font-light text-gray-400 md:text-lg">
-                <Accordion>
-                    {#each data?.challenges as challenge}
-                        {#if challenge.locked}
-                            <AccordionItem classInactive="locked-tab">
-                                <span slot="header">
-                                    {challenge.title}
-                                    {#if mounted}
-                                        <Countdown
-                                            from={challenge.unlockDate}
-                                            dateFormat="YYYY-MM-DD H:m:s Z"
-                                            let:remaining
-                                        >
-                                            {#if remaining.done === false}
-                                                <span>(Opens in ~</span>
-                                                {#if remaining.days}
-                                                    <span
-                                                        >{remaining.days} days</span
-                                                    >
-                                                {/if}
-                                                <span
-                                                    >{remaining.hours} hours</span
-                                                >
-                                                <span
-                                                    >{remaining.minutes} minutes</span
-                                                >
-                                                <span>)</span>
-                                            {:else if remaining.started !== true}{:else}
-                                                <h2>The time has come</h2>
-                                            {/if}
-                                        </Countdown>
-                                    {/if}
-                                </span>
-                            </AccordionItem>
-                        {:else}
-                            <AccordionItem open={challenge.active}>
-                                <span slot="header">{challenge.title}</span>
-                                <p class="mb-6 text-gray-400">
-                                    {challenge.description}
-                                </p>
-                                <div class="mb-4">
-                                    <div class="flex justify-center gap-2">
-                                        <a
-                                            href="https://www.sveltelab.dev/"
-                                            target="_blank"
-                                            class="text-white bg-[#ff3e00] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-                                            >Start a new SvelteLab</a
-                                        >
-                                        <a
-                                            href={challenge.discordLink}
-                                            target="_blank"
-                                            class="text-white bg-[#5865F2] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-                                            >Share your solution on Discord</a
-                                        >
-                                    </div>
-                                </div>
-                            </AccordionItem>
-                        {/if}
-                    {/each}
-                </Accordion>
-            </p>
-        </div>
-    </div>
+	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+		<div class="mx-auto max-w-screen-sm text-center">
+			<h2 class="mb-8 text-4xl font-extrabold leading-tight text-white">
+				The challenges
+			</h2>
+			<p class="mb-6 font-light text-gray-400 md:text-lg">
+				<Accordion>
+					{#each data?.challenges as challenge}
+						{#if challenge.locked}
+							<AccordionItem classInactive="locked-tab">
+								<span slot="header">
+									{challenge.title}
+									{#if mounted}
+										<Countdown
+											from={challenge.unlockDate}
+											dateFormat="YYYY-MM-DD H:m:s Z"
+											let:remaining>
+											{#if remaining.done === false}
+												<span>(Opens in ~</span>
+												{#if remaining.days}
+													<span
+														>{remaining.days} days</span>
+												{/if}
+												<span
+													>{remaining.hours} hours</span>
+												<span
+													>{remaining.minutes} minutes</span>
+												<span>)</span>
+											{:else if remaining.started !== true}{:else}
+												<h2>The time has come</h2>
+											{/if}
+										</Countdown>
+									{/if}
+								</span>
+							</AccordionItem>
+						{:else}
+							<AccordionItem open={challenge.active}>
+								<span slot="header">{challenge.title}</span>
+								<p class="mb-6 text-gray-400">
+									{challenge.description}
+								</p>
+								<div class="mb-4">
+									<div class="flex justify-center gap-2">
+										<a
+											href="https://www.sveltelab.dev/"
+											target="_blank"
+											class="text-white bg-[#ff3e00] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+											>Start a new SvelteLab</a>
+										<a
+											href={challenge.discordLink}
+											target="_blank"
+											class="text-white bg-[#5865F2] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+											>Share your solution on Discord</a>
+									</div>
+								</div>
+							</AccordionItem>
+						{/if}
+					{/each}
+				</Accordion>
+			</p>
+		</div>
+	</div>
 </section>
 
 <footer class="p-4 sm:p-6 bg-gray-800">
-    <div class="mx-auto max-w-screen-xl">
-        <div class="md:flex md:justify-between">
-            <div class="mb-6 md:mb-0">
-                <a href="https://sveltesociety.dev/" class="flex items-center">
-                    <span
-                        class="self-center text-2xl font-semibold whitespace-nowrap text-white"
-                        >Advent of Code</span
-                    >
-                </a>
-            </div>
-        </div>
-        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm sm:text-center text-gray-400">
-                Advent of Code is created <a href="https://sveltesociety.dev/"
-                    >by Svelte Society</a
-                >. <br />
-                Santa Hat illustration by
-                <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
-                    >Icons 8</a
-                >
-                from <a href="https://icons8.com/illustrations">Ouch!</a>
-            </span>
-            <!--
+	<div class="mx-auto max-w-screen-xl">
+		<div class="md:flex md:justify-between">
+			<div class="mb-6 md:mb-0">
+				<a href="https://sveltesociety.dev/" class="flex items-center">
+					<span
+						class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+						>Advent of Code</span>
+				</a>
+			</div>
+		</div>
+		<hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<span class="text-sm sm:text-center text-gray-400">
+				Advent of Code is created <a href="https://sveltesociety.dev/"
+					>by Svelte Society</a
+				>. <br />
+				Santa Hat illustration by
+				<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
+					>Icons 8</a>
+				from <a href="https://icons8.com/illustrations">Ouch!</a>
+			</span>
+			<!--
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <a
                     href="#"
@@ -422,22 +401,22 @@
                 </a>
             </div>
             -->
-        </div>
-    </div>
+		</div>
+	</div>
 </footer>
 
 <style>
-    canvas {
-        position: fixed;
-        pointer-events: none;
-    }
+	canvas {
+		position: fixed;
+		pointer-events: none;
+	}
 
-    a {
-        cursor: pointer;
-    }
+	a {
+		cursor: pointer;
+	}
 
-    :global(.locked-tab) {
-        opacity: 0.5;
-        pointer-events: none;
-    }
+	:global(.locked-tab) {
+		opacity: 0.5;
+		pointer-events: none;
+	}
 </style>
