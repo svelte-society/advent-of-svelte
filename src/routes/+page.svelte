@@ -143,11 +143,11 @@
     </nav>
 </header>
 
-<section class="bg-gray-900 sm:text-center">
+<section class="bg-gray-900">
     <div
         class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
     >
-        <div class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden">
+        <div class="flex lg:mt-0 lg:col-span-5x justify-center sm:justify-start mb-4 lg:hidden">
             <img
                 style="max-width: 300px;"
                 src={santaLogo}
