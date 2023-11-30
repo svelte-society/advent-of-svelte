@@ -145,20 +145,20 @@
 
 <section class="bg-gray-900">
     <div
-        class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 text-center"
     >
-        <div class="flex lg:mt-0 lg:col-span-5x justify-center sm:justify-start mb-4 lg:hidden">
+        <div class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden">
             <img
                 style="max-width: 300px;"
                 src={santaLogo}
                 alt="Svelte logo with a santa hat on top of it"
             />
         </div>
-        <div class="place-self-center mr-auto lg:col-span-7">
+        <div class="place-self-center lg:col-span-7">
             <h1
                 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white"
             >
-                A new Svelte challenge for every day of December
+                A Svelte challenge for every day of December
             </h1>
             <p
                 class="mb-6 max-w-2xl font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
