@@ -31,7 +31,7 @@
     
     onMount(() => {
         if(!dateFormat){
-            dateFormat = "YYYY-MM-DD H:m:s"
+            dateFormat = "YYYY-MM-DD H:m:s Z"
         }
         try {
             if(zone) {

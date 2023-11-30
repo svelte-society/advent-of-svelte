@@ -105,6 +105,8 @@
         letThereBeSnow();
         mounted = true;
     })
+
+    // $: console.log(data);
 </script>
 
 <canvas bind:this={snowCanvas}></canvas>
