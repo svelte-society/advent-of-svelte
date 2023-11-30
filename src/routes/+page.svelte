@@ -8,22 +8,7 @@
     let mounted = false;
     let snowCanvas;
 
-    const challenges = [
-        {
-            title: "Day 1",
-            description:
-                "Create a simple counter that can be incremented and decremented.",
-            active: true,
-        },
-        {
-            title: "Day 2",
-            description:
-                "Create a simple counter that can be incremented and decremented.",
-            active: false,
-            locked: true,
-            unlockDate: "2023-12-02",
-        },
-    ];
+    export let data;
 
     const letThereBeSnow = () => {
         //canvas init
@@ -158,10 +143,17 @@
     </nav>
 </header>
 
-<section class="bg-gray-900">
+<section class="bg-gray-900 sm:text-center">
     <div
         class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
     >
+        <div class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden">
+            <img
+                style="max-width: 300px;"
+                src={santaLogo}
+                alt="Svelte logo with a santa hat on top of it"
+            />
+        </div>
         <div class="place-self-center mr-auto lg:col-span-7">
             <h1
                 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white"
@@ -237,18 +229,20 @@
                 class="mb-6 font-light text-gray-400 md:text-lg"
             >
                 <Accordion>
-                    {#each challenges as challenge}
+                    {#each data?.challenges as challenge}
                         {#if challenge.locked}
                             <AccordionItem classInactive="locked-tab">
                                 <span slot="header">
                                     {challenge.title}
                                     {#if mounted}
-                                        <Countdown from="2023-12-01 00:00:00" dateFormat="YYYY-MM-DD H:m:s" zone="America/Porto_Velho" let:remaining>
+                                        <Countdown from={challenge.unlockDate} dateFormat="YYYY-MM-DD H:m:s Z" let:remaining>
                                                 {#if remaining.done === false}
-                                                    <span>(Opens in</span>
+                                                    <span>(Opens in ~</span>
+                                                    {#if remaining.days}
+                                                        <span>{remaining.days} days</span>
+                                                    {/if}
                                                     <span>{remaining.hours} hours</span>
                                                     <span>{remaining.minutes} minutes</span>
-                                                    <span>{remaining.seconds} seconds</span>
                                                     <span>)</span>
                                                 {:else if remaining.started !== true}
                                                 {:else}
@@ -266,7 +260,7 @@
                                 {challenge.description}
                             </p>
                             <div class="mb-4">
-                                <div class="flex justify-center">
+                                <div class="flex justify-center gap-2">
                                     <a
                                     href="https://www.sveltelab.dev/"
                                     target="_blank"

@@ -11,7 +11,8 @@
     dayjs.extend(tz)
     dayjs.extend(customParseFormat)
     
-    export let from, dateFormat, zone
+    export let from, dateFormat;
+    export let zone = false;
     
     let remaining = {
         years: 0,
@@ -33,7 +34,11 @@
             dateFormat = "YYYY-MM-DD H:m:s"
         }
         try {
-            target = zone ? dayjs(from, dateFormat, zone) : dayjs(from, dateFormat)
+            if(zone) {
+                target = dayjs.tz(from, dateFormat, zone);
+            } else {
+                target = dayjs(from, dateFormat);
+            } 
         } catch(e) {
             if(e.message.indexOf('Invalid time zone') > -1) {
                 target = dayjs(from, dateFormat)
