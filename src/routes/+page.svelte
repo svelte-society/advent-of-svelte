@@ -241,10 +241,12 @@
 			<p class="mb-6 font-light text-gray-400 md:text-lg">
 				<Accordion>
 					{#each data?.challenges as challenge, index}
+						{@const title = `Day ${index + 1}`}
+
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab">
 								<span slot="header">
-									{challenge.title}
+									{title}
 									{#if mounted}
 										<Countdown
 											from={challenge.unlockDate}
@@ -270,7 +272,7 @@
 							</AccordionItem>
 						{:else}
 							<AccordionItem open={challenge.active}>
-								<span slot="header">Day {index + 1}</span>
+								<span slot="header">{title}</span>
 								<p
 									class="text-left space-y-3 mb-6 text-gray-400">
 									{@html challenge.body}
