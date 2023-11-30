@@ -26,7 +26,7 @@ export const load: PageServerLoad = async () => {
     }
 
     // TODO: Fill me in
-    const DEFAULT_DISCORD_LINK = 'https://discord.com/beep-boop';
+    const DEFAULT_DISCORD_LINK = 'https://discord.com/channels/457912077277855764/1158027748699279430';
 
     const TIMEZONE = 'Europe/London';
 
@@ -36,7 +36,7 @@ export const load: PageServerLoad = async () => {
             description:
                 "Create a simple counter that can be incremented and decremented.",
             discordLink: '',
-            unlockDate: '2023-12-01 00:00:00 +00:00',
+            unlockDate: '2023-12-01 00:00:00 +02:00',
         },
         {
             title: "Day 2",
