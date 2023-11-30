@@ -1,17 +1,17 @@
 <script>
-    import "$lib/app.css";
+	import '$lib/app.css';
 </script>
 
 <svelte:head>
-    <title>Advent of Svelte</title>
+	<title>Advent of Svelte</title>
 </svelte:head>
 
 <div>
-<slot />
+	<slot />
 </div>
 
 <style>
-    div {
-        background-color: black;
-    }
+	div {
+		background-color: black;
+	}
 </style>
