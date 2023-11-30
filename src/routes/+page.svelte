@@ -119,14 +119,6 @@
 
     $: {
         if (canvas) {
-            console.log(
-                "Changing canvas dimensions, windowWidth: ",
-                windowWidth,
-                " windowHeight: ",
-                windowHeight,
-                canvas.width,
-                canvas.height
-            );
             canvas.width = windowWidth;
             canvas.height = windowHeight;
 
