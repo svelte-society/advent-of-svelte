@@ -238,7 +238,27 @@
 			<h2 class="mb-8 text-4xl font-extrabold leading-tight text-white">
 				The challenges
 			</h2>
-			<p class="mb-6 font-light text-gray-400 md:text-lg">
+
+			<!-- todo style -->
+
+			<p class="text-gray-400 mb-2">
+				Every year Santa and his elves work around the clock to prepare
+				for Christmas. However this year he faces an unprecedented
+				challenge. The Magical Christmas Code, which powers Santa's
+				Sleigh and ensures the smooth delivery of presents, was
+				shattered into 24 fragments.
+			</p>
+
+			<p class="text-gray-400 mb-2">
+				Santa immediately called upon his sentient robot assistant
+				Svelte Bot to get the sleigh operational but they can't do it
+				alone. Each day, a new challenge awaits - a unique puzzle that,
+				when solved, will unlock a fragment of the Magical Christmas
+				Code. Will you help Santa and Svelte Bot fix the Sleigh and save
+				Christmas?!
+			</p>
+
+			<div class="mb-6 font-light text-gray-400 md:text-lg">
 				<Accordion>
 					{#each data?.challenges as challenge, index}
 						{@const title = `Day ${index + 1}`}
@@ -272,30 +292,33 @@
 							</AccordionItem>
 						{:else}
 							<AccordionItem open={challenge.active}>
-								<span slot="header">{title}</span>
-								<p
+								<h3 slot="header">{title}</h3>
+
+								<div
 									class="text-left space-y-3 mb-6 text-gray-400">
 									{@html challenge.body}
-								</p>
-								<div class="mb-4">
-									<div class="flex justify-center gap-2">
-										<a
-											href="https://www.sveltelab.dev/"
-											target="_blank"
-											class="text-white bg-[#ff3e00] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-											>Start a new SvelteLab</a>
-										<a
-											href={challenge.discordLink}
-											target="_blank"
-											class="text-white bg-[#5865F2] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-											>Share your solution on Discord</a>
-									</div>
+								</div>
+
+								<div class="mb-4 flex justify-center gap-2">
+									<a
+										href="https://www.sveltelab.dev/"
+										target="_blank"
+										class="text-white bg-[#ff3e00] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+										Start a new SvelteLab
+									</a>
+
+									<a
+										href={challenge.discordLink}
+										target="_blank"
+										class="text-white bg-[#5865F2] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+										Share your solution on Discord
+									</a>
 								</div>
 							</AccordionItem>
 						{/if}
 					{/each}
 				</Accordion>
-			</p>
+			</div>
 		</div>
 	</div>
 </section>
