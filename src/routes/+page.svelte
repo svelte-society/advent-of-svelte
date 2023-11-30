@@ -10,11 +10,15 @@
             title: "Day 1",
             description:
                 "Create a simple counter that can be incremented and decremented.",
+            active: true,
         },
         {
-            title: "Day 2 (Unlocks in 1 day)",
+            title: "Day 2",
             description:
                 "Create a simple counter that can be incremented and decremented.",
+            active: false,
+            locked: true,
+            unlockDate: "2023-12-02",
         },
     ];
 
@@ -158,7 +162,7 @@
             <h1
                 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white"
             >
-                A new Svelte challenge for every day of december
+                A new Svelte challenge for every day of December
             </h1>
             <p
                 class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
@@ -229,19 +233,33 @@
             >
                 <Accordion>
                     {#each challenges as challenge}
-                        <AccordionItem>
+                        {#if challenge.locked}
+                            <AccordionItem classInactive="locked-tab">
+                                <span slot="header">{challenge.title}</span>
+                            </AccordionItem>
+                        {:else}
+                        <AccordionItem open={challenge.active}>
                             <span slot="header">{challenge.title}</span>
                             <p class="mb-6 text-gray-500 dark:text-gray-400">
                                 {challenge.description}
                             </p>
                             <div class="mb-4">
+                                <div class="flex justify-center">
+                                    <a
+                                    href="https://www.sveltelab.dev/"
+                                    target="_blank"
+                                    class="text-white bg-[#ff3e00] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+                                    >Start a new SvelteLab</a
+                                >
                                 <a
-                                    href="#"
-                                    class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+                                    href="/"
+                                    class="text-white bg-[#5865F2] hover:opacity-80 transition-opacity focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
                                     >Share your solution on Discord</a
                                 >
+                                </div>
                             </div>
                         </AccordionItem>
+                        {/if}
                     {/each}
                 </Accordion>
             </p>
@@ -362,5 +380,10 @@
 
     a {
         cursor: pointer
+    }
+
+    :global(.locked-tab) {
+        opacity: 0.5;
+        pointer-events: none;
     }
 </style>
