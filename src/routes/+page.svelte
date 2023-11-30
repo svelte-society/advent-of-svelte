@@ -253,7 +253,7 @@
                                                     <span>)</span>
                                                 {:else if remaining.started !== true}
                                                 {:else}
-                                                    <h2>The time has come!</h2>
+                                                    <h2>The time has come</h2>
                                                 {/if}
                                         </Countdown>
                                     {/if}
