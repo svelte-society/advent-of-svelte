@@ -4,7 +4,7 @@
     "trailingComma": "all",
     "bracketSpacing": true,
     "arrowParens": "always",
-    "semi": true,
+    "semi": false,
     "useTabs": true,
     "tabWidth": 4,
 
