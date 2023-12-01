@@ -20,7 +20,7 @@
 <!-- <AnimationFrameSnow />-->
 <!-- https://github.com/themesberg/tailwind-landing-page -->
 <header>
-	<nav class="border-gray-200 px-4 lg:px-6 py-2 bg-[#ff3e00]">
+	<nav class="border-gray-200 px-4 lg:px-6 py-2 bg-svelte">
 		<div
 			class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
 			<a href="/" class="flex items-center">
@@ -232,23 +232,16 @@
 
 		<p class="text-sm text-gray-400">
 			Advent of Code is created
-			<a
-				class="hover:text-gray-200 transition-colors underline"
-				href="https://sveltesociety.dev/">by Svelte Society</a
-			>.
+			<a href="https://sveltesociety.dev/">by Svelte Society</a>.
 		</p>
 
 		<p class="text-sm text-gray-400">
 			Santa Hat illustration by
-			<a
-				class="hover:text-gray-200 transition-colors underline"
-				href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
+			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
 				Icons 8
 			</a>
 			from
-			<a
-				class="hover:text-gray-200 transition-colors underline"
-				href="https://icons8.com/illustrations">Ouch!</a>
+			<a href="https://icons8.com/illustrations">Ouch!</a>
 		</p>
 	</div>
 </footer>
