@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount, tick } from 'svelte'
-	import rich from '$lib/images/rich.jpeg'
+	import rich from '$lib/images/rich.png'
 
 	let img: HTMLImageElement
 
