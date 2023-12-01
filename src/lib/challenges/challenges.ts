@@ -34,13 +34,14 @@ export const challengesRaw: Challenge[] = [
 		title: 'Day 1',
 		body: render(day1),
 		discordLink:
-			'https://ptb.discord.com/channels/457912077277855764/1179937338751725659',
+			'https://discord.com/channels/457912077277855764/1179937338751725659',
 		unlockDate: '2023-12-01 00:00:00 +00:00',
 	},
 	{
 		title: 'Day 2',
 		unlockDate: '2023-12-02 00:00:00 +00:00',
-		discordLink: DEFAULT_DISCORD_LINK,
+		discordLink:
+			'https://discord.com/channels/457912077277855764/1180291180995559514',
 		image: cookieImage,
 		body: render(day2),
 	},
