@@ -103,11 +103,13 @@
 				How do I participate?
 			</h2>
 			<p class="sm:text-xl text-gray-400">
-				Check this page every day of December to find the daily channel.
-				Join the <a
-					href="https://discord.com/channels/457912077277855764/1158027748699279430"
-					>Discord channel</a> and share your solution in the daily thread.
-				That's it!
+				Check this page every day of December to find the daily
+				challenge. Join the
+				<a
+					href="https://discord.com/channels/457912077277855764/1158027748699279430">
+					Discord channel
+				</a>
+				and share your solution in the daily thread. That's it!
 			</p>
 		</div>
 	</div>
