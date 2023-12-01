@@ -1,6 +1,6 @@
 import day1 from './day-1.svx'
+import day2 from './day-2.svx'
 import day3 from './day-3.svx'
-import day4 from './day-4.svx'
 
 // todo replace title as I made it unused?
 
@@ -41,7 +41,8 @@ export const challengesRaw: Challenge[] = [
 		title: 'Day 2',
 		unlockDate: '2023-12-02 00:00:00 +00:00',
 		discordLink: DEFAULT_DISCORD_LINK,
-		body: 'TODO',
+		image: cookieImage,
+		body: render(day2),
 	},
 	{
 		title: 'Day 3',
@@ -54,8 +55,7 @@ export const challengesRaw: Challenge[] = [
 		title: 'Day 4',
 		unlockDate: '2023-12-04 00:00:00 +00:00',
 		discordLink: DEFAULT_DISCORD_LINK,
-		image: cookieImage,
-		body: render(day4),
+		body: 'TODO',
 	},
 	{
 		title: 'Day 5',
