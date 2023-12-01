@@ -79,8 +79,7 @@
 					><path
 						fill-rule="evenodd"
 						d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-						clip-rule="evenodd"></path
-					></svg>
+						clip-rule="evenodd" /></svg>
 			</a>
 			<a
 				href="https://www.sveltelab.dev/"
@@ -122,8 +121,6 @@
 			<h2 class="mb-6 text-4xl font-extrabold leading-tight text-white">
 				The challenges
 			</h2>
-
-			<!-- todo style -->
 
 			<p class="text-gray-400 mb-4 text-xl">
 				Every year, Santa and his elves work around the clock to prepare
@@ -189,7 +186,7 @@
 								<h3 slot="header">{title}</h3>
 
 								<div
-									class="text-left space-y-3 mb-6 text-gray-300">
+									class="text-left space-y-3 mb-6 text-gray-300 max-w-full overflow-x-auto">
 									{@html challenge.body}
 								</div>
 
