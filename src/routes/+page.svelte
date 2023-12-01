@@ -20,7 +20,7 @@
 <!-- <AnimationFrameSnow />-->
 <!-- https://github.com/themesberg/tailwind-landing-page -->
 <header>
-	<nav class="border-gray-200 px-4 lg:px-6 py-2 bg-[#ff3e00]">
+	<nav class="relative border-gray-200 px-4 lg:px-6 py-2 bg-[#ff3e00]">
 		<div
 			class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
 			<a href="/" class="flex items-center">
@@ -84,7 +84,7 @@
 			<a
 				href="https://www.sveltelab.dev/"
 				target="_blank"
-				class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800">
+				class="relative bg-gray-900 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800">
 				Launch SvelteLab
 			</a>
 		</div>
@@ -96,7 +96,7 @@
 	</div>
 </section>
 
-<section class="bg-gray-800">
+<section class="bg-gray-800 relative">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 		<div class="max-w-screen-md text-center mx-auto">
 			<h2 class="mb-4 text-4xl font-extrabold text-white">
@@ -113,7 +113,7 @@
 	</div>
 </section>
 
-<section class="bg-gray-900" id="challenges">
+<section class="bg-gray-900/75 relative" id="challenges">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 		<div class="mx-auto max-w-screen-sm text-center">
 			<h2 class="mb-6 text-4xl font-extrabold leading-tight text-white">
@@ -140,7 +140,8 @@
 				save Christmas?!
 			</p>
 
-			<div class="mb-6 font-light text-gray-300 md:text-lg">
+			<div
+				class="mb-6 font-light text-gray-300 md:text-lg bg-gray-900 relative">
 				<Accordion>
 					{#each data.challenges as challenge, index}
 						{@const title = `Day ${index + 1}`}
@@ -214,7 +215,7 @@
 	</div>
 </section>
 
-<footer class="p-4 sm:p-6 bg-gray-800">
+<footer class="p-4 sm:p-6 bg-gray-800 relative">
 	<div class="mx-auto max-w-screen-xl">
 		<div class="md:flex md:justify-between">
 			<div class="mb-6 md:mb-0">
