@@ -184,6 +184,12 @@
 						{:else}
 							<AccordionItem open={challenge.active}>
 								<h3 slot="header">{title}</h3>
+								{#if challenge.image}
+									<img
+										class="w-60 mx-auto mt-4 mb-8"
+										src={challenge.image}
+										alt={challenge.title} />
+								{/if}
 
 								<div
 									class="text-left space-y-3 mb-6 text-gray-300 max-w-full overflow-x-auto">

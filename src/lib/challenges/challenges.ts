@@ -1,12 +1,16 @@
 import day1 from './day-1.svx'
+import day3 from './day-3.svx'
 
 // todo replace title as I made it unused?
+
+import sleighImage from '$lib/images/sleigh.png'
 
 export interface Challenge {
 	body: string
 	discordLink: string
 	unlockDate: string
 	title: string
+	image?: string
 }
 
 export interface ChallengeEnriched extends Challenge {
@@ -41,7 +45,8 @@ export const challengesRaw: Challenge[] = [
 		title: 'Day 3',
 		unlockDate: '2023-12-03 00:00:00 +00:00',
 		discordLink: DEFAULT_DISCORD_LINK,
-		body: 'TODO',
+		image: sleighImage,
+		body: render(day3),
 	},
 	{
 		title: 'Day 4',
