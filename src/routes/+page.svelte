@@ -48,7 +48,8 @@
 <section class="bg-gray-900">
 	<div
 		class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 text-center">
-		<div class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden">
+		<div
+			class="flex lg:mt-0 lg:col-span-5x justify-center mb-4 lg:hidden relative">
 			<img
 				style="max-width: 300px;"
 				src={santaLogo}
@@ -56,7 +57,7 @@
 		</div>
 		<div class="place-self-center lg:col-span-7">
 			<h1
-				class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white">
+				class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white relative">
 				A Svelte challenge for each day of December
 			</h1>
 
