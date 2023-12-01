@@ -1,4 +1,4 @@
-import dayOne from './day-one.svx'
+import day1 from './day-1.svx'
 
 // todo replace title as I made it unused?
 
@@ -26,7 +26,7 @@ const DEFAULT_DISCORD_LINK =
 export const challengesRaw: Challenge[] = [
 	{
 		title: 'Day 1',
-		body: render(dayOne),
+		body: render(day1),
 		discordLink:
 			'https://ptb.discord.com/channels/457912077277855764/1179937338751725659',
 		unlockDate: '2023-12-01 00:00:00 +00:00',
