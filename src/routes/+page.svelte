@@ -104,8 +104,10 @@
 			</h2>
 			<p class="sm:text-xl text-gray-400">
 				Check this page every day of December to find the daily channel.
-				Join the <a href="#">Discord channel</a> and share your solution
-				in the daily thread. That's it!
+				Join the <a
+					href="https://discord.com/channels/457912077277855764/1158027748699279430"
+					>Discord channel</a> and share your solution in the daily thread.
+				That's it!
 			</p>
 		</div>
 	</div>
@@ -121,20 +123,21 @@
 			<!-- todo style -->
 
 			<p class="text-gray-400 mb-4 text-xl">
-				Every year Santa and his elves work around the clock to prepare
+				Every year, Santa and his elves work around the clock to prepare
 				for Christmas. This year, however, he faces an unprecedented
-				challenge. The Magical Christmas Code, which powers Santa's
-				Sleigh and ensures the smooth delivery of presents, was
-				shattered into 24 fragments.
+				challenge. The <strong>Magical Christmas Code</strong>, which
+				powers Santa's Sleigh and ensures the smooth delivery of
+				presents, was shattered into 24 fragments.
 			</p>
 
 			<p class="text-gray-400 mb-6 text-xl">
 				Santa immediately called upon his sentient robot assistant
 				Svelte Bot to get the sleigh operational, but they can't do it
 				alone. Each day, a new challenge awaits - a unique puzzle that,
-				when solved, will unlock a fragment of the Magical Christmas
-				Code. Will you help Santa and Svelte Bot fix the Sleigh and save
-				Christmas?!
+				when solved, will unlock a fragment of the <strong>
+					Magical Christmas Code
+				</strong>. Will you help Santa and Svelte Bot fix the Sleigh and
+				save Christmas?!
 			</p>
 
 			<div class="mb-6 font-light text-gray-300 md:text-lg">
