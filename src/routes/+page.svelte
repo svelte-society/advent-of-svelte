@@ -184,6 +184,12 @@
 						{:else}
 							<AccordionItem open={challenge.active}>
 								<h3 slot="header">{title}</h3>
+								{#if challenge.image}
+									<img
+										class="w-60 mx-auto mt-4 mb-8"
+										src={challenge.image}
+										alt={challenge.title} />
+								{/if}
 
 								<div
 									class="text-left space-y-3 mb-6 text-gray-300 max-w-full overflow-x-auto">
@@ -241,6 +247,15 @@
 			</a>
 			from
 			<a href="https://icons8.com/illustrations">Ouch!</a>
+			<br /> Santa sleigh illustration by Illustration by
+			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
+				>Icons 8</a>
+			from <a href="https://icons8.com/illustrations">Ouch!</a>
+			<br />
+			Cookie Illustration by
+			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
+				>Icons 8</a>
+			from <a href="https://icons8.com/illustrations">Ouch!</a>
 		</p>
 	</div>
 </footer>
