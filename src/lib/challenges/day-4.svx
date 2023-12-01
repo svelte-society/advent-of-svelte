@@ -1,0 +1,8 @@
+As the clock ticks down to Christmas Eve, Santa has been enjoying the generous offerings of cookies left by children from all corners of the globe. But amidst the holiday cheer, a small problem has arisen – no one can keep track of how many cookies Santa has munched! 
+
+Your task is to create a Svelte-powered Cookie Counter. Develop a user-friendly interface with a display showing the number of cookies eaten and buttons to add another eaten cookie, as well as a reset counter. Remember to give it a Christmas flair with animations or festive decorations!
+
+<br/>
+<strong>Bonus mission</strong>
+
+Santa loves creativity! If you're up for it, add a feature that shows Santa's mood based on the number of cookies eaten – maybe he gets a little merrier with each cookie!
