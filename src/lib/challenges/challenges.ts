@@ -24,7 +24,8 @@ const DEFAULT_DISCORD_LINK =
 export const challengesRaw: Challenge[] = [
 	{
 		body: render(dayOne),
-		discordLink: DEFAULT_DISCORD_LINK,
+		discordLink:
+			'https://ptb.discord.com/channels/457912077277855764/1179937338751725659',
 		unlockDate: '2023-12-01 00:00:00 +00:00',
 	},
 	{
