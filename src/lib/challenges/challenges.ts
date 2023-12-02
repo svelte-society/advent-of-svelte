@@ -48,7 +48,8 @@ export const challengesRaw: Challenge[] = [
 	{
 		title: 'Day 3',
 		unlockDate: '2023-12-03 00:00:00 +00:00',
-		discordLink: DEFAULT_DISCORD_LINK,
+		discordLink:
+			'https://discord.com/channels/457912077277855764/1158027748699279430/1180653927448973352',
 		image: sleighImage,
 		body: render(day3),
 	},
