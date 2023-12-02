@@ -10,9 +10,9 @@
 		states: { value },
 	} = accordionCtx.get()
 
-	export let title = ''
 	export let open = false
 	export let classInactive = ''
+	export let disabled = false
 	export let headingLevel: 1 | 2 | 3 | 4 | 5 | 6 = 3
 	$: headingEl = `h${headingLevel}`
 
@@ -25,15 +25,17 @@
 	}
 </script>
 
-<div use:melt={$item(id)} class={!$isSelected(id) ? classInactive : ''}>
+<div
+	use:melt={$item({ value: id, disabled })}
+	class={!$isSelected(id) ? classInactive : ''}>
 	<svelte:element this={headingEl} class="flex">
 		<button
-			use:melt={$trigger(id)}
+			use:melt={$trigger({ value: id, disabled })}
 			class="flex items-center justify-between w-full p-5 font-medium rtl:text-right
 			text-gray-500 border border-gray-200 focus:ring-4
 			focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400
 			hover:bg-gray-100 dark:hover:bg-gray-800 gap-3">
-			{title}
+			<slot name="header" />
 		</button>
 	</svelte:element>
 	{#if $isSelected(id)}

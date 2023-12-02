@@ -150,8 +150,7 @@
 						{@const title = `Day ${index + 1}`}
 
 						{#if challenge.locked}
-							<AccordionItem classInactive="locked-tab">
-								aaa
+							<AccordionItem classInactive="locked-tab" disabled>
 								<div class="flex gap-3" slot="header">
 									<h3>{title}</h3>
 
@@ -186,7 +185,8 @@
 								</div>
 							</AccordionItem>
 						{:else}
-							<AccordionItem open={challenge.active} {title}>
+							<AccordionItem open={challenge.active}>
+								<span slot="header">{title}</span>
 								{#if challenge.image}
 									<img
 										class="w-60 mx-auto mt-4 mb-8"

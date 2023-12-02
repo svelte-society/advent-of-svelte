@@ -35,9 +35,11 @@ export const load: PageServerLoad = async () => {
 				TIMEZONE,
 			)
 
-			const isLocked = dev
-				? true
-				: unlockDate.isAfter(currentDayJSDateInCET)
+			// const isLocked = dev
+			// 	? false
+			// 	: unlockDate.isAfter(currentDayJSDateInCET)
+
+			const isLocked = unlockDate.isAfter(currentDayJSDateInCET)
 
 			const active = currentMonthIsDecember2023
 				? currentDayNumber1Indexed === i + 1
