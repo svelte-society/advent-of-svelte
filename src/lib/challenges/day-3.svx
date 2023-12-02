@@ -2,12 +2,12 @@ In the heart of Santa's workshop, the Elves are facing a new problem. With Chris
 
 Your mission is to help the Elves solve this crucial task. You’ll be in charge of creating a Svelte-powered Sleigh Load Balancer (SLB™), a tool designed to ensure that the sleigh is packed efficiently without exceeding its maximum capacity.
 
-The Elves have kept a meticulous record of all the children and the weight of their presents in a JSON format. It’s your job to use this data to help santa plan his sleigh load. Below is a list of children and how much their presents weigh in kg. Create a tool where santa can choose to include children from a list on his sleigh. The dashboard should show the current sleigh load and if the maximum of <u>100kg</u> has been exceeded.
+The Elves have kept a meticulous record of all the children and the weight of their presents in a JSON format. It’s your job to use this data to help santa plan his sleigh load. Below is a list of children and how much their presents weigh in kilogram. Create a tool where santa can choose whose presents to include on his run. The tool should show the current sleigh load and if the maximum of <u>100kg</u> has been exceeded.
 
 <br/>
 <strong>Bonus mission</strong>
 
-Santa likes pretty interfaces. As a bonus, make sure that the design sparkles! ✨
+Santa likes pretty interfaces. Maybe there can be an exciting visualization, or even a drag and drop interface?!
 
 ```json
 [
