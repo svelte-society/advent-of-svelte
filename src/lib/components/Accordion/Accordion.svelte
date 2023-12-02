@@ -16,6 +16,7 @@
 
 <script lang="ts">
 	import { createAccordion, melt } from '@melt-ui/svelte'
+	import { browser } from '$app/environment'
 
 	const accordion = createAccordion()
 	accordionCtx.set(accordion)
@@ -26,8 +27,14 @@
 
 	let className = ''
 	export { className as class }
+
+	const isHtmlOnly = !browser
 </script>
 
-<div class={className} use:melt={$root}>
+{#if isHtmlOnly}
 	<slot />
-</div>
+{:else}
+	<div class={className} use:melt={$root}>
+		<slot />
+	</div>
+{/if}
