@@ -228,7 +228,7 @@
 				<a href="https://sveltesociety.dev/" class="flex items-center">
 					<span
 						class="self-center text-2xl font-semibold whitespace-nowrap text-white"
-						>Advent of Code</span>
+						>Advent of Svelte</span>
 				</a>
 			</div>
 		</div>
@@ -236,7 +236,7 @@
 		<hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
 
 		<p class="text-sm text-gray-400">
-			Advent of Code is created
+			Advent of Svelte is created
 			<a href="https://sveltesociety.dev/">by Svelte Society</a>.
 		</p>
 
