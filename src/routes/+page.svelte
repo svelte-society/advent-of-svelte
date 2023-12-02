@@ -1,6 +1,9 @@
 <script lang="ts">
 	// import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
-	import { AccordionItem, Accordion } from 'flowbite-svelte'
+	import {
+		AccordionItem,
+		Accordion,
+	} from '$lib/components/Accordion/index.js'
 	import Countdown from '$lib/components/Countdown.svelte'
 	import santaLogo from '$lib/images/santa-svelte.png'
 	import Snow from '$lib/components/Snow.svelte'
@@ -148,6 +151,7 @@
 
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab">
+								aaa
 								<div class="flex gap-3" slot="header">
 									<h3>{title}</h3>
 
@@ -182,8 +186,7 @@
 								</div>
 							</AccordionItem>
 						{:else}
-							<AccordionItem open={challenge.active}>
-								<h3 slot="header">{title}</h3>
+							<AccordionItem open={challenge.active} {title}>
 								{#if challenge.image}
 									<img
 										class="w-60 mx-auto mt-4 mb-8"
