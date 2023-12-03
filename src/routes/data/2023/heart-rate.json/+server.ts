@@ -1,4 +1,6 @@
-function mockHeartRate(timestamp) {
+import { json } from '@sveltejs/kit'
+
+function mockHeartRate(timestamp: number) {
 	// Constants for heart rate simulation
 	const baseBPM = 55 // Adjusted average resting heart rate
 	const shortTermAmplitude = 5 // Amplitude for the two-hour fluctuation
@@ -35,25 +37,14 @@ function mockHeartRate(timestamp) {
 	return Math.max(45, Math.min(160, heartRate)) // Clamping the value between 45 and 160 BPM
 }
 
-// Start of the day in Unix timestamp (e.g., midnight)
-/*
-const startOfDayTimestamp = Math.floor(new Date().setHours(0, 0, 0, 0) / 1000)
+export const GET = ({ setHeaders }) => {
+	const currentTimestamp = Math.floor((Date.now() + 1000) / 1000)
 
-// Loop to sample heart rate every 10 minutes over 24 hours
-for (let i = 0; i < 144; i++) {
-	const currentTimestamp = startOfDayTimestamp + i * 600 // 600 seconds = 10 minutes
-	const heartRate = mockHeartRate(currentTimestamp)
-	console.log(
-		`Time: ${new Date(
-			currentTimestamp * 1000,
-		).toLocaleTimeString()}, Heart Rate: ${heartRate} BPM`,
-	)
+	setHeaders({
+		'cache-control': 'no-cache',
+	})
+
+	return json({
+		heartRate: mockHeartRate(currentTimestamp),
+	})
 }
-*/
-
-// Example usage
-
-setInterval(() => {
-	const currentTimestamp = Math.floor((Date.now() + 1000) / 1000) // Current Unix timestamp in seconds
-	console.log('Mock Heart Rate:', mockHeartRate(currentTimestamp))
-}, 1000)
