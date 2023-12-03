@@ -6,6 +6,6 @@ Svelte Bot setup a JSON endpoint for you to get the live data, and requests you 
 
 ```json
 {
-    "heartRate" : 65
+	"heartRate" : 65
 }
 ```
