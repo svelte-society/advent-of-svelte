@@ -1,11 +1,13 @@
 import day1 from './day-1.svx'
 import day2 from './day-2.svx'
 import day3 from './day-3.svx'
+import day4 from './day-4.svx'
 
 // todo replace title as I made it unused?
 
 import sleighImage from '$lib/images/sleigh.png'
 import cookieImage from '$lib/images/cookie.png'
+import heartImage from '$lib/images/heart.png'
 
 export interface Challenge {
 	body: string
@@ -49,15 +51,17 @@ export const challengesRaw: Challenge[] = [
 		title: 'Day 3',
 		unlockDate: '2023-12-03 00:00:00 +00:00',
 		discordLink:
-			'https://discord.com/channels/457912077277855764/1158027748699279430/1180653927448973352',
+			'https://discord.com/channels/457912077277855764/1180653927448973352',
 		image: sleighImage,
 		body: render(day3),
 	},
 	{
 		title: 'Day 4',
 		unlockDate: '2023-12-04 00:00:00 +00:00',
-		discordLink: DEFAULT_DISCORD_LINK,
-		body: 'TODO',
+		discordLink:
+			'https://discord.com/channels/457912077277855764/1180997671541035078',
+		image: heartImage,
+		body: render(day4),
 	},
 	{
 		title: 'Day 5',
