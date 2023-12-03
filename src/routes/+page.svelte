@@ -148,37 +148,15 @@
 
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab">
-								<div class="flex gap-3" slot="header">
-									<h3>{title}</h3>
+								<div class="flex gap-1" slot="header">
+									<h3>
+										{title}
 
-									{#if mounted}
-										<p>
-											<Countdown
-												from={challenge.unlockDate}
-												dateFormat="YYYY-MM-DD H:m:s Z"
-												let:remaining>
-												{#if remaining.done === false}
-													<span>~</span>
-
-													{#if remaining.days}
-														<span>
-															{remaining.days} days
-														</span>
-													{/if}
-
-													<span>
-														{remaining.hours} hours
-													</span>
-
-													<span>
-														{remaining.minutes} minutes
-													</span>
-												{:else}
-													<h2>The time has come</h2>
-												{/if}
-											</Countdown>
-										</p>
-									{/if}
+										<!-- {#if mounted} -->
+										<Countdown
+											date={challenge.unlockDate} />
+										<!-- {/if} -->
+									</h3>
 								</div>
 							</AccordionItem>
 						{:else}
