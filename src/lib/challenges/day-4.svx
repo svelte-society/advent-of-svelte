@@ -1,0 +1,16 @@
+As Christmas Eve approaches, ensuring Santa's well-being is paramount to a successful gift delivery night. Santa's busy schedule, from supervising elves to checking the naughty or nice list, can be quite demanding. This year, the elves have set up a special system to monitor Santa's heart rate throughout the day, ensuring he stays healthy and jolly!
+
+Your task is to create a Santa's Heart Rate Monitor (SHRM™) using Svelte. This interactive tool will display Santa's heart rate, fetched in real-time from our North Pole health database.
+
+As a bonus the elves have been wondering if the heart rate could be charted throughout the day!
+
+The JSON structure is as follows:
+
+
+```json
+{
+    "heartRate" : 65
+}
+```
+
+This data updates every second and can be fetched by continuously polling `https://advent.sveltesociety.dev/data/2023/heart-rate.json`

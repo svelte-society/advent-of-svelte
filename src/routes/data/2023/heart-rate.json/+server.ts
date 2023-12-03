@@ -1,5 +1,15 @@
 import { json } from '@sveltejs/kit'
 
+function deterministicVariation(timestamp: number) {
+	let seed = timestamp
+	seed = seed ^ 61 ^ (seed >> 16)
+	seed *= 9
+	seed = seed ^ (seed >> 4)
+	seed *= 0x27d4eb2d
+	seed = seed ^ (seed >> 15)
+	return Math.round((seed % 5) - 2)
+}
+
 function mockHeartRate(timestamp: number) {
 	// Constants for heart rate simulation
 	const baseBPM = 55 // Adjusted average resting heart rate
@@ -30,11 +40,12 @@ function mockHeartRate(timestamp: number) {
 		) // Evening peak
 	heartRate += Math.max(morningPeak, eveningPeak)
 
-	// Adding heart rate variability
-	const hrv = Math.random() * 2 // Random value up to 2
-	heartRate += Math.random() > 0.5 ? hrv : -hrv // Randomly adding or subtracting the variability
+	// Deterministic, integer heart rate variability
+	const hrv = deterministicVariation(timestamp)
+	console.log(hrv)
+	heartRate += hrv
 
-	return Math.max(45, Math.min(160, heartRate)) // Clamping the value between 45 and 160 BPM
+	return Math.floor(Math.max(45, Math.min(160, heartRate))) // Clamping the value between 45 and 160 BPM
 }
 
 export const GET = ({ setHeaders }) => {
