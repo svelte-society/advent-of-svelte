@@ -152,10 +152,10 @@
 									<h3>
 										{title}
 
-										<!-- {#if mounted} -->
-										<Countdown
-											date={challenge.unlockDate} />
-										<!-- {/if} -->
+										{#if mounted}
+											<Countdown
+												date={challenge.unlockDate} />
+										{/if}
 									</h3>
 								</div>
 							</AccordionItem>

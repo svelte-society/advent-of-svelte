@@ -17,7 +17,6 @@
 		"autoprefixer": "^10.4.16",
 		"date-fns": "^2.30.0",
 		"date-fns-tz": "^2.0.0",
-		"dayjs": "^1.11.10",
 		"flowbite": "^2.2.0",
 		"flowbite-svelte": "^0.44.20",
 		"mdsvex": "^0.11.0",
