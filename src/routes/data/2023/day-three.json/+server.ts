@@ -19,7 +19,7 @@ export const GET = ({ setHeaders }) => {
 	for (let i = 0; i < 100; i++) {
 		presents.push({
 			name: faker.person.firstName(),
-			weight: faker.number.int({ min: 3.5, max: 8.2 }),
+			weight: faker.number.float({ min: 3.5, max: 8.2, precision: 0.01 }),
 		})
 	}
 

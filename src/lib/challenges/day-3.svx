@@ -10,11 +10,11 @@ Here is an example of what the Elves have stored:
 
 ```json
 [
-	{ "name": "Kurtis", "weight": 8 },
-	{ "name": "Branson", "weight": 4 },
-	{ "name": "Danielle", "weight": 7 },
-	{ "name": "Wanda", "weight": 7 },
-	{ "name": "Claud", "weight": 4 },
+	{ "name": "Kurtis", "weight": 8.20 },
+	{ "name": "Branson", "weight": 4.31 },
+	{ "name": "Danielle", "weight": 7.40 },
+	{ "name": "Wanda", "weight": 7.04 },
+	{ "name": "Claud", "weight": 4.93 },
 	...
 ]
 ```
