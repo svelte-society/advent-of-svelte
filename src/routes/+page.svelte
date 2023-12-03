@@ -241,21 +241,13 @@
 		</p>
 
 		<p class="text-sm text-gray-400">
-			Santa Hat illustration by
+			Santa Hat illustration, Santa sleigh illustration, Cookie
+			Illustration, Heart illustration by
 			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
 				Icons 8
 			</a>
 			from
 			<a href="https://icons8.com/illustrations">Ouch!</a>
-			<br /> Santa sleigh illustration by Illustration by
-			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
-				>Icons 8</a>
-			from <a href="https://icons8.com/illustrations">Ouch!</a>
-			<br />
-			Cookie Illustration by
-			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
-				>Icons 8</a>
-			from <a href="https://icons8.com/illustrations">Ouch!</a>
 		</p>
 	</div>
 </footer>
