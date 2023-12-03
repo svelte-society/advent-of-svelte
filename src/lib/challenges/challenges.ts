@@ -1,3 +1,4 @@
+import { dev } from '$app/environment'
 import { getDate, isAfter, addDays } from 'date-fns'
 import { zonedTimeToUtc } from 'date-fns-tz'
 
@@ -31,7 +32,7 @@ export const challenges = Object.entries(challengeFiles)
 	// Parse the files to something useful
 	.map<Challenge>(([path, mod]) => {
 		const day = Number(path.slice('./day-'.length, -4))
-		const locked = getDate(NOW_UTC) < day
+		const locked = dev ? false : getDate(NOW_UTC) < day
 
 		return {
 			day,
@@ -49,4 +50,6 @@ export const challenges = Object.entries(challengeFiles)
 	// Sort it by day
 	.sort((a, b) => a.day - b.day)
 	// Only show the available challenges, and the next day (locked)
-	.filter((challenge) => isAfter(addDays(NOW_UTC, 1), challenge.unlockDate))
+	.filter((challenge) =>
+		dev ? true : isAfter(addDays(NOW_UTC, 1), challenge.unlockDate),
+	)
