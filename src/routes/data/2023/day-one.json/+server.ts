@@ -11,7 +11,6 @@ interface Person {
 export const GET = ({ setHeaders }) => {
 	setHeaders({
 		'cache-control': 'public, max-age=31536000, immutable',
-		'Access-Control-Allow-Origin': '*',
 	})
 
 	const people: Person[] = []
