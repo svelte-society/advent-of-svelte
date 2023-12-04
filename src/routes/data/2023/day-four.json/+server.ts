@@ -49,7 +49,7 @@ function mockHeartRate(timestamp: number) {
 }
 
 export const GET = ({ setHeaders }) => {
-	const currentTimestamp = Math.floor((Date.now() + 1000) / 1000)
+	const currentTimestamp = Math.floor(Date.now() / 1000)
 
 	setHeaders({
 		'cache-control': 'no-cache',
