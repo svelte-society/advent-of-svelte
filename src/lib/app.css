@@ -11,5 +11,5 @@ a {
 }
 
 .button:not(.secondary) {
-    @apply inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-svelte focus:outline focus:outline-2 focus:outline-svelte focus:outline-offset-2
+    @apply inline-flex justify-center items-center gap-2 py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-svelte focus:outline focus:outline-2 focus:outline-svelte focus:outline-offset-2
 }
