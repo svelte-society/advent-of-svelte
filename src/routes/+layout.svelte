@@ -1,17 +1,19 @@
 <script>
-	import '$lib/app.css';
+	import '$lib/app.css'
+	import Snow from '$lib/components/Snow.svelte'
+	import Header from './Header.svelte'
+	import Footer from './Footer.svelte'
 </script>
 
 <svelte:head>
 	<title>Advent of Svelte</title>
 </svelte:head>
 
-<div>
-	<slot />
+<Snow />
+<div class="bg-black">
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
 </div>
-
-<style>
-	div {
-		background-color: black;
-	}
-</style>
