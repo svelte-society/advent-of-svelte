@@ -1,0 +1,24 @@
+---
+discordLink: null
+image: morse
+---
+
+**Morse Mischief**
+
+Today at the North Pole, the elves face a curious situation. Santa recently discovered that one of his key reindeer trainers, located in the remote and snowy expanses of Iceland, communicates exclusively through Morse code. Why, you ask? Well, it turns out the trainer is an eccentric but brilliant character who believes Morse code keeps his reindeer alert and attentive (he insists they respond better to beeps and boops).
+
+Your mission, should you choose to accept it, is to create a Morse Code Translator. The translator should have a text input and an output that shows the text converted into morse code. 
+
+Santa has provided you with the international morse code alphabet above.
+
+Each letter and number can be translated into dots (.) and dashes (-). Space bar can be represented as a slash (/). For example, “Hello World” can be written as:
+
+```
+.... . .-.. .-.. --- / .-- --- .-. .-.. -..
+```
+
+**Bonus objective**
+
+In order to send out the code, Santa needs your help to convert it into audible bleeps and bloops. Create a play button that converts the entered  Santa has provided you with an example message from Iceland that you can play here. The message reads out “Hello world”. A famous elf engineer suggest looking into <a target="_blank" href="https://marcgg.com/blog/2016/11/01/javascript-audio/">AudioContext</a> for the sound generation!
+
+Santa has provided you with an audio sample of how Hello World sounds like <a href="/files/hello-world.wav">here!</a>

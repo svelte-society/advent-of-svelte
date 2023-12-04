@@ -1,0 +1,10 @@
+**Spreading the holiday cheer**
+
+The North Pole is always looking for new ways to spread Christmas cheer far and wide. This year, Santa has come up with a brilliant idea: a Holiday Greeting Pop-Up that website owners can easily integrate into their sites. This pop-up will appear after a few seconds of visiting the site, featuring a festive greeting from Santa himself!
+Your task is to bring Santa's vision to life by creating a cheerful, engaging pop-up that can be added to any website. Santa envisions this pop-up as a delightful surprise that will put a smile on the faces of all who see it, spreading the joy of the season.
+
+Design the pop-up to feature a jolly image of Santa Claus, along with a warm, festive message wishing the visitor a Merry Christmas and happy holidays.
+
+**Bonus Challenge**
+
+Transform this Holiday Greeting Pop-Up into an NPM package. This will allow web developers to easily integrate the pop-up into their projects by installing your package. 

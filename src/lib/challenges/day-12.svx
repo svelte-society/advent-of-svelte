@@ -1,0 +1,17 @@
+---
+image: santa-card
+---
+
+**Greetings and salutations**
+
+In the bustling workshops of the North Pole, the elves have discovered a new joy – creating personalized Christmas cards for each other. However, with the big day fast approaching, they're finding it hard to keep up with the demand. Santa, always keen on fostering creativity, suggests a digital solution: a Drag-and-Drop Christmas Card Creator.
+
+Your mission is to build an interactive application that allows users to design their own Christmas cards with ease. Embrace the festive spirit and Svelte's capabilities to create a tool where elements can be effortlessly dragged, dropped, and arranged into beautiful holiday greetings.
+
+The elves have drawn some decorations you can use to add to your Christmas Card Creator, but feel free to add more drawings if you’d like! Implement an intuitive drag-and-drop interface where users can select, move, and place elements anywhere on the card. 
+
+**Bonus challenge**
+
+Allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
+
+<a href="/files/santa-card.zip">Download the decorations here!</a>
