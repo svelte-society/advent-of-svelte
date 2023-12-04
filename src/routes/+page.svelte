@@ -30,7 +30,7 @@
 		<div class="place-self-center lg:col-span-7 relative">
 			<h1
 				class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white relative">
-				A Svelte challenge for each day until Christmas!
+				A Svelte challenge for each day until Christmas Eve!
 			</h1>
 
 			<p
