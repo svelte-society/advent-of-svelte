@@ -4,9 +4,11 @@
 			class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
 			<a href="/" class="flex items-center">
 				<span
-					class="self-center text-xl font-semibold whitespace-nowrap text-white"
-					>Advent of Svelte</span>
+					class="self-center text-xl font-semibold whitespace-nowrap text-white">
+					Advent of Svelte
+				</span>
 			</a>
+
 			<div
 				class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
 				id="mobile-menu-2">
@@ -23,5 +25,3 @@
 		</div>
 	</nav>
 </header>
-<!-- <AnimationFrameSnow />-->
-<!-- https://github.com/themesberg/tailwind-landing-page -->
