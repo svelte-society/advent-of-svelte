@@ -43,14 +43,6 @@
 				See the challenges
 				<RightArrow />
 			</a>
-
-			<a
-				class="button secondary"
-				rel="external"
-				target="_blank"
-				href="https://www.sveltelab.dev/">
-				Launch SvelteLab
-			</a>
 		</div>
 
 		<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
