@@ -17,10 +17,3 @@
 	</main>
 	<Footer />
 </div>
-
-<style>
-	:global(.locked-tab) {
-		opacity: 0.5;
-		pointer-events: none;
-	}
-</style>

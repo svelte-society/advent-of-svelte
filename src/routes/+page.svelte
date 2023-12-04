@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { AccordionItem, Accordion } from 'flowbite-svelte'
+	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte'
+	import Accordion from '$lib/components/Accordion/Accordion.svelte'
 	import Countdown from '$lib/components/Countdown.svelte'
 	import santaLogo from '$lib/images/santa-svelte.png'
 	import A from '$lib/components/A.svelte'
@@ -105,48 +106,25 @@
 						{@const title = `Day ${index + 1}`}
 
 						{#if challenge.locked}
-							<AccordionItem classInactive="locked-tab">
-								<div class="flex gap-3" slot="header">
-									<h3>{title}</h3>
+							<AccordionItem classInactive="locked-tab" disabled>
+								<h3 slot="header">
+									{title}
 
 									{#if mounted}
-										<p>
-											<Countdown
-												from={challenge.unlockDate}
-												dateFormat="YYYY-MM-DD H:m:s Z"
-												let:remaining>
-												{#if remaining.done === false}
-													<span>~</span>
-
-													{#if remaining.days}
-														<span>
-															{remaining.days} days
-														</span>
-													{/if}
-
-													<span>
-														{remaining.hours} hours
-													</span>
-
-													<span>
-														{remaining.minutes} minutes
-													</span>
-												{:else}
-													<h2>The time has come</h2>
-												{/if}
-											</Countdown>
-										</p>
+										<Countdown
+											date={challenge.unlockDate} />
 									{/if}
-								</div>
+								</h3>
 							</AccordionItem>
 						{:else}
-							<AccordionItem open={challenge.active}>
-								<h3 slot="header">{title}</h3>
+							<AccordionItem
+								open={new Date().getUTCDate() == challenge.day}>
+								<span slot="header">{title}</span>
 								{#if challenge.image}
 									<img
 										class="w-60 mx-auto mt-4 mb-8"
 										src={challenge.image}
-										alt={challenge.title} />
+										alt="{title} image" />
 								{/if}
 
 								<div
@@ -178,10 +156,5 @@
 <style>
 	a {
 		cursor: pointer;
-	}
-
-	:global(.locked-tab) {
-		opacity: 0.5;
-		pointer-events: none;
 	}
 </style>
