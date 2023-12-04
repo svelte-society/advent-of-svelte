@@ -5,21 +5,31 @@ This dashboard, powered by Svelte's reactive magic, will provide real-time insig
 Svelte Bot setup a JSON endpoint for you to get the live data, which updates every second: `https://advent.sveltesociety.dev/data/2023/day-five.json`. Here is what that data looks like:
 
 ```json
-{
-	"elf": "Ashlynn",
-	"task": "WRAPPED_PRESENT",
-	"minutesTaken": 3,
-	"date": "2024-01-05T00:3:00.000Z"
-}
+[
+	{
+		"elf": "Ashlynn",
+		"task": "WRAPPED_PRESENT",
+		"minutesTaken": 3,
+		"date": "2024-01-05T00:3:00.000Z"
+	},
+	{
+		"elf": "Ashlynn",
+		"task": "CREATED_TOY",
+		"minutesTaken": 15,
+		"date": "2024-01-05T00:18:00.000Z"
+	}
+]
 ```
 
-or
+Or as a TypeScript type:
 
-```json
-{
-	"elf": "Ashlynn",
-	"task": "CREATED_TOY",
-	"minutesTaken": 15,
-	"date": "2024-01-05T00:18:00.000Z"
+```ts
+type TaskType = 'CREATED_TOY' | 'WRAPPED_PRESENT'
+
+interface Task {
+	elf: string
+	task: TaskType
+	minutesTaken: number
+    date: string;
 }
 ```
