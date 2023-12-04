@@ -163,13 +163,14 @@
 								</div>
 							</AccordionItem>
 						{:else}
-							<AccordionItem open={challenge.active}>
+							<AccordionItem
+								open={new Date().getUTCDate() == challenge.day}>
 								<span slot="header">{title}</span>
 								{#if challenge.image}
 									<img
 										class="w-60 mx-auto mt-4 mb-8"
 										src={challenge.image}
-										alt={challenge.title} />
+										alt="{title} image" />
 								{/if}
 
 								<div
