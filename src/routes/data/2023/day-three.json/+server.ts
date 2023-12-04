@@ -1,11 +1,11 @@
-import { json } from '@sveltejs/kit'
 import { faker } from '@faker-js/faker/locale/en'
+import { json } from '@sveltejs/kit'
 
 export const prerender = true
 
-interface Person {
+interface Present {
 	name: string
-	tally: number
+	weight: number
 }
 
 export const GET = ({ setHeaders }) => {
@@ -13,14 +13,14 @@ export const GET = ({ setHeaders }) => {
 		'cache-control': 'public, max-age=31536000, immutable',
 	})
 
-	const people: Person[] = []
+	const presents: Present[] = []
 
 	for (let i = 0; i < 100; i++) {
-		people.push({
+		presents.push({
 			name: faker.person.firstName(),
-			tally: faker.number.int({ min: -100, max: 100 }),
+			weight: faker.number.float({ min: 3.5, max: 8.2, precision: 0.01 }),
 		})
 	}
 
-	return json(people)
+	return json(presents)
 }

@@ -152,36 +152,14 @@
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab" disabled>
 								<div class="flex gap-3" slot="header">
-									<h3>{title}</h3>
+									<h3>
+										{title}
 
-									{#if mounted}
-										<p>
+										{#if mounted}
 											<Countdown
-												from={challenge.unlockDate}
-												dateFormat="YYYY-MM-DD H:m:s Z"
-												let:remaining>
-												{#if remaining.done === false}
-													<span>~</span>
-
-													{#if remaining.days}
-														<span>
-															{remaining.days} days
-														</span>
-													{/if}
-
-													<span>
-														{remaining.hours} hours
-													</span>
-
-													<span>
-														{remaining.minutes} minutes
-													</span>
-												{:else}
-													<h2>The time has come</h2>
-												{/if}
-											</Countdown>
-										</p>
-									{/if}
+												date={challenge.unlockDate} />
+										{/if}
+									</h3>
 								</div>
 							</AccordionItem>
 						{:else}
@@ -244,21 +222,13 @@
 		</p>
 
 		<p class="text-sm text-gray-400">
-			Santa Hat illustration by
+			Santa Hat illustration, Santa sleigh illustration, Cookie
+			Illustration, Heart illustration by
 			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
 				Icons 8
 			</a>
 			from
 			<a href="https://icons8.com/illustrations">Ouch!</a>
-			<br /> Santa sleigh illustration by Illustration by
-			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
-				>Icons 8</a>
-			from <a href="https://icons8.com/illustrations">Ouch!</a>
-			<br />
-			Cookie Illustration by
-			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
-				>Icons 8</a>
-			from <a href="https://icons8.com/illustrations">Ouch!</a>
 		</p>
 	</div>
 </footer>

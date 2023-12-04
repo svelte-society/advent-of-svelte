@@ -1,45 +1,27 @@
-In the heart of Santa's workshop, the Elves are facing a new problem. With Christmas day approaching, they've realized that Santa's sleigh, though robust, has its limits. The Elves found that Santa can only bring <u>100 kg</u> on his sleigh!
+---
+discordLink: https://discord.com/channels/457912077277855764/1180653927448973352
+image: sleigh
+---
 
-Your mission is to help the Elves solve this crucial task. You’ll be in charge of creating a Svelte-powered Sleigh Load Balancer (SLB™), a tool designed to ensure that the sleigh is packed efficiently without exceeding its maximum capacity.
+With the elves now back busily crafting gifts and the festive atmosphere at its peak, attention shifts to the crucial task of loading Santa's sleigh. However, Svelte Bot, with it's precise calculations, has brought to light a critical limitation: Santa's sleigh can carry a maximum load of only <strong>100 kg</strong> per journey.
 
-The Elves have kept a meticulous record of all the children and the weight of their presents in a JSON format. It’s your job to use this data to help santa plan his sleigh load. Below is a list of children and how much their presents weigh in kg. Create a tool where santa can choose to include children from a list on his sleigh. The dashboard should show the current sleigh load and if the maximum of <u>100kg</u> has been exceeded.
+Your mission is to help the Elves solve this crucial task. You’ll be in charge of creating a Sleigh Load Balancer (SLB™), a tool designed to ensure that the sleigh is packed efficiently without exceeding its maximum capacity.
 
-<br/>
-<strong>Bonus mission</strong>
+The Elves have kept a meticulous record of all the children and the weight of their presents in a JSON format. It’s your job to use this data to help keep the Sleigh within it's new operating weight. You should create a tool where Santa can choose whose presents to include on his run. The tool should show the current sleigh load and if the maximum of <strong>100kg</strong> has been exceeded.
 
-Santa likes pretty interfaces. As a bonus, make sure that the design sparkles! ✨
+As a bonus you could include an exciting data visualisation, or even a drag and drop interface!
+
+Here is an example of what the Elves have stored:
 
 ```json
 [
-	{"child": "Amina", "weight": 10},
-	{"child": "Liam", "weight": 12},
-	{"child": "Sofia", "weight": 13},
-	{"child": "Ming", "weight": 10},
-	{"child": "Olivia", "weight": 18},
-	{"child": "Juan", "weight": 18},
-	{"child": "Fatima", "weight": 14},
-	{"child": "Noah", "weight": 18},
-	{"child": "Isha", "weight": 19},
-	{"child": "Alejandro", "weight": 10},
-	{"child": "Chloe", "weight": 12},
-	{"child": "Ivan", "weight": 13},
-	{"child": "Yara", "weight": 19},
-	{"child": "Kenji", "weight": 18},
-	{"child": "Ella", "weight": 15},
-	{"child": "Dmitri", "weight": 16},
-	{"child": "Anaya", "weight": 15},
-	{"child": "Luca", "weight": 17},
-	{"child": "Nia", "weight": 20},
-	{"child": "Rajesh", "weight": 11},
-	{"child": "Maya", "weight": 15},
-	{"child": "Hans", "weight": 18},
-	{"child": "Layla", "weight": 13},
-	{"child": "Pablo", "weight": 12},
-	{"child": "Zoe", "weight": 10},
-	{"child": "Kofi", "weight": 10},
-	{"child": "Amira", "weight": 10},
-	{"child": "Felix", "weight": 17},
-	{"child": "Aria", "weight": 19},
-	{"child": "Jin", "weight": 12}
+	{ "name": "Kurtis", "weight": 8.20 },
+	{ "name": "Branson", "weight": 4.31 },
+	{ "name": "Danielle", "weight": 7.40 },
+	{ "name": "Wanda", "weight": 7.04 },
+	{ "name": "Claud", "weight": 4.93 },
+	...
 ]
 ```
+
+You can fetch this data by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-three.json`
