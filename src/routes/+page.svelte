@@ -1,6 +1,6 @@
 <script lang="ts">
-	// import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
-	import { AccordionItem, Accordion } from 'flowbite-svelte'
+	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte'
+	import Accordion from '$lib/components/Accordion/Accordion.svelte'
 	import Countdown from '$lib/components/Countdown.svelte'
 	import santaLogo from '$lib/images/santa-svelte.png'
 	import Snow from '$lib/components/Snow.svelte'
@@ -147,26 +147,25 @@
 						{@const title = `Day ${index + 1}`}
 
 						{#if challenge.locked}
-							<AccordionItem classInactive="locked-tab">
-								<div class="flex gap-1" slot="header">
-									<h3>
-										{title}
+							<AccordionItem classInactive="locked-tab" disabled>
+								<h3 slot="header">
+									{title}
 
-										{#if mounted}
-											<Countdown
-												date={challenge.unlockDate} />
-										{/if}
-									</h3>
-								</div>
+									{#if mounted}
+										<Countdown
+											date={challenge.unlockDate} />
+									{/if}
+								</h3>
 							</AccordionItem>
 						{:else}
-							<AccordionItem open={challenge.active}>
-								<h3 slot="header">{title}</h3>
+							<AccordionItem
+								open={new Date().getUTCDate() == challenge.day}>
+								<span slot="header">{title}</span>
 								{#if challenge.image}
 									<img
 										class="w-60 mx-auto mt-4 mb-8"
 										src={challenge.image}
-										alt={challenge.title} />
+										alt="{title} image" />
 								{/if}
 
 								<div
