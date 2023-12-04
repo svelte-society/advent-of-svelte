@@ -1,9 +1,6 @@
 <script lang="ts">
-	// import AnimationFrameSnow from "$lib/components/AnimationFrameSnow.svelte";
-	import {
-		AccordionItem,
-		Accordion,
-	} from '$lib/components/Accordion/index.js'
+	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte'
+	import Accordion from '$lib/components/Accordion/Accordion.svelte'
 	import Countdown from '$lib/components/Countdown.svelte'
 	import santaLogo from '$lib/images/santa-svelte.png'
 	import Snow from '$lib/components/Snow.svelte'
@@ -151,16 +148,14 @@
 
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab" disabled>
-								<div class="flex gap-3" slot="header">
-									<h3>
-										{title}
+								<h3 slot="header">
+									{title}
 
-										{#if mounted}
-											<Countdown
-												date={challenge.unlockDate} />
-										{/if}
-									</h3>
-								</div>
+									{#if mounted}
+										<Countdown
+											date={challenge.unlockDate} />
+									{/if}
+								</h3>
 							</AccordionItem>
 						{:else}
 							<AccordionItem
