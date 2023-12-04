@@ -2,9 +2,8 @@
 	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte'
 	import Accordion from '$lib/components/Accordion/Accordion.svelte'
 	import Countdown from '$lib/components/Countdown.svelte'
-	import santaLogo from '$lib/images/santa-svelte.png'
-	import A from '$lib/components/A.svelte'
 	import RightArrow from '$lib/icons/RightArrow.svelte'
+	import santaLogo from '$lib/images/santa-svelte.png'
 	import SvelteLab from '$lib/icons/SvelteLab.svelte'
 	import { onMount } from 'svelte'
 
@@ -27,6 +26,7 @@
 				src={santaLogo}
 				alt="Svelte logo with a santa hat on top of it" />
 		</div>
+
 		<div class="place-self-center lg:col-span-7 relative">
 			<h1
 				class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white relative">
@@ -39,14 +39,20 @@
 				challenge using Svelte.
 			</p>
 
-			<A href="#challenges">
+			<a class="button" href="#challenges">
 				See the challenges
 				<RightArrow />
-			</A>
-			<A secondary external href="https://www.sveltelab.dev/">
+			</a>
+
+			<a
+				class="button secondary"
+				rel="external"
+				target="_blank"
+				href="https://www.sveltelab.dev/">
 				Launch SvelteLab
-			</A>
+			</a>
 		</div>
+
 		<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
 			<img
 				src={santaLogo}
@@ -61,6 +67,7 @@
 			<h2 class="mb-4 text-4xl font-extrabold text-white">
 				How do I participate?
 			</h2>
+
 			<p class="sm:text-xl text-gray-400">
 				Check this page every day of December to find the daily
 				challenge. Join the
@@ -133,16 +140,22 @@
 								</div>
 
 								<div class="mb-4 flex gap-2">
-									<A external href="https://sveltelab.dev/">
+									<a
+										class="button"
+										rel="external"
+										target="_blank"
+										href="https://sveltelab.dev/">
+										<SvelteLab />
 										Open in SvelteLab
-									</A>
+									</a>
 
-									<A
-										external
-										href={challenge.discordLink}
-										class="text-white bg-[#5865F2] hover:bg-indigo-500/60 focus:ring-4 ring-offset-4 font-medium rounded-lg text-sm flex justify-center items-center px-5">
+									<a
+										class="button !bg-[#5865F2] focus:!outline-[#5865F2]"
+										rel="external"
+										target="_blank"
+										href={challenge.discordLink}>
 										Share your solution on Discord
-									</A>
+									</a>
 								</div>
 							</AccordionItem>
 						{/if}
