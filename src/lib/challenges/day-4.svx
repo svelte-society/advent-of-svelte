@@ -2,7 +2,7 @@ In this particularly bustling holiday season, the focus at the North Pole has sh
 
 You've been tasked with taking in the raw data to create Santa's Heart Rate Monitor (SHRM™). This system will utilize real-time data from the North Pole Health Database. The elves envision a dashboard that not only displays the live heart rate of Santa but also calculates and shows an average over specified periods. Additionally, if you're up to it they are keen on a historical view that charts Santa's heart rate over the course of the day, offering insights into how various activities and moments affect him.
 
-Svelte Bot setup a JSON endpoint for you to get the live data, and requests you poll it no more than six times per minute: `https://advent.sveltesociety.dev/data/2023/day-four.json`. Here is what that data looks like:
+Svelte Bot setup a JSON endpoint for you to get the live data, which updates every second: `https://advent.sveltesociety.dev/data/2023/day-four.json`. Here is what that data looks like:
 
 ```json
 {
