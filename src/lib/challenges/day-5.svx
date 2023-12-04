@@ -2,4 +2,24 @@ Despite the preparation for Christmas kicking off early in the year, the Elves a
 
 This dashboard, powered by Svelte's reactive magic, will provide real-time insights into the elves' workflow. There are two primary tasks that we're tracking, represented in the JSON data by "CREATED_TOY" and "WRAPPED_PRESENT". You'll can tap into information such as the number of toys produced per hour, the time taken for each toy, and the elves' task completion rates. Your mission is to visualise this data in an engaging and interactive way, and show the data in realtime as it'll be changing throughout the day.
 
-// TODO 
+Svelte Bot setup a JSON endpoint for you to get the live data, which updates every second: `https://advent.sveltesociety.dev/data/2023/day-five.json`. Here is what that data looks like:
+
+```json
+{
+	"elf": "Ashlynn",
+	"task": "WRAPPED_PRESENT",
+	"minutesTaken": 3,
+	"date": "2024-01-05T00:3:00.000Z"
+}
+```
+
+or
+
+```json
+{
+	"elf": "Ashlynn",
+	"task": "CREATED_TOY",
+	"minutesTaken": 15,
+	"date": "2024-01-05T00:18:00.000Z"
+}
+```
