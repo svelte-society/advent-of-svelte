@@ -1,6 +1,6 @@
 ---
 discordLink: https://discord.com/channels/457912077277855764/1180997671541035078
-image: $lib/images/heart.png
+image: heart
 ---
 
 In this particularly bustling holiday season, the focus at the North Pole has shifted towards a crucial aspect of the Christmas operation: the well-being of Santa Claus. This year, they want to set up a special system to monitor Santa's heart rate throughout the day, to ensure he stays healthy and jolly!

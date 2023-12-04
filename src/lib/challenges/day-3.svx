@@ -1,6 +1,6 @@
 ---
 discordLink: https://discord.com/channels/457912077277855764/1180653927448973352
-image: $lib/images/sleigh.png
+image: sleigh
 ---
 
 With the elves now back busily crafting gifts and the festive atmosphere at its peak, attention shifts to the crucial task of loading Santa's sleigh. However, Svelte Bot, with it's precise calculations, has brought to light a critical limitation: Santa's sleigh can carry a maximum load of only <strong>100 kg</strong> per journey.
