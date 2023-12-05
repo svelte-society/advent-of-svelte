@@ -1,3 +1,8 @@
+---
+discordLink: https://discord.com/channels/457912077277855764/1181384548269953074
+image: null
+---
+
 Despite the preparation for Christmas kicking off early in the year, the Elves are behind schedule. Santa, ever so reliant on their craftsmanship, turns to you for a solution. Svelte Bot, with its keen understanding of data-driven solutions, suggests building an "Elf Productivity Dashboard".
 
 This dashboard, powered by Svelte's reactive magic, will provide real-time insights into the elves' workflow. There are two primary tasks that we're tracking, represented in the JSON data by "CREATED_TOY" and "WRAPPED_PRESENT". You'll can tap into information such as the number of toys produced per hour, the time taken for each toy, and the elves' task completion rates. Your mission is to visualise this data in an engaging and interactive way, and show the data in realtime as it'll be changing throughout the day.
