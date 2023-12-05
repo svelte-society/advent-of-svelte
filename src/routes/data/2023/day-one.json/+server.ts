@@ -13,6 +13,8 @@ export const GET = ({ setHeaders }) => {
 		'cache-control': 'public, max-age=31536000, immutable',
 	})
 
+	faker.seed(1)
+
 	const people: Person[] = []
 
 	for (let i = 0; i < 100; i++) {
