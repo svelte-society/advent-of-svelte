@@ -1,10 +1,9 @@
-**Spreading the holiday cheer**
+**Santa's Final Countdown**
 
-The North Pole is always looking for new ways to spread Christmas cheer far and wide. This year, Santa has come up with a brilliant idea: a Holiday Greeting Pop-Up that website owners can easily integrate into their sites. This pop-up will appear after a few seconds of visiting the site, featuring a festive greeting from Santa himself!
-Your task is to bring Santa's vision to life by creating a cheerful, engaging pop-up that can be added to any website. Santa envisions this pop-up as a delightful surprise that will put a smile on the faces of all who see it, spreading the joy of the season.
+As Christmas Eve rapidly approaches, the North Pole is abuzz with excitement and festive preparations. However, Santa has realized that amidst all the hustle and bustle, they've lost track of the exact countdown to the big night. The old, trusty mechanical countdown clock, a centerpiece in Santa's workshop for decades, has finally ticked its last tock. With everyone so busy making toys and preparing the sleigh, tracking every passing second until Christmas has become a challenge.
 
-Design the pop-up to feature a jolly image of Santa Claus, along with a warm, festive message wishing the visitor a Merry Christmas and happy holidays.
+This is where your expertise comes in. Santa needs a modern, digital Christmas Countdown Timer – a vital tool to keep everyone at the North Pole aligned and on schedule.
 
-**Bonus Challenge**
+Your mission is to create a digital solution that accurately counts down to the stroke of midnight on Christmas Eve. This countdown timer should be visually festive and engaging, displaying the remaining days, hours, minutes, and seconds in a way that adds to the holiday spirit.
 
-Transform this Holiday Greeting Pop-Up into an NPM package. This will allow web developers to easily integrate the pop-up into their projects by installing your package. 
+Santa and the elves are counting on you to bring this crucial piece of Christmas technology to life, ensuring that the magic of Christmas Eve unfolds perfectly on time. 

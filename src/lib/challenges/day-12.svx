@@ -1,17 +1,7 @@
----
-image: santa-card
----
+**Tinsel Transformers**
 
-**Greetings and salutations**
+Amidst the festive chaos of wrapping gifts and preparing for Santa's big journey, the elves have come up with a delightful diversion to lighten the mood at the North Pole: an Elf Name Generator. They're thrilled with the idea but need a bit of tech magic to make it happen.
 
-In the bustling workshops of the North Pole, the elves have discovered a new joy – creating personalized Christmas cards for each other. However, with the big day fast approaching, they're finding it hard to keep up with the demand. Santa, always keen on fostering creativity, suggests a digital solution: a Drag-and-Drop Christmas Card Creator.
+Your mission is to create this generator! This tool will allow anyone to enter their "Human name" and receive a unique, elf-inspired name in return. It's a wonderful way for people everywhere to feel connected to the magic of the North Pole!
 
-Your mission is to build an interactive application that allows users to design their own Christmas cards with ease. Embrace the festive spirit and Svelte's capabilities to create a tool where elements can be effortlessly dragged, dropped, and arranged into beautiful holiday greetings.
-
-The elves have drawn some decorations you can use to add to your Christmas Card Creator, but feel free to add more drawings if you’d like! Implement an intuitive drag-and-drop interface where users can select, move, and place elements anywhere on the card. 
-
-**Bonus challenge**
-
-Allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
-
-<a href="/files/santa-card.zip">Download the decorations here!</a>
+To build this merry name transformer, you will need to create an algorithm that converts real names into elf names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.

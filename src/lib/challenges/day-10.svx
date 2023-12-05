@@ -1,9 +1,10 @@
-**Wrap Wizard**
+**Spreading the holiday cheer**
 
-In the heart of Santa's workshop, the gift wrapping department is bustling with activity. Elves wrap gifts at lightning speed, but with the immense number of presents, keeping track of efficiency is crucial.
+The North Pole is always looking for new ways to spread Christmas cheer far and wide. This year, Santa has come up with a brilliant idea: a Holiday Greeting Pop-Up that website owners can easily integrate into their sites. This pop-up will appear after a few seconds of visiting the site, featuring a festive greeting from Santa himself!
+Your task is to bring Santa's vision to life by creating a cheerful, engaging pop-up that can be added to any website. Santa envisions this pop-up as a delightful surprise that will put a smile on the faces of all who see it, spreading the joy of the season.
 
-Today's challenge for you is to create a **Gift Wrapping Efficiency Tracker**. This tool will assist the elves in monitoring their gift wrapping speed. Your task is to build an application where elves can start a timer and mark every time the complete wrapping a gift. The timer should then show the average GPT (Gifts Per Minute™️) the elf has managed to reach. Secret has it that there's a global elf leaderboard somewhere deep in santas workshop!
+Design the pop-up to feature a jolly image of Santa Claus, along with a warm, festive message wishing the visitor a Merry Christmas and happy holidays.
 
-The tracker should be able to calculate the average wrapping time per gift, and display this data in a user-friendly manner. 
+**Bonus Challenge**
 
-Remember, the more efficient the elves are at wrapping gifts, the more children will receive presents on Christmas morning!
+Transform this Holiday Greeting Pop-Up into an NPM package. This will allow web developers to easily integrate the pop-up into their projects by installing your package. 

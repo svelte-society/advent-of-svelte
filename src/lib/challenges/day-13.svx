@@ -1,12 +1,17 @@
 ---
-discordLink: null
+image: santa-card
 ---
 
-**Misteltoe Metronome**
+**Greetings and salutations**
 
-Amidst the twinkling lights and joyful melodies at the North Pole, Santa's elves have discovered a festive way to stay in rhythm while they work – by tapping along to their favorite Christmas tunes. But how do they know if they're really keeping the beat? This is where you come in with today's challenge: the Christmas BPM (Beats Per Minute) Counter!
-Santa has asked for a the tool to feature an interface where users can tap the spacebar or a button on the screen in time with the music (or their own tapping). Each tap should represent a beat. The tool should calculate and display the BPM in real-time, updating with each tap. Don’t forget to include a reset button!
+In the bustling workshops of the North Pole, the elves have discovered a new joy – creating personalized Christmas cards for each other. However, with the big day fast approaching, they're finding it hard to keep up with the demand. Santa, always keen on fostering creativity, suggests a digital solution: a Drag-and-Drop Christmas Card Creator.
+
+Your mission is to build an interactive application that allows users to design their own Christmas cards with ease. Embrace the festive spirit and Svelte's capabilities to create a tool where elements can be effortlessly dragged, dropped, and arranged into beautiful holiday greetings.
+
+The elves have drawn some decorations you can use to add to your Christmas Card Creator, but feel free to add more drawings if you’d like! Implement an intuitive drag-and-drop interface where users can select, move, and place elements anywhere on the card. 
 
 **Bonus challenge**
 
-For those who want to go the extra mile, integrate a small library of Christmas songs, for example by embedding a YouTube video. Elves can select a song to play, and your BPM counter will help them find its rhythm.
+Allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
+
+<a href="/files/santa-card.zip">Download the decorations here!</a>

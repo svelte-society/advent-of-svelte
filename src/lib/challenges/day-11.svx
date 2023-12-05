@@ -1,7 +1,9 @@
-**Tinsel Transformers**
+**Wrap Wizard**
 
-Amidst the festive chaos of wrapping gifts and preparing for Santa's big journey, the elves have come up with a delightful diversion to lighten the mood at the North Pole: an Elf Name Generator. They're thrilled with the idea but need a bit of tech magic to make it happen.
+In the heart of Santa's workshop, the gift wrapping department is bustling with activity. Elves wrap gifts at lightning speed, but with the immense number of presents, keeping track of efficiency is crucial.
 
-Your mission is to create this generator! This tool will allow anyone to enter their "Human name" and receive a unique, elf-inspired name in return. It's a wonderful way for people everywhere to feel connected to the magic of the North Pole!
+Today's challenge for you is to create a **Gift Wrapping Efficiency Tracker**. This tool will assist the elves in monitoring their gift wrapping speed. Your task is to build an application where elves can start a timer and mark every time the complete wrapping a gift. The timer should then show the average GPT (Gifts Per Minute™️) the elf has managed to reach. Secret has it that there's a global elf leaderboard somewhere deep in santas workshop!
 
-To build this merry name transformer, you will need to create an algorithm that converts real names into elf names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.
+The tracker should be able to calculate the average wrapping time per gift, and display this data in a user-friendly manner. 
+
+Remember, the more efficient the elves are at wrapping gifts, the more children will receive presents on Christmas morning!
