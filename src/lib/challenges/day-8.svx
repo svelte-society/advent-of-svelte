@@ -1,9 +1,8 @@
 ---
+title: Santa's Mysterious Deck of Doubles
 discordLink: null
 image: santa-deck
 ---
-
-**Santa's Mysterious Deck of Doubles**
 
 On a brisk, starry night at the North Pole, Santa stumbled upon a peculiar and enchanting discovery. Hidden beneath a pile of old maps in his study, he found a mysterious deck of playing cards. But this was no ordinary deck – it consisted of exactly 24 cards, each with a duplicate, adorned with intricate and whimsical designs unknown to Santa.
 

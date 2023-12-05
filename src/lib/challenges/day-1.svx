@@ -1,5 +1,6 @@
 ---
 discordLink: https://discord.com/channels/457912077277855764/1179937338751725659
+title: Naughty or Nice
 image: null
 ---
 

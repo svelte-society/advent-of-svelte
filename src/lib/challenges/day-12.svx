@@ -1,4 +1,7 @@
-**Tinsel Transformers**
+---
+title: Tinsel Transformers
+discordLink: null
+---
 
 Amidst the festive chaos of wrapping gifts and preparing for Santa's big journey, the elves have come up with a delightful diversion to lighten the mood at the North Pole: an Elf Name Generator. They're thrilled with the idea but need a bit of tech magic to make it happen.
 

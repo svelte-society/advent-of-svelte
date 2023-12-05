@@ -1,8 +1,7 @@
 ---
+title: Greetings and salutations
 image: santa-card
 ---
-
-**Greetings and salutations**
 
 In the bustling workshops of the North Pole, the elves have discovered a new joy – creating personalized Christmas cards for each other. However, with the big day fast approaching, they're finding it hard to keep up with the demand. Santa, always keen on fostering creativity, suggests a digital solution: a Drag-and-Drop Christmas Card Creator.
 

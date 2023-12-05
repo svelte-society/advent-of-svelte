@@ -1,5 +1,6 @@
 ---
 discordLink: https://discord.com/channels/457912077277855764/1180997671541035078
+title: Heart of Christmas
 image: heart
 ---
 

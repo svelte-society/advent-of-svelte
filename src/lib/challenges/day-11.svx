@@ -1,4 +1,7 @@
-**Wrap Wizard**
+---
+title: Wrap Wizard
+discordLink: null
+---
 
 In the heart of Santa's workshop, the gift wrapping department is bustling with activity. Elves wrap gifts at lightning speed, but with the immense number of presents, keeping track of efficiency is crucial.
 

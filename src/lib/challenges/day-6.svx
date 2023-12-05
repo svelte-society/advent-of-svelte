@@ -1,8 +1,7 @@
 ---
+title: Misteltoe Metronome
 discordLink: null
 ---
-
-**Misteltoe Metronome**
 
 Following the successful launch of the productivity dashboard for the Elves, Svelte Bot has proposed an exciting follow-up project to keep the North Pole workshop buzzing with energy and rhythm. This new challenge involves creating a Beats Per Minute (BPM) Counter, a tool that will enable the Elves to tap along to their favorite Christmas tunes while they work. This innovative counter will provide real-time feedback on the tempo of the music, with each tap by an Elf registering as a beat.
 

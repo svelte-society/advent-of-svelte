@@ -5,6 +5,7 @@ import { zonedTimeToUtc } from 'date-fns-tz'
 const NOW_UTC = zonedTimeToUtc(new Date(), 'Europe/London')
 
 export interface Challenge {
+	title: string
 	day: number
 	body: string
 	discordLink: string
@@ -16,6 +17,7 @@ export interface Challenge {
 interface ChallengeImport {
 	default: any
 	metadata?: {
+		title: string
 		discordLink: string | null
 		image: string | null
 	}
@@ -38,9 +40,14 @@ export const challenges = await Promise.all(
 			const day = Number(path.slice('./day-'.length, -4))
 			const locked = dev ? false : getDate(NOW_UTC) < day
 
+			if (!mod.metadata?.title?.length) {
+				throw new Error(`Missing title for day ${day}`)
+			}
+
 			return {
 				day,
 				locked,
+				title: locked ? 'Spoilers' : mod.metadata.title,
 				body: locked ? LOCKED_BODY : mod.default.render().html,
 				discordLink: mod.metadata?.discordLink || DEFAULT_DISCORD_LINK,
 				image: mod.metadata?.image || null,
@@ -77,6 +84,7 @@ if (!challenges.some((c) => c.locked)) {
 
 	challenges.push({
 		day,
+		title: 'Spoilers',
 		locked: true,
 		body: LOCKED_BODY,
 		discordLink: DEFAULT_DISCORD_LINK,

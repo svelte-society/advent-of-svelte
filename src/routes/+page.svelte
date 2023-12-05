@@ -101,13 +101,11 @@
 			<div
 				class="mb-6 font-light text-gray-300 md:text-lg bg-gray-900 relative">
 				<Accordion>
-					{#each data.challenges as challenge, index}
-						{@const title = `Day ${index + 1}`}
-
+					{#each data.challenges as challenge}
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab" disabled>
 								<h3 slot="header">
-									{title}
+									<span>Day {challenge.day}</span>
 
 									{#if mounted}
 										<Countdown
@@ -118,12 +116,15 @@
 						{:else}
 							<AccordionItem
 								open={new Date().getUTCDate() == challenge.day}>
-								<span slot="header">{title}</span>
+								<span slot="header">
+									Day {challenge.day} - {challenge.title}
+								</span>
+
 								{#if challenge.image}
 									<img
 										class="w-60 mx-auto mt-4 mb-8"
 										src={challenge.image}
-										alt="{title} image" />
+										alt="Day {challenge.day}s image" />
 								{/if}
 
 								<div

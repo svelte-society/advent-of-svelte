@@ -1,4 +1,7 @@
-**Santa's Final Countdown**
+---
+title: Santa's Final Countdown
+discordLink: null
+---
 
 As Christmas Eve rapidly approaches, the North Pole is abuzz with excitement and festive preparations. However, Santa has realized that amidst all the hustle and bustle, they've lost track of the exact countdown to the big night. The old, trusty mechanical countdown clock, a centerpiece in Santa's workshop for decades, has finally ticked its last tock. With everyone so busy making toys and preparing the sleigh, tracking every passing second until Christmas has become a challenge.
 

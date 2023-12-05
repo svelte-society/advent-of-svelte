@@ -1,5 +1,6 @@
 ---
 discordLink: https://discord.com/channels/457912077277855764/1181384548269953074
+title: Present Progress
 image: null
 ---
 

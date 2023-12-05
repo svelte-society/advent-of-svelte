@@ -1,5 +1,6 @@
 ---
 discordLink: null
+title: Merry Munch-o-Meter
 image: cookie
 ---
 
