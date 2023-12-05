@@ -6,7 +6,7 @@ export const GET = () => {
 
 	return json(
 		data.filter((task) => {
-			return new Date(task.date).getUTCMilliseconds() < now
+			return new Date(task.date).getTime() < now
 		}),
 	)
 }
