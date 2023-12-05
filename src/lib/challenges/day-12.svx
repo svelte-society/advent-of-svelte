@@ -5,3 +5,5 @@ Amidst the festive chaos of wrapping gifts and preparing for Santa's big journey
 Your mission is to create this generator! This tool will allow anyone to enter their "Human name" and receive a unique, elf-inspired name in return. It's a wonderful way for people everywhere to feel connected to the magic of the North Pole!
 
 To build this merry name transformer, you will need to create an algorithm that converts real names into elf names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.
+
+The Elves have prepared a list of suitable Elf names that you can download here: `https://advent.sveltesociety.dev/data/2023/day-twelve.json`
