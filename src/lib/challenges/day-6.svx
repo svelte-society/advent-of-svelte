@@ -4,9 +4,6 @@ discordLink: null
 
 **Misteltoe Metronome**
 
-Amidst the twinkling lights and joyful melodies at the North Pole, Santa's elves have discovered a festive way to stay in rhythm while they work – by tapping along to their favorite Christmas tunes. But how do they know if they're really keeping the beat? This is where you come in with today's challenge: the Christmas BPM (Beats Per Minute) Counter!
-Santa has asked for a the tool to feature an interface where users can tap the spacebar or a button on the screen in time with the music (or their own tapping). Each tap should represent a beat. The tool should calculate and display the BPM in real-time, updating with each tap. Don’t forget to include a reset button!
+Following the successful launch of the productivity dashboard for the Elves, Svelte Bot has proposed an exciting follow-up project to keep the North Pole workshop buzzing with energy and rhythm. This new challenge involves creating a Beats Per Minute (BPM) Counter, a tool that will enable the Elves to tap along to their favorite Christmas tunes while they work. This innovative counter will provide real-time feedback on the tempo of the music, with each tap by an Elf registering as a beat.
 
-**Bonus challenge**
-
-For those who want to go the extra mile, integrate a small library of Christmas songs, for example by embedding a YouTube video. Elves can select a song to play, and your BPM counter will help them find its rhythm.
+The BPM Counter should dynamically calculate and display the BPM, updating instantly with each tap to match the current beat of the song. A reset button is essential, allowing the Elves to start a fresh count for each new tune. For an extra touch you could consider including a selection of classic Christmas songs into the system, perhaps through embedding YouTube videos. This feature will allow the Elves to choose a song and use your BPM counter to stay in sync with its rhythm, adding a musical twist to their festive productivity!
