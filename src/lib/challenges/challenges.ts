@@ -79,7 +79,7 @@ export const challenges = await Promise.all(
 // Push a empty locked challenge if the next day hasn't been written yet
 // purely for UI purposes
 // todo handle this in UI instead of complex logic server side
-if (!challenges.some((c) => c.locked)) {
+if (!dev && !challenges.some((c) => c.locked)) {
 	const day = challenges.length + 1
 
 	challenges.push({
