@@ -1,19 +1,12 @@
-import data from './data.json'
 import { json } from '@sveltejs/kit'
-
-type TaskType = 'CREATED_TOY' | 'WRAPPED_PRESENT'
-
-interface Task {
-	elf: string
-	task: TaskType
-	minutesTaken: number
-}
+import data from './data.json'
 
 export const GET = () => {
-	const now = new Date()
+	const now = Date.now()
+
 	return json(
 		data.filter((task) => {
-			return new Date(task.date).getTime() < now.getTime()
+			return new Date(task.date).getUTCMilliseconds() < now
 		}),
 	)
 }
