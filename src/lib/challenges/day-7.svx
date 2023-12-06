@@ -4,20 +4,16 @@ discordLink: null
 image: morse
 ---
 
-Today at the North Pole, the elves face a curious situation. Santa recently discovered that one of his key reindeer trainers, located in the remote and snowy expanses of Iceland, communicates exclusively through Morse code. Why, you ask? Well, it turns out the trainer is an eccentric but brilliant character who believes Morse code keeps his reindeer alert and attentive (he insists they respond better to beeps and boops).
+Building on the success of the recent North Pole technological initiatives, Santa has encountered a unique communication challenge. He needs to connect with Sven, one of his top reindeer trainers based in Iceland. However, with the sleigh currently unavailable, Santa must resort to a more unconventional method of communication. Sven, known for his eccentric but effective training methods, swears by the use of Morse code, believing it keeps his reindeer more alert and attentive (he insists they respond better to beeps and boops).
 
-Your mission, should you choose to accept it, is to create a Morse Code Translator. The translator should have a text input and an output that shows the text converted into morse code. 
+Your mission, should you choose to accept it, is to create a Morse Code Translator. The translator should have a text input and an output section that displays the corresponding Morse code translation. Fortuantely, the all knowing Svelte bot has provided you with the international morse code alphabet above.
 
-Santa has provided you with the international morse code alphabet above.
-
-Each letter and number can be translated into dots (.) and dashes (-). Space bar can be represented as a slash (/). For example, “Hello World” can be written as:
+Each letter and number can be translated into a sequrence dots (.) and dashes (-), with the space key represented by a forward slash (/). For example, “Hello World” can be written as:
 
 ```
 .... . .-.. .-.. --- / .-- --- .-. .-.. -..
 ```
 
-**Bonus objective**
+A famour Elf engineer suggested that we could use the <a target="_blank" href="https://marcgg.com/blog/2016/11/01/javascript-audio/">AudioContext</a> API to generate audible bleeps and bloops to aid in the sending of the message. Svelte Bot found a recording of the message "Hello World" you could use as a reference:
 
-In order to send out the code, Santa needs your help to convert it into audible bleeps and bloops. Create a play button that converts the entered  Santa has provided you with an example message from Iceland that you can play here. The message reads out “Hello world”. A famous elf engineer suggest looking into <a target="_blank" href="https://marcgg.com/blog/2016/11/01/javascript-audio/">AudioContext</a> for the sound generation!
-
-Santa has provided you with an audio sample of how Hello World sounds like <a href="/files/hello-world.wav">here!</a>
+<audio controls src="/files/hello-world.wav"></audio>
