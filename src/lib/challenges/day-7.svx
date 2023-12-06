@@ -6,14 +6,14 @@ image: morse
 
 Building on the success of the recent North Pole technological initiatives, Santa has encountered a unique communication challenge. He needs to connect with Sven, one of his top reindeer trainers based in Iceland. However, with the sleigh currently unavailable, Santa must resort to a more unconventional method of communication. Sven, known for his eccentric but effective training methods, swears by the use of Morse code, believing it keeps his reindeer more alert and attentive (he insists they respond better to beeps and boops).
 
-Your mission, should you choose to accept it, is to create a Morse Code Translator. The translator should have a text input and an output section that displays the corresponding Morse code translation. Fortuantely, the all knowing Svelte bot has provided you with the international morse code alphabet above.
+Your mission, should you choose to accept it, is to create a Morse Code Translator. The translator should have a text input and an output section that displays the corresponding Morse code translation. Fortunately, the all knowing Svelte bot has provided you with the international morse code alphabet above.
 
-Each letter and number can be translated into a sequrence dots (.) and dashes (-), with the space key represented by a forward slash (/). For example, “Hello World” can be written as:
+Each letter and number can be translated into a sequence of dots (.) and dashes (-), with the space key represented by a forward slash (/). For example, “Hello World” can be written as:
 
 ```
 .... . .-.. .-.. --- / .-- --- .-. .-.. -..
 ```
 
-A famour Elf engineer suggested that we could use the <a target="_blank" href="https://marcgg.com/blog/2016/11/01/javascript-audio/">AudioContext</a> API to generate audible bleeps and bloops to aid in the sending of the message. Svelte Bot found a recording of the message "Hello World" you could use as a reference:
+A famous Elf engineer suggested that we could use the <a target="_blank" href="https://marcgg.com/blog/2016/11/01/javascript-audio/">AudioContext</a> API to generate audible bleeps and bloops to aid in the sending of the message. Svelte Bot found a recording of the message "Hello World" you could use as a reference:
 
 <audio controls src="/files/hello-world.wav"></audio>
