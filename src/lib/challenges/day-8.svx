@@ -13,4 +13,4 @@ The game involves flipping over two cards at a time, with the aim of finding mat
 
 Integrate a timer to track how quickly players can match all pairs, adding a sense of urgency and excitement to the game.
 
-<a href="/files/santa-deck.zip">Download the deck here!</a>
+<a href="/data/2023/santa-deck.zip">Download the deck here!</a>

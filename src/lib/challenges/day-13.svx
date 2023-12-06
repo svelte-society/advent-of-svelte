@@ -13,4 +13,4 @@ The elves have drawn some decorations you can use to add to your Christmas Card 
 
 Allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
 
-<a href="/files/santa-card.zip">Download the decorations here!</a>
+<a href="/data/2023/santa-card.zip">Download the decorations here!</a>
