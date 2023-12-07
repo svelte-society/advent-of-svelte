@@ -4,13 +4,10 @@ discordLink: null
 image: santa-deck
 ---
 
-On a brisk, starry night at the North Pole, Santa stumbled upon a peculiar and enchanting discovery. Hidden beneath a pile of old maps in his study, he found a mysterious deck of playing cards. But this was no ordinary deck – it consisted of exactly 24 cards, each with a duplicate, adorned with intricate and whimsical designs unknown to Santa.
+Under the shimmering aurora of the North Pole night, Santa made a captivating discovery that sparked a twinkle in his eye. Tucked away beneath a collection of ancient maps in his cozy study, he unearthed a set of playing cards, each pair graced with enchanting intricate designs. This Deck of Doubles, consisting of 24 unique pairs, was unlike anything Santa had ever seen.
 
 Intrigued by this mysterious find, Santa, known for his love of puzzles and games, saw an opportunity for a delightful pre-Christmas activity. He decided to turn this Deck of Doubles into a memory game, a fun way to keep himself and Mrs. Claus sharp during the bustling holiday season.
 
-Your challenge is to bring Santa's idea to life by creating a digital memory game based on this magical deck.
-The game involves flipping over two cards at a time, with the aim of finding matching pairs. The challenge lies in remembering where each card and its twin are located.
+Your challenge is to bring Santa's idea to life by creating a digital memory game based on this magical deck. The game involves flipping over two cards at a time, with the aim of finding matching pairs. He'd like the game to include a feature for keeping track of the high score and a timer to measure how quickly players can match all pairs.
 
-Integrate a timer to track how quickly players can match all pairs, adding a sense of urgency and excitement to the game.
-
-<a href="/data/2023/santa-deck.zip">Download the deck here!</a>
+You can find the pictures for the cards by visiting `https://advent.sveltesociety.dev/data/2023/day-eight/NUMBER.png` where `NUMBER` is a number from 1 to 24 inclusive.
