@@ -1,6 +1,6 @@
 ---
 title: Morse Mischief
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1182160556757614672
 image: morse
 ---
 
