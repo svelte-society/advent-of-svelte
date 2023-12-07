@@ -1,6 +1,6 @@
 ---
 title: Santa's Mysterious Deck of Doubles
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1182468694337650718
 image: santa-deck
 ---
 
