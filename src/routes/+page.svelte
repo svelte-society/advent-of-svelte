@@ -18,7 +18,7 @@
 		mounted = true
 
 		cron = new Cron('0 0 * * * *', async () => {
-			console.log(new Date().toLocaleTimeString(), 'Reloading color')
+			console.log(new Date().toLocaleTimeString(), 'Reloading challenges')
 			try {
 				await invalidateAll()
 			} catch (e) {
