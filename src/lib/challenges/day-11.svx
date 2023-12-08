@@ -1,12 +1,19 @@
 ---
 title: Wrap Wizard
 discordLink: null
+image: present
 ---
 
 In the heart of Santa's workshop, the gift wrapping department is bustling with activity. Elves wrap gifts at lightning speed, but with the immense number of presents, keeping track of efficiency is crucial.
 
-Today's challenge for you is to create a **Gift Wrapping Efficiency Tracker**. This tool will assist the elves in monitoring their gift wrapping speed. Your task is to build an application where elves can start a timer and mark every time the complete wrapping a gift. The timer should then show the average GPT (Gifts Per Minute™️) the elf has managed to reach. Secret has it that there's a global elf leaderboard somewhere deep in santas workshop!
+Today's challenge for you is to create a **Gift Wrapping Efficiency Tracker**. This tool will assist the elves in monitoring their gift wrapping speed. Your task is to build an application where elves can start a timer and mark every time the complete wrapping a gift. The timer should then show the average GPT (Gifts Per Minute™️) the elf has managed to reach. 
+
 
 The tracker should be able to calculate the average wrapping time per gift, and display this data in a user-friendly manner. 
 
-Remember, the more efficient the elves are at wrapping gifts, the more children will receive presents on Christmas morning!
+
+**Bonus challenge**
+
+Secret has it that there's a global elf leaderboard of somewhere deep in santas workshop, that shows how fast an elf can wrap 25 gifts!
+
+Remember, the more efficient the elves are at wrapping gifts, the more children will receive gifts on Christmas morning!

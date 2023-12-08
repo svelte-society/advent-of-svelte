@@ -19,11 +19,15 @@
 
 		<p class="text-sm text-gray-400">
 			Santa Hat illustration, Santa sleigh illustration, Cookie
-			Illustration, Heart illustration by
+			Illustration, Heart illustration, Santa face illustration, Present
+			illustration, ID illustration by
 			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
-				Icons 8
+				Icons 8.
 			</a>
-			from
+			Clock illustration by
+			<a href="https://icons8.com/illustrations/author/lZpGtGw5182N"
+				>Elisabet Guba</a
+			>. All above illustrations are from
 			<a href="https://icons8.com/illustrations">Ouch!</a>
 		</p>
 	</div>
