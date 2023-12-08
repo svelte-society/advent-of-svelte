@@ -1,7 +1,11 @@
 import { challenges } from '$lib/challenges/challenges'
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ setHeaders }) => {
+	setHeaders({
+		'cache-control': 'no-cache',
+	})
+
 	return {
 		challenges,
 	}
