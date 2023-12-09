@@ -16,4 +16,4 @@ Each letter and number can be translated into a sequence of dots (.) and dashes 
 
 A famous Elf engineer suggested that we could use the <a target="_blank" href="https://marcgg.com/blog/2016/11/01/javascript-audio/">AudioContext</a> API to generate audible bleeps and bloops to aid in the sending of the message. Svelte Bot found a recording of the message "Hello World" you could use as a reference:
 
-<audio controls src="/data/2023/hello-world.wav"></audio>
+<audio controls src="/data/2023/day-seven.wav"></audio>
