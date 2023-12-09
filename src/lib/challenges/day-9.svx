@@ -1,6 +1,6 @@
 ---
 title: Santa's Final Countdown
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1158027748699279430/1182866567701213296
 image: countdown
 ---
 
