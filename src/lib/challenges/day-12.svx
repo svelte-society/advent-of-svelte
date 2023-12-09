@@ -4,12 +4,10 @@ discordLink: null
 image: id
 ---
 
-Amidst the festive chaos of wrapping gifts and preparing for Santa's big journey, the elves have come up with a delightful diversion to lighten the mood at the North Pole: an Elf Name Generator for all the children and adults around the world. They're thrilled with the idea but need a bit of tech magic to make it happen.
+In the midst of their bustling gift-making, the elves have come up with a delightful idea for you to tinker with: a Elf Name Generator! They're thrilled with their idea but need a bit of tech magic to make it happen, which is where you come in.
 
-Your mission is to create this generator! This tool will allow anyone to enter their "Human name" and receive a unique, elf-inspired name in return. It's a wonderful way for people everywhere to feel connected to the magic of the North Pole!
+This tool will allow anyone to enter their "Human name" and receive a unique, elf-inspired name in return. It's a wonderful way for people everywhere to feel connected to the magic of the North Pole!
 
-For example, if your human name is "Rich Harris", your elf name could be something like "Peppermint Merryweather"!
+For example, if your human name is "Rich Harris", your elf name could be something like "Peppermint Merryweather". You'll need to create an algorithm to match names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.
 
-To build this merry name transformer, you will need to create an algorithm that converts real names into elf names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.
-
-The Elves have prepared a list of suitable Elf names that you can download here for inspiration: `https://advent.sveltesociety.dev/data/2023/day-twelve.json`
+The Elves have collaborated with Svelte Bot to prepare a list of suitable Elf names that you can fetch here: `https://advent.sveltesociety.dev/data/2023/day-twelve.json`
