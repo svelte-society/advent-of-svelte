@@ -5,32 +5,15 @@
 	import RightArrow from '$lib/icons/RightArrow.svelte'
 	import santaLogo from '$lib/images/santa-svelte.png'
 	import SvelteLab from '$lib/icons/SvelteLab.svelte'
-	import { onDestroy, onMount } from 'svelte'
-	import { Cron } from 'croner'
-	import { invalidateAll } from '$app/navigation'
+	import { invalidate } from '$app/navigation'
+	import { onMount } from 'svelte'
 
 	export let data
-	let cron: Cron | undefined
 
 	let mounted = false
 
 	onMount(() => {
 		mounted = true
-
-		cron = new Cron('0 0 * * * *', async () => {
-			console.log(new Date().toLocaleTimeString(), 'Reloading challenges')
-			try {
-				await invalidateAll()
-			} catch (e) {
-				console.error(e)
-			}
-		})
-	})
-
-	onDestroy(() => {
-		if (cron && cron?.isRunning()) {
-			cron.stop()
-		}
 	})
 </script>
 
@@ -127,6 +110,8 @@
 
 									{#if mounted}
 										<Countdown
+											on:done={() =>
+												invalidate('challenges')}
 											date={challenge.unlockDate} />
 									{/if}
 								</h3>

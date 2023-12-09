@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { formatDuration, intervalToDuration } from 'date-fns'
-	import { onMount } from 'svelte'
+	import { formatDuration, intervalToDuration, isPast } from 'date-fns'
+	import { onMount, createEventDispatcher } from 'svelte'
+
+	const dispatcher = createEventDispatcher<{ done: {} }>()
 
 	export let date: Date
 
@@ -12,7 +14,15 @@
 	})
 
 	onMount(() => {
-		const interval = setInterval(() => (now = Date.now()), 500)
+		const interval = setInterval(() => {
+			now = Date.now()
+
+			if (isPast(date)) {
+				dispatcher('done', {})
+				clearInterval(interval)
+			}
+		}, 500)
+
 		return () => clearInterval(interval)
 	})
 </script>
