@@ -11,4 +11,4 @@ Design the pop-up to feature a jolly image of Santa Claus, along with a warm, fe
 
 **Bonus Challenge**
 
-Transform this Holiday Greeting Pop-Up into an NPM package. This will allow web developers to easily integrate the pop-up into their projects by installing your package. 
+Transform this Holiday Greeting Pop-Up into an installable package and [publish it on GitHub](https://www.pluralsight.com/guides/install-npm-packages-from-gitgithub) or NPM. This will allow web developers to easily integrate the pop-up into their projects by installing your package. 
