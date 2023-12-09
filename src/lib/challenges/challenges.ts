@@ -94,3 +94,4 @@ if (!dev && !challenges.some((c) => c.locked)) {
 		),
 	})
 }
+
