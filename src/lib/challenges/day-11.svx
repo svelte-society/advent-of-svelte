@@ -11,3 +11,12 @@ This tool will allow anyone to enter their "Human name" and receive a unique, el
 For example, if your human name is "Rich Harris", your elf name could be something like "Peppermint Merryweather". You'll need to create an algorithm to match names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.
 
 The Elves have collaborated with Svelte Bot to prepare a list of suitable Elf names that you can fetch here: `https://advent.sveltesociety.dev/data/2023/day-eleven.json`
+
+The TypeScript type for this data is:
+
+```ts
+interface NamesList {
+    firstNames: string[];
+    lastNames: string[];
+}
+```
