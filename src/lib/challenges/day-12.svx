@@ -11,4 +11,4 @@ The elves have drawn some decorations for use in your Christmas card creator. Fe
 
 If you're up to the task, you could also allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
 
-<a href="/data/2023/santa-card.zip">Download the decorations here!</a>
+You can find the decorations by visiting `https://advent.sveltesociety.dev/data/2023/day-twelve/NUMBER.png` where `NUMBER` is a number from 1 to 11 inclusive.
