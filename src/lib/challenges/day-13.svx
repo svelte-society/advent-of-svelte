@@ -1,14 +1,19 @@
 ---
-title: Greetings and salutations
-image: santa-card
+title: _ # Wrap Wizard
+discordLink: null
+image: present
 ---
 
-It's time to start sending out Christmas cards to ensure they arrive in time for Christmas Day, but with the added rush at the North Pole no one has had time to design a card! Santa has requested the creation of a digital Christmas card creator.
+<!-- In the heart of Santa's workshop, the gift wrapping department is bustling with activity. Elves wrap gifts at lightning speed, but with the immense number of presents, keeping track of efficiency is crucial.
 
-Your mission is to build an interactive application that allows users to design their own Christmas cards with ease. Embrace the festive spirit and Svelte's capabilities to create a tool where elements can be effortlessly dragged, dropped, and arranged into beautiful holiday greetings.
+Today's challenge for you is to create a **Gift Wrapping Efficiency Tracker**. This tool will assist the elves in monitoring their gift wrapping speed. Your task is to build an application where elves can start a timer and mark every time the complete wrapping a gift. The timer should then show the average GPT (Gifts Per Minute™️) the elf has managed to reach. 
 
-The elves have drawn some decorations for use in your Christmas card creator. Feel free to add more drawings if you’d like! Implement an intuitive drag-and-drop interface where users can select, move, and place elements anywhere on the card. 
 
-If you're up to the task, you could also allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
+The tracker should be able to calculate the average wrapping time per gift, and display this data in a user-friendly manner. 
 
-<a href="/data/2023/santa-card.zip">Download the decorations here!</a>
+
+**Bonus challenge**
+
+Secret has it that there's a global elf leaderboard of somewhere deep in santas workshop, that shows how fast an elf can wrap 25 gifts!
+
+Remember, the more efficient the elves are at wrapping gifts, the more children will receive gifts on Christmas morning! -->

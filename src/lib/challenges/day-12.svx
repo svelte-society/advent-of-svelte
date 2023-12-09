@@ -1,13 +1,14 @@
 ---
-title: Tinsel Transformers
-discordLink: null
-image: id
+title: Greetings and salutations
+image: santa-card
 ---
 
-In the midst of their bustling gift-making, the elves have come up with a delightful idea for you to tinker with: a Elf Name Generator! They're thrilled with their idea but need a bit of tech magic to make it happen, which is where you come in.
+It's time to start sending out Christmas cards to ensure they arrive in time for Christmas Day, but with the added rush at the North Pole no one has had time to design a card! Santa has requested the creation of a digital Christmas card creator.
 
-This tool will allow anyone to enter their "Human name" and receive a unique, elf-inspired name in return. It's a wonderful way for people everywhere to feel connected to the magic of the North Pole!
+Your mission is to build an interactive application that allows users to design their own Christmas cards with ease. Embrace the festive spirit and Svelte's capabilities to create a tool where elements can be effortlessly dragged, dropped, and arranged into beautiful holiday greetings.
 
-For example, if your human name is "Rich Harris", your elf name could be something like "Peppermint Merryweather". You'll need to create an algorithm to match names. You could base this on the letters in the user’s name, their length, or even add a touch of randomness for extra fun. Once the user inputs their name and the generator works its magic, display their new elf name in a festive font.
+The elves have drawn some decorations for use in your Christmas card creator. Feel free to add more drawings if you’d like! Implement an intuitive drag-and-drop interface where users can select, move, and place elements anywhere on the card. 
 
-The Elves have collaborated with Svelte Bot to prepare a list of suitable Elf names that you can fetch here: `https://advent.sveltesociety.dev/data/2023/day-twelve.json`
+If you're up to the task, you could also allow users to add personalized messages with different fonts, sizes, and colors. Include festive font styles to enhance the holiday feel. Google Fonts has some fonts that suit santas taste!
+
+<a href="/data/2023/santa-card.zip">Download the decorations here!</a>
