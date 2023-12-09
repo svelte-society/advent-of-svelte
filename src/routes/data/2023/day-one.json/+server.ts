@@ -10,7 +10,7 @@ interface Person {
 
 export const GET = ({ setHeaders }) => {
 	setHeaders({
-		'cache-control': 'public, max-age=31536000, immutable',
+		'cache-control': 'public, max-age=31536000',
 	})
 
 	faker.seed(1)
