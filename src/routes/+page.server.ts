@@ -1,4 +1,4 @@
-import { challenges } from '$lib/challenges/challenges'
+import { getChallenges } from '$lib/challenges/challenges'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ setHeaders, depends }) => {
@@ -9,6 +9,6 @@ export const load: PageServerLoad = async ({ setHeaders, depends }) => {
 	})
 
 	return {
-		challenges,
+		challenges: await getChallenges(),
 	}
 }
