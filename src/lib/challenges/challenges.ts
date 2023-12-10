@@ -1,5 +1,5 @@
 import { getDate, isAfter, addDays } from 'date-fns'
-import { zonedTimeToUtc } from 'date-fns-tz'
+import { getNowUTC } from '$lib/helpers/date'
 import { dev } from '$app/environment'
 
 export interface Challenge {
@@ -32,14 +32,14 @@ const challengeFiles = import.meta.glob<ChallengeImport>('./day-*.svx', {
 })
 
 export async function getChallenges() {
-	const NOW_UTC = zonedTimeToUtc(new Date(), 'Europe/London')
+	const now = getNowUTC()
 
 	const challenges = await Promise.all(
 		Object.entries(challengeFiles)
 			// Parse the files to something useful
 			.map<Challenge>(([path, mod]) => {
 				const day = Number(path.slice('./day-'.length, -4))
-				const locked = dev ? false : getDate(NOW_UTC) < day
+				const locked = dev ? false : getDate(now) < day
 
 				if (!mod.metadata?.title?.length) {
 					throw new Error(`Missing title for day ${day}`)
@@ -62,7 +62,7 @@ export async function getChallenges() {
 			.sort((a, b) => a.day - b.day)
 			// Only show the available challenges, and the next day (locked)
 			.filter((challenge) =>
-				dev ? true : isAfter(addDays(NOW_UTC, 1), challenge.unlockDate),
+				dev ? true : isAfter(addDays(now, 1), challenge.unlockDate),
 			)
 			.map(async (challenge) => {
 				let image: string | null = null
