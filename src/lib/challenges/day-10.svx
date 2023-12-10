@@ -1,6 +1,6 @@
 ---
 title: Pop-up! Spreading the holiday cheer
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1183202428888297633
 image: santa-popup
 ---
 
