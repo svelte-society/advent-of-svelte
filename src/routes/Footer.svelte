@@ -24,7 +24,7 @@
 			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
 				Icons 8.
 			</a>
-			Clock illustration by
+			Clock, Social Media illustration by
 			<a href="https://icons8.com/illustrations/author/lZpGtGw5182N"
 				>Elisabet Guba</a
 			>. All above illustrations are from

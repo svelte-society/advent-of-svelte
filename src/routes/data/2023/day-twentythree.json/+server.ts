@@ -4,20 +4,20 @@ import { differenceInMilliseconds } from 'date-fns'
 import { utcToZonedTime } from 'date-fns-tz'
 
 interface ElfPost {
-	id: string // Unique identifier for each post
-	author: string // Name of the elf who authored the post
-	timestamp: string // ISO 8601 format date-time when the post was "created"
-	content: string // Text content of the post
-	likes: number // Number of likes the post has received
-	comments: Comment[] // Array of comments on the post
+	id: string
+	author: string
+	timestamp: string
+	content: string
+	likes: number
+	comments: Comment[]
 }
 
 interface Comment {
-	id: string // Unique identifier for each comment
-	author: string // Name of the elf who authored the comment
-	timestamp: string // ISO 8601 format date-time when the comment was "created"
-	content: string // Text content of the comment
-	likes: number // Number of likes the comment has received
+	id: string
+	author: string
+	timestamp: string
+	content: string
+	likes: number
 }
 
 function getPostableData(data: ElfPost[]) {
@@ -55,6 +55,10 @@ function getPostableData(data: ElfPost[]) {
 }
 
 export const GET = ({ setHeaders }) => {
+	setHeaders({
+		'cache-control': 'no-cache',
+	})
+
 	const posts: ElfPost[] = [
 		{
 			id: '35846d4c-1b0f-4ef9-a685-063dc1ddcebd',
