@@ -1,0 +1,19 @@
+---
+title: Snowfall Symphony
+discordLink: null
+image: snowflake
+---
+
+In the heart of the North Pole, there lies a unique magic in the way snowflakes gracefully descend, blanketing the world in a serene white. Today's challenge invites you to capture this ethereal beauty through the lens of Svelte, creating your very own Enchanting Snowfall Symphony.
+
+**Your Mission**
+
+Embark on a journey to recreate the mesmerizing dance of snowflakes. Using Svelte's capabilities, you'll craft an interactive snowfall experience that not only charms the eye but also brings the joyous spirit of the holidays to all who see it.
+
+**Objectives**  
+
+Design a captivating snowfall animation. Let each snowflake in your symphony be a testament to the tranquility and beauty of winter.
+
+**Bonus**
+
+Incorporate a 'Wind Speed Slider' into your simulator. This tool allows users to adjust the wind speed, directly influencing the direction and flow of the snowflakes, mirroring the capricious winds of the North Pole. 🌬️❄️
