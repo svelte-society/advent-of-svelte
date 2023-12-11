@@ -1,6 +1,6 @@
 ---
 title: Tinsel Transformers
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1183570033687924767
 image: id
 ---
 
