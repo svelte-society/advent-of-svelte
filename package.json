@@ -19,6 +19,7 @@
 		"autoprefixer": "^10.4.16",
 		"date-fns": "^2.30.0",
 		"date-fns-tz": "^2.0.0",
+		"fs-extra": "^11.2.0",
 		"markdown-pdf": "^11.0.0",
 		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.31",

@@ -10,9 +10,16 @@ const __dirname = dirname(__filename)
 const dirPath = path.join(__dirname, './src/lib/challenges')
 const outputPath = 'merged.pdf'
 
+function naturalSort(a, b) {
+	return a.localeCompare(b, undefined, {
+		numeric: true,
+		sensitivity: 'base',
+	})
+}
+
 async function mergeMarkdownToPDF() {
 	try {
-		const files = await fs.readdir(dirPath)
+		const files = (await fs.readdir(dirPath)).sort(naturalSort)
 		let markdownContent = ''
 
 		for (const file of files) {
@@ -21,7 +28,7 @@ async function mergeMarkdownToPDF() {
 					path.join(dirPath, file),
 					'utf-8',
 				)
-				markdownContent += content + '\n\n'
+				markdownContent += `# ${file}\n\n${content}\n\n`
 			}
 		}
 
