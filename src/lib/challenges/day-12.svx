@@ -1,5 +1,6 @@
 ---
 title: Greetings and salutations
+discordLink: https://discord.com/channels/457912077277855764/1183943510672547860
 image: santa-card
 ---
 
