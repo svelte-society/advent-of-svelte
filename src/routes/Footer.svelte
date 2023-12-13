@@ -20,7 +20,8 @@
 		<p class="text-sm text-gray-400">
 			Santa Hat illustration, Santa sleigh illustration, Cookie
 			Illustration, Heart illustration, Santa face illustration, Present
-			illustration, ID illustration, Snowflake illustration by
+			illustration, ID illustration, Snowflake illustration, Snow Globe
+			illustration by
 			<a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
 				Icons 8.
 			</a>

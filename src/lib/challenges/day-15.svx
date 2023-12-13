@@ -1,9 +1,9 @@
 ---
 discordLink: null
-title: TBD
-# image: snowglobe
+image: snowglobe
+title: Super Snowfall
 ---
 
-As the elves huddled around the glowing workshop table, the idea struck them like a sparkling snowflake: why not take the Snowfall component a step further and create a magical snow globe customizer? The prospect of crafting their own snow globes with customized colors and unique snowfall patterns sent shivers of excitement through the elf workshop.
+As the elves huddled around the glowing workshop table, the idea struck them like a sparkling snowflake: why not take the `Snowfall` component we've made a step further and create a customisable Snow Globe!? The idea of being able to quickly design unique Snow Globes to send out to their friends and family filled them with excitement.
 
-With the moonlight casting a silvery glow, the elves set to work, enchanted by the idea of letting users change not only the quantity and speed of snowflakes but also the hues of the snow and the background. They envisioned a whimsical interface where you could pick from a palette of colors, adjust the snowfall parameters with a simple slider, and even upload your own background image to make the snow globe truly personal. The snowy adventure was just beginning, and with Svelte and CSS as their magical tools, they were ready to create a snow globe customizer that would capture the enchantment of winter for everyone to enjoy.
+They've asked you to integrate your wonderful `Snowfall` component, and its various customisable options into a brilliant Snow Globe customiser. They would also like some additional ways to configure it which is up to your imagination. Svelte Bot has suggested you could add options like changing the colour, changing the decorations, and even adding your own background image.
