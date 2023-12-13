@@ -1,0 +1,8 @@
+---
+image: snowflake
+title: Snowfall
+---
+
+In a captivating late-night discussion under the stunning northern lights, Santa and Svelte Bot found themselves engaged in a debate: Can the beauty of snow be captured digitally? To settle this debate, Svelte Bot has tasked you with creating a snowfall simulator.
+
+Your task involves creating a versatile `Snowfall` component. It should allow customisation such as adjusting the quantity of snowflakes, and their speed. You may use any technology you prefer, though Svelte Bot recommends Svelte, CSS, and SVGs.
