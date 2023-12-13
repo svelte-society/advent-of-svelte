@@ -3,11 +3,11 @@ title: Jingle Bell Balancer 2.0
 discordLink: https://discord.com/channels/457912077277855764/1184289563733131345
 ---
 
-Santa is very happy with the Sleigh Load Balancer (SLB™) - it revolutionized the way presents are loaded onto his sleigh, ensuring a smooth and efficient journey. However, as the holiday season approaches and the number of children around the world continues to grow, a new need has emerged. Santa now requires an automated solution to plan his runs. With millions of children eagerly awaiting their gifts, manual planning simply won't cut it anymore. It's time to take the SLB™ to the next level by automating the entire sleigh loading and route planning process.
+Santa is very happy with the **Sleigh Load Balancer (SLB™)** - it revolutionised the way presents are loaded onto his sleigh, ensuring a smooth and efficient journey. However, as the holiday season approaches and the number of children around the world continues to grow, a new need has emerged. Santa now requires an automated solution to plan his deliveries. With millions of children eagerly awaiting their gifts, manual planning simply won't cut it anymore. It's time to take the SLB™ to the next level by automating the entire sleigh loading and route planning process.
 
-The new load balancer needs to be able to group the list of children into deliveries automatically and present each run with the optimal selection of presents. Additionally, Santa asked for general statistics to be added such as the average weight of the sled and the number of runs!
+The new load balancer needs to be able to group the list of children into deliveries automatically and present each run with the optimal selection of presents. Svelte Bot has suggested you add general statistics such as the average weight of the sled, and the number of deliveries!
 
-Santa has tasked the SLB to handled 10.000 children at a time. You can fetch the test data of the first 10.000 children by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-thirteen.json`.
+Santa has tasked the SLB to handle `10,000` children at a time. You can fetch the test data of the first `10,000` children by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-thirteen.json`.
 
 The TypeScript type for this data is:
 
