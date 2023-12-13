@@ -7,4 +7,15 @@ Santa is very happy with the Sleigh Load Balancer (SLB™) - it revolutionized t
 
 The new load balancer needs to be able to group the list of children into deliveries automatically and present each run with the optimal selection of presents. Additionally, Santa asked for general statistics to be added such as the average weight of the sled and the number of runs!
 
-Santa has tasked the SLB to handled 10.000 children at a time. You can fetch the test data of the first 10.000 children by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-thirteen.json`
+Santa has tasked the SLB to handled 10.000 children at a time. You can fetch the test data of the first 10.000 children by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-thirteen.json`.
+
+The TypeScript type for this data is:
+
+```ts
+interface Present {
+    name: string;
+    weight: number;
+}
+
+type ResponseData = Present[]
+```
