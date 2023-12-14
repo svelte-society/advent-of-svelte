@@ -10,6 +10,11 @@
 
 	export let data
 
+	async function refresh() {
+		await new Promise((resolve) => setTimeout(resolve, 1000))
+		await invalidate('challenges')
+	}
+
 	let mounted = false
 
 	onMount(() => {
@@ -110,8 +115,7 @@
 
 									{#if mounted}
 										<Countdown
-											on:done={() =>
-												invalidate('challenges')}
+											on:done={refresh}
 											date={challenge.unlockDate} />
 									{/if}
 								</h3>
