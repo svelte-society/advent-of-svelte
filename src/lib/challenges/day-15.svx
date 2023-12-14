@@ -1,7 +1,7 @@
 ---
 discordLink: null
 image: snowglobe
-title: Super Snowfall
+title: Sparkling Snowglobes
 ---
 
 As the elves huddled around the glowing workshop table, the idea struck them like a sparkling snowflake: why not take the `Snowfall` component we've made a step further and create a customisable Snow Globe!? The idea of being able to quickly design unique Snow Globes to send out to their friends and family filled them with excitement.

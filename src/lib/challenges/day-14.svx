@@ -1,6 +1,6 @@
 ---
 image: snowflake
-title: Snowfall
+title: Snowfall Symphony
 discordLink: https://discord.com/channels/457912077277855764/1184646079057248297
 ---
 
