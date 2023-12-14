@@ -1,6 +1,7 @@
 ---
 image: snowflake
 title: Snowfall
+discordLink: https://discord.com/channels/457912077277855764/1184646079057248297
 ---
 
 In a captivating late-night discussion under the stunning northern lights, Santa and Svelte Bot found themselves engaged in a debate: Can the beauty of snow be captured digitally? To settle this debate, Svelte Bot has tasked you with creating a snowfall simulator.
