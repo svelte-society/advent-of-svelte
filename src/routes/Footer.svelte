@@ -67,10 +67,10 @@
 </footer>
 
 <dialog
-	class="border border-gray-700 text-gray-400 bg-gray-900 py-6 px-12 backdrop:bg-black backdrop:bg-opacity-60"
+	class="border border-gray-700 text-gray-400 bg-gray-900 py-6 px-10 backdrop:bg-black backdrop:bg-opacity-60"
 	bind:this={dialog}>
-	<div class="flex items-center justify-between">
-		<h1 class="text-3xl font-extrabold text-white mb-3">Credits</h1>
+	<div class="flex items-center justify-between mb-3 sm:min-w-[300px]">
+		<h1 class="text-3xl font-extrabold text-white">Credits</h1>
 
 		<button class="button simple" on:click={() => dialog.close()}>
 			<IconClose />
