@@ -1,0 +1,20 @@
+---
+title: Lessons from Amazon™️
+discordLink: https://discord.com/channels/457912077277855764/1184289563733131345
+---
+
+Santa is taking notes from the best. While Mrs Calus was watching TV, Santa overheard about Amazon's new warehouse robots and got inspired. He decided to move all the gifts already made into a giant hangar (it's actually 20x20, but don't tell Santa; he will be sad about it) and tasked you with teaching Svelte Bot how to fetch every gift.
+
+Your job? Build a visual representation of the 20x20 hangar with all the gifts stacked on top of each other and a system for inputting commands into Svelte Bot on how to move from his starting point to the actual gift. You can fetch the list of gifts from https://advent.sveltesociety.dev/data/2023/day-sixteen.json.
+
+The TypeScript type for this data is:
+
+```ts
+interface Present {
+	name: string
+	x: number // 1-20
+	y: number // 1-20
+}
+
+type ResponseData = Present[]
+```
