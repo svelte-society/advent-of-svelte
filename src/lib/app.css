@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 a {
-    @apply hover:opacity-60 transition-opacity text-svelte rounded-sm focus:outline focus:outline-2 focus:outline-svelte focus:outline-offset-2
+    @apply hover:opacity-80 transition-opacity text-svelte
 }
 
 .button.secondary {
     @apply relative bg-gray-900 inline-flex justify-center items-center gap-2 py-3 px-5 text-base font-medium text-center rounded-lg border focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800
 }
 
-.button:not(.secondary):not(.simple) {
+.button:not(.secondary) {
     @apply inline-flex justify-center items-center gap-2 py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-svelte focus:outline focus:outline-2 focus:outline-svelte focus:outline-offset-2
-}
-
-/* Use when you just want the focus/hover styles */
-.button.simple {
-    @apply relative inline-flex justify-center items-center gap-2 rounded-sm hover:opacity-60 transition-opacity focus:outline focus:outline-2 focus:outline-svelte focus:outline-offset-2
 }
