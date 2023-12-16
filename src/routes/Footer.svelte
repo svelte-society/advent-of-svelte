@@ -25,6 +25,7 @@
 				'ID',
 				'Snowflake',
 				'Snow Globe',
+				'Piggy Bank',
 			],
 		},
 		{
