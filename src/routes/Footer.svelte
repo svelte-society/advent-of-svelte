@@ -26,6 +26,7 @@
 				'Snowflake',
 				'Snow Globe',
 				'Question Mark',
+				'Fairy Lights',
 			],
 		},
 		{
