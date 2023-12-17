@@ -1,0 +1,17 @@
+---
+title: Jingle Jokes
+image: null
+discordLink: null
+---
+
+Late last night, Svelte Bot was exploring various Christmas traditions. During his research, he stumbled upon something that truly captivated his interest: Christmas Cracker Jokes. These jokes are a staple at many homes during Christmas, and he is keen to bring it early to the North Pole to keep spirits high.
+
+He envisions a special button, one that, when pressed, would randomly select and display a joke from a collection of classic Christmas Cracker Jokes. As an added bonus, you could integrate the [Web SpeechSynthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis). This feature would enable the jokes to be read aloud, enhancing amusement and accessibility for everyone in the workshop.
+
+You can fetch this data by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-twenty.json`.
+
+The data as a TypeScript type is:
+
+```ts
+type ResponseData = string[];
+```

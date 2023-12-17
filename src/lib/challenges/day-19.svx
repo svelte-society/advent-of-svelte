@@ -1,0 +1,9 @@
+---
+title: Polar Lights
+image: fairy-lights
+discordLink: null
+---
+
+Santa, always keen on brightening up the North Pole with new and exciting ideas, has come up with a plan to introduce Zigbee-controlled Christmas lights (he likes to own his devices). He envisions these lights to be not only spectacular in appearance but also highly customisable. To bring this vision to life, Santa needs a creative mind to design a prototype, and that's where you come in. Your challenge is to create a Christmas light simulator, a tool that will allow Santa to experiment with different designs and settings before the elves start building the actual lights.
+
+Your simulator should be user-friendly and intuitive, enabling Santa to play around with various parameters. Consider including options to change the colours of the lights, their blinking patterns, intensity, and perhaps even the sequence in which they light up. Your simulator will be an essential tool in Santa's workshop, helping him to visualise and finalise the designs for these new, magical Christmas lights.
