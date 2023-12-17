@@ -1,0 +1,9 @@
+---
+image: piggy-bank
+discordLink: https://discord.com/channels/457912077277855764/1185729228218581114
+title: Festive Funds
+---
+
+In the bustling North Pole, the elves are taking a short break from their work to buy presents for each other. They're excited about the idea but realise they need to be careful with their spending. To help them manage their budgets, Svelte Bot has come up with a brilliant idea: an app that keeps track of their Christmas shopping expenses. This app will be a real game-changer for the elves, ensuring they can buy thoughtful gifts without overspending.
+
+Svelte Bot needs your help to build this app; it should allow each elf to input their total budget for gifts. Once the budget is set, the elves can then add each item they're planning to buy, along with its cost. The clever part of the app will be how it shows the elves the total amount of money they've spent so far and how much they have left. This way, they can easily see if they're sticking to their budget or if they need to rethink some of their gift choices.

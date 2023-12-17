@@ -27,6 +27,7 @@
 				'Snow Globe',
 				'Question Mark',
 				'Fairy Lights',
+				'Piggy Bank',
 			],
 		},
 		{
