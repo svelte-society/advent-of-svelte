@@ -1,0 +1,9 @@
+---
+title: Oh the weather outside is frightful
+image: null
+discordLink: null
+---
+
+Poor Santa, the holy night is coming and his faithful barometer that helped him for all this years is completely broken. He needs to know what kind of weather to expect while is cruising close to the speed of light all around the globe.
+
+Luckily this year Svelte Bot is here to help! Your job is to build a simple and christmas themed weather app. You can use the https://open-meteo.com/en/docs API to get information about the current weather and the [geolocation api](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) for the current position.
