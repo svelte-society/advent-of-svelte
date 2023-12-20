@@ -1,7 +1,7 @@
 ---
 title: Jingle Jokes
 image: null
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1186848869737316392
 ---
 
 Late last night, Svelte Bot was exploring various Christmas traditions. During his research, he stumbled upon something that truly captivated his interest: Christmas Cracker Jokes. These jokes are a staple at many homes during Christmas, and he is keen to bring it early to the North Pole to keep spirits high.
