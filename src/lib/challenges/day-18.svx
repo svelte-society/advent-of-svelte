@@ -1,0 +1,25 @@
+---
+title: Santa's Quiz
+image: question
+discordLink: https://discord.com/channels/457912077277855764/1186103684686434346
+---
+
+Santa, always keen to share the rich history of the North Pole with the younger generation of elves, decided it was time for a fun and educational activity. He thought a quiz game would be a delightful way for the young elves to learn about their heritage and the many tales of the North Pole. Eager to make this idea a reality, Santa turned to you for help. He knew you had the skills to create something both engaging and informative. Your task is to develop a simple quiz game that would captivate the young elves and teach them in an interactive way.
+
+To assist you in this endeavour, Svelte Bot has stepped in with a list of trivia questions about the North Pole in JSON format. Your challenge is to fetch these questions from the API and present them in a user-friendly multiple choice quiz format.
+
+You can fetch this data by making a GET request to `https://advent.sveltesociety.dev/data/2023/day-eighteen.json`. It will return 20 random questions every time, each with four answers, one of which is correct.
+
+The data as a TypeScript type is:
+
+```ts
+interface Question {
+    question: string;
+    answers: {
+        text: string;
+        correct: boolean;
+    }[]
+}
+
+type ResponseData = Question[];
+```

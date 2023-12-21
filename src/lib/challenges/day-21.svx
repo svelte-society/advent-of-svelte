@@ -1,0 +1,7 @@
+---
+title: Oh the weather outside is frightful
+discordLink: https://discord.com/channels/457912077277855764/1187183671787143208
+image: globe
+---
+
+As Christmas nears, Santa is in a bit of trouble. His old barometer, which has been a big help over the years, has broken. Santa requires precise meteorological forecasts to navigate his near-light-speed sleigh journey across the globe. Luckily this year you're here to help. Your task is to build a simple Christmas themed weather app. You can use the [Open-Meteo API](https://open-meteo.com/en/docs) for current weather updates and the [Web Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) to find the current location.
