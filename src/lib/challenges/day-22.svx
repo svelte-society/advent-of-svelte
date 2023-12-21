@@ -4,11 +4,4 @@ discordLink: null
 image: snowflake-2
 ---
 
-The North Pole is a wonderland of snow, where each snowflake is as unique as the individual it represents. In this magical challenge, your task is to bring to life a one-of-a-kind Snowflake Generator. This special tool will create a unique snowflake silhouette based on a person's name, capturing the essence of their individuality in the form of these delicate ice crystals. Your task is to create an interface where users can input their name and immediately see their personalized snowflake rendered on the screen.
-
-Implement an algorithm that takes a user's name as input and generates a snowflake design. The pattern of the snowflake could be influenced by factors such as the length of the name, the characters used, and their arrangement.
-
-**Bonus challenge:** 
-Allow users to download or share their personalized snowflake, providing a unique digital keepsake or a shareable image for social media.
-
-For suggestions on how to build a snowflake generator, SvelteBot recommends [this tutorial](https://cloudfour.com/thinks/coding-a-snowflake-generator/) to get started!
+The North Pole is a magical land full of snow, with each snowflake as unique as the individual it represents. In this magical challenge, your task is to bring to life a one-of-a-kind Snowflake Generator. This special tool will create a unique snowflake shape using the person's name as the basis or 'seed' for the design. The pattern of the snowflake could be influenced by factors such as the length of the name, the characters used, and their arrangement. Optionally, you may also include a feature to download or copy the generated snowflake. For suggestions on how to build a snowflake generator, Svelte Bot recommends [this tutorial](https://cloudfour.com/thinks/coding-a-snowflake-generator/) to get started.
