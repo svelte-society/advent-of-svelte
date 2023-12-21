@@ -1,6 +1,6 @@
 ---
 title: Snowflake Silhouettes
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1187544530002645074
 image: snowflake-2
 ---
 
