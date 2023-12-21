@@ -4,9 +4,9 @@ discordLink: null
 image: social
 ---
 
-In the heart of the North Pole, the Elves have embraced technology like never before. They've built their very own social network, ElfNet, to share the joy of the holiday season. Your mission is to make ElfNet come alive by ingesting the feed from ElfDB which will display posts in real time during the day. 
+In the enchanting realm of the North Pole, the Elves have made a significant leap into the world of technology by crafting ElfNet, their exclusive social network. This digital platform is brimming with the festive spirit of the holiday season. However, they've encountered a challenge: they need a way to effectively manage and interact with the ElfNet backend. They require your assistance to establish a seamless connection with their ElfDB, ensuring that posts are dynamically displayed as they are submitted throughout the day.
 
-The format for ElfNet is:
+Svelte Bot setup a JSON endpoint for you to get the live data from ElfDB: `https://advent.sveltesociety.dev/data/2023/day-twenty-three.json`. Here is what that data looks like as a TypeScript type:
 
 ```ts
 interface ElfPost {
@@ -25,6 +25,6 @@ interface Comment {
 	content: string 
 	likes: number 
 }
-```
 
-The live feed from ElfDB can be fetched from `https://advent.sveltesociety.dev/data/2023/day-twenty-three.json`. Make sure to check on it during the day! ❄️
+type ResponseData = ElfPost[]
+```
