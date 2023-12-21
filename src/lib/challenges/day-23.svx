@@ -1,0 +1,30 @@
+---
+title: ElfNet Social
+discordLink: null
+image: social
+---
+
+In the heart of the North Pole, the Elves have embraced technology like never before. They've built their very own social network, ElfNet, to share the joy of the holiday season. Your mission is to make ElfNet come alive by ingesting the feed from ElfDB which will display posts in real time during the day. 
+
+The format for ElfNet is:
+
+```ts
+interface ElfPost {
+	id: string 
+	author: string 
+	timestamp: string
+	content: string
+	likes: number 
+	comments: Comment[] 
+}
+
+interface Comment {
+	id: string
+	author: string 
+	timestamp: string 
+	content: string 
+	likes: number 
+}
+```
+
+The live feed from ElfDB can be fetched from `http://localhost:5173/data/2023/day-twentythree.json`. Make sure to check on it during the day! ❄️
