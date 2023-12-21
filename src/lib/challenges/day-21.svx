@@ -1,7 +1,7 @@
 ---
 title: Oh the weather outside is frightful
 image: null
-discordLink: null
+discordLink: https://discord.com/channels/457912077277855764/1158027748699279430/1187183671787143208
 ---
 
 Poor Santa, the holy night is coming and his faithful barometer that helped him for all this years is completely broken. He needs to know what kind of weather to expect while is cruising close to the speed of light all around the globe.
