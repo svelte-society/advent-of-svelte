@@ -28,6 +28,7 @@
 				'Question Mark',
 				'Fairy Lights',
 				'Piggy Bank',
+				'Globe',
 			],
 		},
 		{
