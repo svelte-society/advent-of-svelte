@@ -11,7 +11,7 @@
 		"generate-pdf": "node challenges-to-pdf.js"
 	},
 	"devDependencies": {
-		"@date-fns/utc": "^1.1.0",
+		"@date-fns/utc": "^1.1.1",
 		"@faker-js/faker": "^8.3.1",
 		"@melt-ui/pp": "^0.2.0",
 		"@melt-ui/svelte": "^0.66.2",
@@ -20,7 +20,7 @@
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"@types/node": "^20.10.5",
 		"autoprefixer": "^10.4.16",
-		"date-fns": "^3.0.5",
+		"date-fns": "^3.0.6",
 		"fs-extra": "^11.2.0",
 		"markdown-pdf": "^11.0.0",
 		"mdsvex": "^0.11.0",
@@ -34,10 +34,5 @@
 		"vite": "^5.0.10",
 		"vite-imagetools": "^6.2.8"
 	},
-	"type": "module",
-	"pnpm": {
-		"patchedDependencies": {
-			"@date-fns/utc@1.1.0": "patches/@date-fns__utc@1.1.0.patch"
-		}
-	}
+	"type": "module"
 }
