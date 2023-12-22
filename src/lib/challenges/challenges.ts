@@ -1,4 +1,4 @@
-import { getDate, isAfter, addDays } from 'date-fns'
+import { isAfter, addDays, isFuture } from 'date-fns'
 import { UTCDate } from '@date-fns/utc'
 import { dev } from '$app/environment'
 
@@ -31,6 +31,10 @@ const challengeFiles = import.meta.glob<ChallengeImport>('./day-*.svx', {
 	eager: true,
 })
 
+function createUnlockDate(day: number) {
+	return new Date(`2023-12-${day < 10 ? '0' : ''}${day}T00:00:00Z`)
+}
+
 export async function getChallenges() {
 	const NOW_UTC = new UTCDate()
 
@@ -39,7 +43,9 @@ export async function getChallenges() {
 			// Parse the files to something useful
 			.map<Challenge>(([path, mod]) => {
 				const day = Number(path.slice('./day-'.length, -4))
-				const locked = dev ? false : getDate(NOW_UTC) < day
+				const unlockDate = createUnlockDate(day)
+
+				const locked = dev ? false : isFuture(unlockDate)
 
 				if (!mod.metadata?.title?.length) {
 					throw new Error(`Missing title for day ${day}`)
@@ -53,9 +59,7 @@ export async function getChallenges() {
 					discordLink:
 						mod.metadata?.discordLink || DEFAULT_DISCORD_LINK,
 					image: mod.metadata?.image || null,
-					unlockDate: new Date(
-						`2023-12-${day < 10 ? '0' : ''}${day} 00:00:00 +00:00`,
-					),
+					unlockDate,
 				}
 			})
 			// Sort it by day
@@ -92,9 +96,7 @@ export async function getChallenges() {
 			body: LOCKED_BODY,
 			discordLink: DEFAULT_DISCORD_LINK,
 			image: null,
-			unlockDate: new Date(
-				`2023-12-${day < 10 ? '0' : ''}${day} 00:00:00 +00:00`,
-			),
+			unlockDate: createUnlockDate(day),
 		})
 	}
 
