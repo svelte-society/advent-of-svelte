@@ -1,5 +1,5 @@
 import { differenceInMilliseconds } from 'date-fns'
-import { utcToZonedTime } from 'date-fns-tz'
+import { UTCDate } from '@date-fns/utc'
 import { json } from '@sveltejs/kit'
 import posts from './data.json'
 
@@ -25,11 +25,11 @@ export const GET = ({ setHeaders }) => {
 		'cache-control': 'no-cache',
 	})
 
-	const nowUTC = utcToZonedTime(new Date(), 'UTC')
+	const nowUTC = new UTCDate()
 
 	// Filter posts and comments that can be posted
 	const postableData = (posts satisfies ElfPost[]).filter((post) => {
-		const postTimeUTC = utcToZonedTime(new Date(post.timestamp), 'UTC')
+		const postTimeUTC = new UTCDate(post.timestamp)
 		const postDelay = differenceInMilliseconds(postTimeUTC, nowUTC)
 
 		if (postDelay <= 0) {
@@ -39,10 +39,7 @@ export const GET = ({ setHeaders }) => {
 
 		// Filter comments that can be posted
 		const postableComments = post.comments.filter((comment) => {
-			const commentTimeUTC = utcToZonedTime(
-				new Date(comment.timestamp),
-				'UTC',
-			)
+			const commentTimeUTC = new UTCDate(comment.timestamp)
 			const commentDelay = differenceInMilliseconds(
 				commentTimeUTC,
 				nowUTC,

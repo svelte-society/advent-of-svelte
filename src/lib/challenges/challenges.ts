@@ -1,5 +1,5 @@
 import { getDate, isAfter, addDays } from 'date-fns'
-import { zonedTimeToUtc } from 'date-fns-tz'
+import { UTCDate } from '@date-fns/utc'
 import { dev } from '$app/environment'
 
 export interface Challenge {
@@ -32,7 +32,7 @@ const challengeFiles = import.meta.glob<ChallengeImport>('./day-*.svx', {
 })
 
 export async function getChallenges() {
-	const NOW_UTC = zonedTimeToUtc(new Date(), 'Europe/London')
+	const NOW_UTC = new UTCDate()
 
 	const challenges = await Promise.all(
 		Object.entries(challengeFiles)
