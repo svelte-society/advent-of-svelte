@@ -9,8 +9,8 @@
 	let now = Date.now()
 
 	$: duration = intervalToDuration({
-		start: date,
-		end: now,
+		start: now,
+		end: date,
 	})
 
 	onMount(() => {
