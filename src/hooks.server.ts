@@ -1,7 +1,5 @@
 import type { Handle } from '@sveltejs/kit'
 
-// todo protect /data for access ahead of time
-
 export const handle: Handle = async ({ resolve, event }) => {
 	// Apply CORS header for API routes
 	if (event.url.pathname.startsWith('/data')) {
