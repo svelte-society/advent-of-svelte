@@ -58,7 +58,7 @@ export async function getChallenges() {
 					body: locked ? LOCKED_BODY : mod.default.render().html,
 					discordLink:
 						mod.metadata?.discordLink || DEFAULT_DISCORD_LINK,
-					image: mod.metadata?.image || null,
+					image: locked ? mod.metadata?.image || null : null,
 					unlockDate,
 				}
 			})
