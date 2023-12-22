@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { formatDuration, intervalToDuration, isPast } from 'date-fns'
-	import { onMount, createEventDispatcher } from 'svelte'
+	import { createEventDispatcher, onDestroy } from 'svelte'
 
 	const dispatcher = createEventDispatcher<{ done: {} }>()
 
@@ -9,22 +9,37 @@
 	let now = Date.now()
 
 	$: duration = intervalToDuration({
-		start: date,
-		end: now,
+		start: now,
+		end: date,
 	})
 
-	onMount(() => {
-		const interval = setInterval(() => {
+	let interval: ReturnType<typeof setInterval>
+	let done = false
+
+	function count() {
+		clearInterval(interval)
+		done = false
+
+		interval = setInterval(() => {
 			now = Date.now()
 
 			if (isPast(date)) {
+				done = true
 				dispatcher('done', {})
 				clearInterval(interval)
 			}
 		}, 500)
+	}
 
-		return () => clearInterval(interval)
+	$: if (date) count()
+
+	onDestroy(() => {
+		clearInterval(interval)
 	})
 </script>
 
-<span>unlocks in {formatDuration(duration)}</span>
+{#if done}
+	<span>unlocking...</span>
+{:else}
+	<span>unlocks in {formatDuration(duration)}</span>
+{/if}

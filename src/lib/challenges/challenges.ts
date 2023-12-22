@@ -1,5 +1,5 @@
-import { getDate, isAfter, addDays } from 'date-fns'
-import { zonedTimeToUtc } from 'date-fns-tz'
+import { isAfter, addDays, isFuture } from 'date-fns'
+import { UTCDate } from '@date-fns/utc'
 import { dev } from '$app/environment'
 
 export interface Challenge {
@@ -31,15 +31,21 @@ const challengeFiles = import.meta.glob<ChallengeImport>('./day-*.svx', {
 	eager: true,
 })
 
+function createUnlockDate(day: number) {
+	return new Date(`2023-12-${day < 10 ? '0' : ''}${day}T00:00:00Z`)
+}
+
 export async function getChallenges() {
-	const NOW_UTC = zonedTimeToUtc(new Date(), 'Europe/London')
+	const NOW_UTC = new UTCDate()
 
 	const challenges = await Promise.all(
 		Object.entries(challengeFiles)
 			// Parse the files to something useful
 			.map<Challenge>(([path, mod]) => {
 				const day = Number(path.slice('./day-'.length, -4))
-				const locked = dev ? false : getDate(NOW_UTC) < day
+				const unlockDate = createUnlockDate(day)
+
+				const locked = dev ? false : isFuture(unlockDate)
 
 				if (!mod.metadata?.title?.length) {
 					throw new Error(`Missing title for day ${day}`)
@@ -53,9 +59,7 @@ export async function getChallenges() {
 					discordLink:
 						mod.metadata?.discordLink || DEFAULT_DISCORD_LINK,
 					image: mod.metadata?.image || null,
-					unlockDate: new Date(
-						`2023-12-${day < 10 ? '0' : ''}${day} 00:00:00 +00:00`,
-					),
+					unlockDate,
 				}
 			})
 			// Sort it by day
@@ -82,7 +86,7 @@ export async function getChallenges() {
 	// Push a empty locked challenge if the next day hasn't been written yet
 	// purely for UI purposes
 	// todo handle this in UI instead of complex logic server side
-	if (!dev && !challenges.some((c) => c.locked)) {
+	if (!dev && !challenges.some((c) => c.locked) && challenges.length < 24) {
 		const day = challenges.length + 1
 
 		challenges.push({
@@ -92,9 +96,7 @@ export async function getChallenges() {
 			body: LOCKED_BODY,
 			discordLink: DEFAULT_DISCORD_LINK,
 			image: null,
-			unlockDate: new Date(
-				`2023-12-${day < 10 ? '0' : ''}${day} 00:00:00 +00:00`,
-			),
+			unlockDate: createUnlockDate(day),
 		})
 	}
 
