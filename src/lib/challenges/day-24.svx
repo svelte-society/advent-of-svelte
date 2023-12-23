@@ -8,7 +8,7 @@ It's finally time for Christmas Eve, and the Elves need your help! They want to 
 
 Santa has supernatural speed and can visit every city in the world in a single night, starting from the 24th at **00:00 GMT**. Santa can usually handle a city in just a few minutes, so make sure to update the map frequently! You can use the provided data to get the list of cities and their arrival times.
 
-If you choose to utilize the Svelte REPL for this, it has a configured MapBox key built in! [Here is an example REPL that shows Santas workshop](https://svelte.dev/repl/f3f9da29b2fa41e2a11e258d09e51cd0?version=4.2.8).
+If you choose to utilize the Svelte REPL for this, it has a configured MapBox key built in, which can help you to easily create a map! [Here is an example REPL that shows Santas workshop](https://svelte.dev/repl/f3f9da29b2fa41e2a11e258d09e51cd0?version=4.2.8).
 
 The TypeScript interface for the data is:
 
