@@ -29,6 +29,7 @@
 				'Fairy Lights',
 				'Piggy Bank',
 				'Globe',
+				'Present #2',
 			],
 		},
 		{
@@ -95,4 +96,10 @@
 			</ul>
 		{/if}
 	{/each}
+
+	<br />
+	<h3>
+		"Santa's Magical Tracker" uses data from santa-api.appspot.com
+		<h4></h4>
+	</h3>
 </dialog>

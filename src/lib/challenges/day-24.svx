@@ -1,0 +1,34 @@
+---
+title: Santa's Magical Tracker
+discordLink: null
+image: juicy-present
+---
+
+It's finally time for Christmas Eve, and the Elves need your help! They want to keep an eye on Santa's epic journey around the world! Your mission is to create a magical map in Svelte, where Santa's real-time location is tracked as he flies from city to city on December 24th, spreading joy and delivering gifts. Feel free to add a sprinkle of holiday cheer from an ealier challenge - perhaps you'd like to add some moody snowfall or give each location a unique snowflake?
+
+Santa has supernatural speed and can visit every city in the world in a single night, starting from the 24th at **00:00 GMT**. Santa can usually handle a city in just a few minutes, so make sure to update the map frequently! You can use the provided data to get the list of cities and their arrival times.
+
+If you choose to utilize the Svelte REPL for this, it has a configured MapBox key built in, which can help you to easily create a map! [Here is an example REPL that shows Santas workshop](https://svelte.dev/repl/f3f9da29b2fa41e2a11e258d09e51cd0?version=4.2.8).
+
+The TypeScript interface for the data is:
+
+```ts
+interface Destination {
+    id: string; // unique identifier
+    arrival: number; // arrival time in GMT
+    population: number; 
+    presentsDelivered: number;
+    city: string;
+    region: string;
+    location: {
+        lat: number;
+        lng: number;
+    };
+}
+
+type ResponseData = {
+    destinations: Destination[];
+}
+```
+
+The data can be fetched from `https://advent.sveltesociety.dev/data/2023/day-twenty-four.json`
