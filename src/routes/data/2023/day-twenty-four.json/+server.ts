@@ -1,12 +1,13 @@
 import { json } from '@sveltejs/kit'
+import { isPast } from 'date-fns'
 import data from './data.json'
 
-export const prerender = true
+export const GET = async () => {
+	const filtered = data.filter((item) => isPast(item.arrival))
+	const now = filtered.at(-1)!
 
-export const GET = ({ setHeaders }) => {
-	setHeaders({
-		'cache-control': 'public, max-age=31536000',
+	return json({
+		now,
+		destinations: data.filter((item) => isPast(item.arrival)),
 	})
-
-	return json(data)
 }
