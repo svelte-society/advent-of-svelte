@@ -4747,11 +4747,11 @@
     {
         "id": "landing",
         "arrival": 1703502000000,
-        "departure": 0,
+        "departure": null,
         "population": 0,
         "presentsDelivered": 7056276203,
         "city": "Santa's Village",
-        "region": "Arctic",
+        "region": "North Pole",
         "location": {
             "lat": 84.6,
             "lng": 168

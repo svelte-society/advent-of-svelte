@@ -16,6 +16,7 @@ The TypeScript type for the data is:
 interface Destination {
     id: string;
     arrival: number; // arrival unix timestamp (UTC)
+    departure: number | null; // only null for the final landing
     population: number; 
     presentsDelivered: number;
     city: string;
@@ -30,10 +31,15 @@ interface ResponseData {
     /**
      * Current Location
      */
-    now: Destination;
+    current: Destination;
 
     /**
-     * History of locations (including current)
+     * Next Location
+     */
+    next: Destination;
+
+    /**
+     * History of locations (excluding current)
      */
     destinations: Destination[];
 }
