@@ -7,7 +7,7 @@
 		label: string
 		author: string
 		items?: string[]
-		url: string
+		url?: string
 	}
 
 	const credits: Credit[] = [
@@ -42,6 +42,16 @@
 			author: 'Obra Icons',
 			label: 'Icons',
 			url: 'https://icons.obra.studio/',
+		},
+		{
+			author: 'Svelte Ambassadors',
+			label: 'Challenges',
+			items: ['Stanislav Khromov', 'Willow (GHOST)', 'Paolo Ricciuti'],
+		},
+		{
+			author: 'NORAD via Danielle Vass',
+			label: 'Santa Tracker Data',
+			url: 'https://gist.github.com/daniellevass/c160e778967d0dd7799e',
 		},
 	]
 </script>
@@ -82,24 +92,24 @@
 		</button>
 	</div>
 
-	{#each credits as { author, url, items }}
-		<h3 class="text-lg">
-			Illustrations by
-			<a href={url}>{author}</a>{items ? ':' : ''}
-		</h3>
+	{#each credits as { author, url, label, items }}
+		<div class="my-2">
+			<h3 class="text-lg">
+				{label} by
+				{#if url}
+					<a href={url}>{author}</a>{items ? ':' : ''}
+				{:else}
+					{author}{items ? ':' : ''}
+				{/if}
+			</h3>
 
-		{#if items}
-			<ul class="list-disc list-inside my-2">
-				{#each items as item}
-					<li>{item}</li>
-				{/each}
-			</ul>
-		{/if}
+			{#if items}
+				<ul class="list-disc list-inside mt-1">
+					{#each items as item}
+						<li>{item}</li>
+					{/each}
+				</ul>
+			{/if}
+		</div>
 	{/each}
-
-	<br />
-	<h3>
-		"Santa's Magical Tracker" uses data from santa-api.appspot.com
-		<h4></h4>
-	</h3>
 </dialog>
