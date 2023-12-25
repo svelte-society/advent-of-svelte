@@ -122,7 +122,8 @@
 							</AccordionItem>
 						{:else}
 							<AccordionItem
-								open={new Date().getUTCDate() == challenge.day}>
+								open={Math.min(new Date().getUTCDate(), 24) ==
+									challenge.day}>
 								<span slot="header">
 									Day {challenge.day} - {challenge.title}
 								</span>
