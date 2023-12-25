@@ -31,12 +31,12 @@ interface ResponseData {
     /**
      * Current Location
      */
-    current: Destination;
+    current: Destination | null;
 
     /**
      * Next Location
      */
-    next: Destination;
+    next: Destination | null;
 
     /**
      * History of locations (excluding current)

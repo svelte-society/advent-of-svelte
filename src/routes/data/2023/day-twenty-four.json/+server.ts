@@ -1,18 +1,22 @@
-import { json } from '@sveltejs/kit'
 import { isFuture, isPast } from 'date-fns'
+import { json } from '@sveltejs/kit'
 import data from './data.json'
 
 export const GET = async () => {
-	const currentIndex = data.findIndex(
+	const current = data.find(
 		(dest) =>
-			dest.departure && isPast(dest.arrival) && isFuture(dest.departure),
+			dest.departure != null &&
+			isPast(dest.arrival) &&
+			isFuture(dest.departure),
 	)
 
+	const next = data.find((dest) => isFuture(dest.arrival))
+
 	return json({
-		current: data[currentIndex],
-		next: data[currentIndex + 1],
+		current: current || null,
+		next: next || null,
 		history: data.filter(
-			(item) => item.departure != null && isPast(item.departure),
+			(dest) => dest.departure != null && isPast(dest.departure),
 		),
 	})
 }
