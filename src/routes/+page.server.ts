@@ -3,10 +3,10 @@ import type { PageServerLoad } from './$types'
 
 export const prerender = false
 
-export const load: PageServerLoad = async ({ setHeaders, depends }) => {
+export const load: PageServerLoad = async ({ depends }) => {
 	depends('challenges')
 
 	return {
-		challenges: await getChallenges(),
+		challenges: await getChallenges(2023),
 	}
 }

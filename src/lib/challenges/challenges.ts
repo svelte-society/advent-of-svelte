@@ -27,23 +27,28 @@ const DEFAULT_DISCORD_LINK =
 const LOCKED_BODY =
 	'Svelte Bot commends you for trying, but there are no spoilers in Advent of Svelte'
 
-const challengeFiles = import.meta.glob<ChallengeImport>('./day-*.svx', {
-	eager: true,
-})
-
-function createUnlockDate(day: number) {
-	return new Date(`2023-12-${day < 10 ? '0' : ''}${day}T00:00:00Z`)
+function createUnlockDate(year: number, day: number) {
+	return new Date(`${year}-12-${day < 10 ? '0' : ''}${day}T00:00:00Z`)
 }
 
-export async function getChallenges() {
+const CHALLENGE_FILES = {
+	2023: () =>
+		import.meta.glob<ChallengeImport>('./2023/day-*.svx', { eager: true }),
+}
+
+type Year = keyof typeof CHALLENGE_FILES
+
+export async function getChallenges(year: Year) {
+	const challengeFiles = CHALLENGE_FILES[year]()
+
 	const NOW_UTC = new UTCDate()
 
 	const challenges = await Promise.all(
 		Object.entries(challengeFiles)
 			// Parse the files to something useful
 			.map<Challenge>(([path, mod]) => {
-				const day = Number(path.slice('./day-'.length, -4))
-				const unlockDate = createUnlockDate(day)
+				const day = Number(path.match(/day-(\d+)/)![1])
+				const unlockDate = createUnlockDate(year, day)
 
 				const locked = dev ? false : isFuture(unlockDate)
 
@@ -85,7 +90,6 @@ export async function getChallenges() {
 
 	// Push a empty locked challenge if the next day hasn't been written yet
 	// purely for UI purposes
-	// todo handle this in UI instead of complex logic server side
 	if (!dev && !challenges.some((c) => c.locked) && challenges.length < 24) {
 		const day = challenges.length + 1
 
@@ -96,7 +100,7 @@ export async function getChallenges() {
 			body: LOCKED_BODY,
 			discordLink: DEFAULT_DISCORD_LINK,
 			image: null,
-			unlockDate: createUnlockDate(day),
+			unlockDate: createUnlockDate(year, day),
 		})
 	}
 
