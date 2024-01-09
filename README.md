@@ -24,3 +24,7 @@ The file/folder must follow the name `day-NUMBER-WORD` (e.g. `day-twenty-four`).
 -   API routes for the challenges can be found in [`src/routes/data`](./src/routes/data)
 
 -   Static files can be found in [`static/data`](./static/data)
+
+## Illustrations
+
+Illustrations in [`src/lib/challenges/images`](./src/lib/challenges/images/) are provided by [Icons 8](https://icons8.com/illustrations/author/zD2oqC8lLBBA) and [Elisabet Guba](https://icons8.com/illustrations/author/lZpGtGw5182N) from Ouch!
