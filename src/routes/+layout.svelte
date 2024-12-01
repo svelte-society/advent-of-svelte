@@ -3,17 +3,34 @@
 	import Snow from '$lib/components/Snow.svelte'
 	import Header from './Header.svelte'
 	import Footer from './Footer.svelte'
+	import { page } from '$app/stores'
+
+	$: year = $page.url.pathname.split('/')[1]
 </script>
 
 <svelte:head>
-	<title>Advent of Svelte</title>
+	<title>Advent of Svelte - {year}</title>
 </svelte:head>
 
 <Snow />
-<div class="bg-black">
+
+<div class="bg-black wrapper">
 	<Header />
+
 	<main>
 		<slot />
 	</main>
-	<Footer />
+
+	{#if year != '2024'}
+		<Footer />
+	{/if}
 </div>
+
+<style>
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: max-content 1fr max-content;
+		min-height: 100dvh;
+	}
+</style>
