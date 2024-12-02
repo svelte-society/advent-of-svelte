@@ -10,10 +10,10 @@
 
 	export let data
 
-	async function refresh() {
-		await new Promise((resolve) => setTimeout(resolve, 1000))
-		await invalidate('challenges')
-	}
+	// async function refresh() {
+	// 	await new Promise((resolve) => setTimeout(resolve, 1000))
+	// 	await invalidate('challenges')
+	// }
 
 	let mounted = false
 
