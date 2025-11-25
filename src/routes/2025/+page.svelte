@@ -266,7 +266,7 @@
 
 		const href = `/2025/${day}`
 
-		// Load the day's data
+		// Load the day's data first
 		const result = await preloadData(href)
 
 		if (result.type === 'loaded' && result.status === 200) {
