@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state'
 
-	const YEARS = ['2024', '2023']
+	const YEARS = ['2025', '2024', '2023']
 </script>
 
 <header>
