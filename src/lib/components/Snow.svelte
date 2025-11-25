@@ -166,7 +166,7 @@
 	}
 </script>
 
-<svelte:window on:resize={debounceResize} />
+<svelte:window onresize={debounceResize} />
 
 <canvas bind:this={canvas} aria-hidden="true"></canvas>
 

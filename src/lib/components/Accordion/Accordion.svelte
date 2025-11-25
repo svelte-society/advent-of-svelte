@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script module lang="ts">
 	import type { Accordion } from '@melt-ui/svelte'
 	import { getContext, setContext } from 'svelte'
 
@@ -17,6 +17,7 @@
 <script lang="ts">
 	import { createAccordion, melt } from '@melt-ui/svelte'
 	import { browser } from '$app/environment'
+	import type { Snippet } from 'svelte'
 
 	const accordion = createAccordion()
 	accordionCtx.set(accordion)
@@ -25,16 +26,15 @@
 		elements: { root },
 	} = accordion
 
-	let className = ''
-	export { className as class }
+	let { class: className = '', children }: { class?: string; children: Snippet } = $props()
 
 	const isHtmlOnly = !browser
 </script>
 
 {#if isHtmlOnly}
-	<slot />
+	{@render children()}
 {:else}
 	<div class={className} use:melt={$root}>
-		<slot />
+		{@render children()}
 	</div>
 {/if}

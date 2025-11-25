@@ -75,7 +75,7 @@
 
 		<button
 			class="button simple text-sm text-svelte"
-			on:click={() => dialog.showModal()}>
+			onclick={() => dialog.showModal()}>
 			Show Credits
 		</button>
 	</div>
@@ -87,7 +87,7 @@
 	<div class="flex items-center justify-between">
 		<h1 class="text-3xl font-extrabold text-white mb-3">Credits</h1>
 
-		<button class="button simple" on:click={() => dialog.close()}>
+		<button class="button simple" onclick={() => dialog.close()}>
 			<IconClose />
 		</button>
 	</div>
