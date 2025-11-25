@@ -8,14 +8,14 @@
 	import { invalidate } from '$app/navigation'
 	import { onMount } from 'svelte'
 
-	export let data
+	let { data } = $props()
 
-	// async function refresh() {
-	// 	await new Promise((resolve) => setTimeout(resolve, 1000))
-	// 	await invalidate('challenges')
-	// }
+	async function refresh() {
+		await new Promise((resolve) => setTimeout(resolve, 1000))
+		await invalidate('challenges')
+	}
 
-	let mounted = false
+	let mounted = $state(false)
 
 	onMount(() => {
 		mounted = true
@@ -110,23 +110,27 @@
 					{#each data.challenges as challenge}
 						{#if challenge.locked}
 							<AccordionItem classInactive="locked-tab" disabled>
-								<h3 slot="header">
-									<span>Day {challenge.day}</span>
+								{#snippet header()}
+									<h3>
+										<span>Day {challenge.day}</span>
 
-									{#if mounted}
-										<Countdown
-											on:done={refresh}
-											date={challenge.unlockDate} />
-									{/if}
-								</h3>
+										{#if mounted}
+											<Countdown
+												ondone={refresh}
+												date={challenge.unlockDate} />
+										{/if}
+									</h3>
+								{/snippet}
 							</AccordionItem>
 						{:else}
 							<AccordionItem
 								open={Math.min(new Date().getUTCDate(), 24) ==
 									challenge.day}>
-								<span slot="header">
-									Day {challenge.day} - {challenge.title}
-								</span>
+								{#snippet header()}
+									<span>
+										Day {challenge.day} - {challenge.title}
+									</span>
+								{/snippet}
 
 								{#if challenge.image}
 									<img

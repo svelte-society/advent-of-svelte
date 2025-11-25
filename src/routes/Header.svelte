@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 
 	const YEARS = ['2024', '2023']
 </script>
@@ -22,7 +22,7 @@
 					<a
 						{href}
 						class="py-2 pr-4 pl-3 text-white rounded"
-						class:font-bold={$page.url.pathname.startsWith(href)}
+						class:font-bold={page.url.pathname.startsWith(href)}
 						aria-current="page">{year}</a>
 				{/each}
 			</div>

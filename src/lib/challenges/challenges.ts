@@ -1,6 +1,7 @@
 import { isAfter, addDays, isFuture } from 'date-fns'
 import { UTCDate } from '@date-fns/utc'
 import { dev } from '$app/environment'
+import { render } from 'svelte/server'
 
 export interface Challenge {
 	title: string
@@ -60,7 +61,7 @@ export async function getChallenges(year: Year) {
 					day,
 					locked,
 					title: locked ? 'Spoilers' : mod.metadata.title,
-					body: locked ? LOCKED_BODY : mod.default.render().html,
+					body: locked ? LOCKED_BODY : render(mod.default).body,
 					discordLink:
 						mod.metadata?.discordLink || DEFAULT_DISCORD_LINK,
 					image: locked ? mod.metadata?.image || null : null,

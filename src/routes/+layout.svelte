@@ -3,9 +3,11 @@
 	import Snow from '$lib/components/Snow.svelte'
 	import Header from './Header.svelte'
 	import Footer from './Footer.svelte'
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 
-	$: year = $page.url.pathname.split('/')[1]
+	let { children } = $props()
+
+	let year = $derived(page.url.pathname.split('/')[1])
 </script>
 
 <svelte:head>
@@ -18,7 +20,7 @@
 	<Header />
 
 	<main>
-		<slot />
+		{@render children()}
 	</main>
 
 	{#if year != '2024'}

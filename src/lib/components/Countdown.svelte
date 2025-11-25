@@ -1,20 +1,19 @@
 <script lang="ts">
 	import { formatDuration, intervalToDuration, isPast } from 'date-fns'
-	import { createEventDispatcher, onDestroy } from 'svelte'
 
-	const dispatcher = createEventDispatcher<{ done: {} }>()
+	let { date, ondone }: { date: Date; ondone?: () => void } = $props()
 
-	export let date: Date
+	let now = $state(Date.now())
+	let done = $state(false)
 
-	let now = Date.now()
-
-	$: duration = intervalToDuration({
-		start: now,
-		end: date,
-	})
+	let duration = $derived(
+		intervalToDuration({
+			start: now,
+			end: date,
+		})
+	)
 
 	let interval: ReturnType<typeof setInterval>
-	let done = false
 
 	function count() {
 		clearInterval(interval)
@@ -25,16 +24,15 @@
 
 			if (isPast(date)) {
 				done = true
-				dispatcher('done', {})
+				ondone?.()
 				clearInterval(interval)
 			}
 		}, 500)
 	}
 
-	$: if (date) count()
-
-	onDestroy(() => {
-		clearInterval(interval)
+	$effect(() => {
+		if (date) count()
+		return () => clearInterval(interval)
 	})
 </script>
 
