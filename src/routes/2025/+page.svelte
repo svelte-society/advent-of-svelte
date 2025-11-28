@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { isFuture } from 'date-fns'
-	import { dev } from '$app/environment'
 	import { pushState, preloadData, goto } from '$app/navigation'
 	import { page } from '$app/state'
 	import santaLogo from '$lib/images/santa-svelte.png'
@@ -247,9 +246,8 @@
 		{ y: -8, rotate: 1.5 }
 	]
 
-	// Reuse unlock logic pattern from challenges.ts
+	// Unlock each day at midnight UTC on December 1-24
 	function isLocked(day: number): boolean {
-		if (dev) return false
 		const unlockDate = new Date(
 			`2025-12-${day.toString().padStart(2, '0')}T00:00:00Z`
 		)
