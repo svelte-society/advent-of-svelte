@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit'
 import type { PageLoad } from './$types'
+import { content } from '$lib/challenges/2025'
 
 export const load: PageLoad = ({ params }) => {
 	const day = parseInt(params.day)
@@ -8,11 +9,12 @@ export const load: PageLoad = ({ params }) => {
 		error(404, 'Day not found')
 	}
 
-	// TODO: Replace with actual content for each day
+	const dayContent = content.get(day)
+
 	return {
 		day,
-		videoId: '',
-		title: `Day ${day}`,
-		content: ''
+		videoId: dayContent?.videoId ?? '',
+		title: dayContent?.title ?? `Day ${day}`,
+		content: dayContent?.description ?? ''
 	}
 }
