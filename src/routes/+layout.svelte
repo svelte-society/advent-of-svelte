@@ -34,6 +34,5 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: max-content 1fr max-content;
 		min-height: 100dvh;
-		overflow-x: hidden;
 	}
 </style>
