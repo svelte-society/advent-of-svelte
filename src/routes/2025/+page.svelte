@@ -276,7 +276,7 @@
 </script>
 
 <section
-	class="bg-gray-900 py-8 px-4 mx-auto text-center flex flex-col items-center justify-center gap-2">
+	class="bg-gray-900 py-8 px-4 mx-auto text-center flex flex-col items-center justify-center gap-2 w-full overflow-hidden">
 	<img
 		style="max-width: 300px;"
 		src={santaLogo}
@@ -302,7 +302,7 @@
 	</p>
 </section>
 
-<section class="bg-gray-900 py-8 px-4 pb-16">
+<section class="bg-gray-900 py-8 px-4 pb-16 overflow-hidden">
 	<div class="calendar-grid">
 		{#each DAYS as day, i (day)}
 			{@const locked = isLocked(day)}
