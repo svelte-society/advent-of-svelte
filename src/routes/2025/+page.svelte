@@ -283,19 +283,19 @@
 		alt="Svelte logo with a santa hat on top of it" />
 
 	<h1
-		class="mb-6 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white">
+		class="mb-6 max-w-2xl w-full text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white">
 		Advent of Svelte 2025
 	</h1>
 
-	<p class="max-w-2xl md:text-lg lg:text-xl text-gray-400">
+	<p class="max-w-2xl w-full md:text-lg lg:text-xl text-gray-400">
 		This year, we're taking a different approach. No coding challenges - just 24 days of Svelte knowledge, tips, and insights to unwrap.
 	</p>
 
-	<p class="max-w-2xl md:text-lg lg:text-xl text-gray-400">
+	<p class="max-w-2xl w-full md:text-lg lg:text-xl text-gray-400">
 		Each day from December 1st to 24th, a new surprise will be revealed. Come back daily to discover what's inside!
 	</p>
 
-	<p class="max-w-2xl md:text-lg lg:text-xl text-gray-400">
+	<p class="max-w-2xl w-full md:text-lg lg:text-xl text-gray-400">
 		Want to chat about Svelte? Join us in the
 		<a href="https://svelte.dev/chat" class="text-orange-500 hover:underline">Discord server</a>
 		to share the joy of Advent of Svelte.
