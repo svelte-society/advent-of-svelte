@@ -322,7 +322,7 @@
 							<div class="day-icon">
 								{@html dayData.icon}
 							</div>
-							<span class="day-number">?</span>
+							<span class="day-number">{day}</span>
 						</div>
 					</div>
 				{:else}
