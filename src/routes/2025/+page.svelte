@@ -313,6 +313,7 @@
 				{#if locked}
 					<div
 						class="calendar-box style-{boxStyle} locked"
+						title="Coming December {day}"
 						style="
 							margin-top: {offset.y}px;
 							transform: rotate({offset.rotate}deg);
@@ -321,7 +322,7 @@
 							<div class="day-icon">
 								{@html dayData.icon}
 							</div>
-							<span class="day-number">?</span>
+							<span class="day-number">{day}</span>
 						</div>
 					</div>
 				{:else}
@@ -584,6 +585,7 @@
 		border-width: 2px;
 		outline: none;
 		box-shadow: none;
+		cursor: default;
 	}
 
 	.calendar-box.locked::before {
