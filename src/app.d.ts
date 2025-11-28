@@ -7,6 +7,14 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
+		interface PageState {
+			selectedDay?: {
+				day: number
+				videoId: string
+				title: string
+				content: string
+			}
+		}
 		// interface Platform {}
 	}
 }
