@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    overflow-x: hidden;
-}
-
 a {
     @apply hover:opacity-60 transition-opacity text-svelte rounded-sm focus:outline focus:outline-2 focus:outline-svelte focus:outline-offset-2
 }
