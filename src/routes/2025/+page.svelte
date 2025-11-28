@@ -249,8 +249,7 @@
 
 	// Reuse unlock logic pattern from challenges.ts
 	function isLocked(day: number): boolean {
-		// Enable day 1 for testing
-		if (dev || day === 1) return false
+		if (dev) return false
 		const unlockDate = new Date(
 			`2025-12-${day.toString().padStart(2, '0')}T00:00:00Z`
 		)

@@ -10,21 +10,27 @@
 </script>
 
 <div class="day-content">
-	<div class="video-container">
-		<iframe
-			src="https://www.youtube.com/embed/{videoId}"
-			title="Day {day} - {title}"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen
-		></iframe>
-	</div>
+	{#if videoId}
+		<div class="video-container">
+			<iframe
+				src="https://www.youtube.com/embed/{videoId}"
+				title="Day {day} - {title}"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			></iframe>
+		</div>
+	{/if}
 	<div class="text-container">
 		<h2 class="day-title">
 			<span class="day-number">Day {day}</span>
 			{title}
 		</h2>
-		<p class="day-description">{content}</p>
+		{#if content}
+			<p class="day-description">{content}</p>
+		{:else}
+			<p class="day-description coming-soon">Content coming soon...</p>
+		{/if}
 	</div>
 </div>
 
@@ -96,5 +102,10 @@
 		line-height: 1.6;
 		color: #9ca3af;
 		margin: 0;
+	}
+
+	.day-description.coming-soon {
+		font-style: italic;
+		color: #6b7280;
 	}
 </style>

@@ -8,10 +8,11 @@ export const load: PageLoad = ({ params }) => {
 		error(404, 'Day not found')
 	}
 
+	// TODO: Replace with actual content for each day
 	return {
 		day,
-		videoId: 'dQw4w9WgXcQ', // placeholder video
-		title: `Surprise #${day}`,
-		content: `This is placeholder content for Day ${day}. The actual content will be revealed when this day is unlocked.`
+		videoId: '',
+		title: `Day ${day}`,
+		content: ''
 	}
 }
