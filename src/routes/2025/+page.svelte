@@ -380,9 +380,10 @@
 <style>
 	.calendar-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
 		gap: 0.5rem;
 		max-width: 500px;
+		width: 100%;
 		margin: 0 auto;
 		padding: 1rem;
 	}
@@ -408,8 +409,6 @@
 
 		aspect-ratio: 1;
 		width: 100%;
-		min-width: 70px;
-		min-height: 70px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -424,13 +423,6 @@
 		overflow: hidden;
 		text-decoration: none;
 		cursor: pointer;
-	}
-
-	@media (min-width: 640px) {
-		.calendar-box {
-			min-width: 90px;
-			min-height: 90px;
-		}
 	}
 
 	/* Base gradient overlay */
