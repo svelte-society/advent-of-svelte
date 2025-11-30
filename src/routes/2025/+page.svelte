@@ -249,7 +249,7 @@
 	// Unlock each day at midnight UTC on December 1-24
 	function isLocked(day: number): boolean {
 		const unlockDate = new Date(
-			`2025-12-${day.toString().padStart(2, '0')}T00:00:00Z`,
+			`2025-12-${day.toString().padStart(2, '0')}T12:00:00Z`,
 		)
 		return isFuture(unlockDate)
 	}
