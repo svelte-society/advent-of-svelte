@@ -22,5 +22,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/$inspect#$inspect.trace()">Read the docs</a></p>
 			`
 		}
+	],
+	[
+		2,
+		{
+			videoId: '380FZyo-1ew',
+			title: 'The Svelte CLI',
+			description: `
+				<p>Santa's workshop just got a new helper! The Svelte CLI (<code>sv</code>) is your one-stop tool for scaffolding projects, adding integrations, and migrating to the latest goodies.</p>
+				<p>Use <code>sv create</code> to spin up a fresh SvelteKit project faster than Rudolph's takeoff. Need Tailwind, Drizzle, or Vitest? <code>sv add</code> wraps them up with a bow — no manual config required.</p>
+				<p>Still on Svelte 4? Let <code>sv migrate svelte-5</code> do the heavy lifting, updating your components to use runes like magic.</p>
+				<p>And the newest gift: import projects straight from the Svelte Playground with <code>sv create --template playground</code>!</p>
+				<p><a href="https://svelte.dev/docs/cli/overview">Read the docs</a></p>
+			`
+		}
 	]
 ])
