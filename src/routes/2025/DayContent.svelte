@@ -27,7 +27,7 @@
 			{title}
 		</h2>
 		{#if content}
-			<p class="day-description">{content}</p>
+			<div class="day-description">{@html content}</div>
 		{:else}
 			<p class="day-description coming-soon">Content coming soon...</p>
 		{/if}
@@ -102,6 +102,33 @@
 		line-height: 1.6;
 		color: #9ca3af;
 		margin: 0;
+	}
+
+	.day-description :global(p) {
+		margin: 0 0 1rem 0;
+	}
+
+	.day-description :global(p:last-child) {
+		margin-bottom: 0;
+	}
+
+	.day-description :global(code) {
+		background: rgba(255, 62, 0, 0.15);
+		color: #ff3e00;
+		padding: 0.125rem 0.375rem;
+		border-radius: 0.25rem;
+		font-family: ui-monospace, monospace;
+		font-size: 0.9em;
+	}
+
+	.day-description :global(a) {
+		color: #ff3e00;
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.day-description :global(a:hover) {
+		text-decoration: underline;
 	}
 
 	.day-description.coming-soon {
