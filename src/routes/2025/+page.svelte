@@ -246,13 +246,37 @@
 		{ y: -8, rotate: 1.5 },
 	]
 
-	// Unlock each day at midnight UTC on December 1-24
+	// Unlock each day at noon UTC on December 1-24
 	function isLocked(day: number): boolean {
 		const unlockDate = new Date(
 			`2025-12-${day.toString().padStart(2, '0')}T12:00:00Z`,
 		)
 		return isFuture(unlockDate)
 	}
+
+	// Get the current day (most recently unlocked)
+	function getCurrentDay(): number {
+		const now = new Date()
+		const december = 11 // 0-indexed month
+
+		// Only relevant in December 2025
+		if (now.getFullYear() !== 2025 || now.getMonth() !== december) {
+			// Before December: no current day; After December: day 24
+			return now.getMonth() < december ? 0 : 24
+		}
+
+		const currentDate = now.getUTCDate()
+		const currentHour = now.getUTCHours()
+
+		// Days unlock at 12:00 UTC, so check if we're past that
+		if (currentHour >= 12) {
+			return Math.min(currentDate, 24)
+		} else {
+			return Math.max(currentDate - 1, 0)
+		}
+	}
+
+	const currentDay = getCurrentDay()
 
 	// Handle click on calendar box - shallow routing
 	async function handleDayClick(e: MouseEvent, day: number) {
@@ -313,6 +337,7 @@
 			{@const offset = OFFSETS[i]}
 			{@const dayData = DAY_ICONS[day]}
 			{@const boxStyle = BOX_STYLES[day]}
+			{@const isCurrentDay = day === currentDay}
 			<div class="calendar-cell">
 				{#if locked}
 					<div
@@ -333,11 +358,26 @@
 					<a
 						href="/2025/{day}"
 						class="calendar-box style-{boxStyle}"
+						class:current-day={isCurrentDay}
 						style="
 							margin-top: {offset.y}px;
 							transform: rotate({offset.rotate}deg);
 						"
 						onclick={(e) => handleDayClick(e, day)}>
+						<!-- Twinkle animation for current day -->
+						{#if isCurrentDay}
+							<div class="twinkles">
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+								<span class="twinkle"></span>
+							</div>
+						{/if}
+
 						<!-- Pattern background for 'pattern' style boxes -->
 						{#if boxStyle === 'pattern'}
 							<div class="pattern-bg">
@@ -652,5 +692,109 @@
 
 	.calendar-box.locked .day-number {
 		color: #4b5563;
+	}
+
+	/* ===== CURRENT DAY TWINKLE ANIMATION ===== */
+	.calendar-box.current-day {
+		overflow: visible;
+	}
+
+	@keyframes twinkle-fade {
+		0%, 100% {
+			opacity: 0;
+			transform: scale(0.5);
+		}
+		50% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.twinkles {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		z-index: 3;
+	}
+
+	.twinkle {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		/* 4-pointed star/sparkle shape */
+		clip-path: polygon(
+			50% 0%,
+			60% 40%,
+			100% 50%,
+			60% 60%,
+			50% 100%,
+			40% 60%,
+			0% 50%,
+			40% 40%
+		);
+		background: linear-gradient(135deg, #fffbe6 0%, #ffd700 50%, #fffbe6 100%);
+		animation: twinkle-fade 1.5s ease-in-out infinite;
+	}
+
+	/* Position twinkles - 4 on edges, 4 on the box */
+	/* Edge twinkles */
+	.twinkle:nth-child(1) {
+		top: -6px;
+		left: 25%;
+		animation-delay: 0s;
+	}
+
+	.twinkle:nth-child(2) {
+		top: 40%;
+		right: -6px;
+		animation-delay: 0.3s;
+	}
+
+	.twinkle:nth-child(3) {
+		bottom: -6px;
+		right: 25%;
+		animation-delay: 0.6s;
+	}
+
+	.twinkle:nth-child(4) {
+		bottom: 40%;
+		left: -6px;
+		animation-delay: 0.9s;
+	}
+
+	/* Interior twinkles */
+	.twinkle:nth-child(5) {
+		top: 15%;
+		left: 60%;
+		width: 10px;
+		height: 10px;
+		animation-delay: 0.2s;
+	}
+
+	.twinkle:nth-child(6) {
+		top: 55%;
+		right: 20%;
+		width: 8px;
+		height: 8px;
+		animation-delay: 0.5s;
+	}
+
+	.twinkle:nth-child(7) {
+		bottom: 20%;
+		left: 25%;
+		width: 10px;
+		height: 10px;
+		animation-delay: 0.8s;
+	}
+
+	.twinkle:nth-child(8) {
+		top: 35%;
+		left: 15%;
+		width: 8px;
+		height: 8px;
+		animation-delay: 1.1s;
 	}
 </style>
