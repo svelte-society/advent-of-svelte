@@ -47,5 +47,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/cli/overview">Read the docs</a></p>
 			`
 		}
+	],
+	[
+		3,
+		{
+			videoId: 'mxMzzxOVLIM',
+			title: '{@attach}',
+			description: `
+				<p>Let it snow! Attachments are the gift that keeps on giving — a simpler, more powerful way to hook into DOM elements introduced in Svelte 5.29.</p>
+				<p>An attachment is just a function that receives a DOM node and optionally returns a cleanup function. Wrap it in a factory to pass options, like configuring how many snowflakes fall from the sky!</p>
+				<p>Unlike actions, attachments are inherently reactive — when your state changes, they automatically re-run like magic. And best of all, they're spreadable: wrapper components can accept attachments and pass them along to their elements, no extra plumbing required.</p>
+				<p>Think of attachments as Santa's little helpers for your DOM — they arrive when needed, do their work, and clean up after themselves!</p>
+				<p><a href="https://svelte.dev/docs/svelte/@attach">Read the docs</a> · <a href="https://svelte.dev/tutorial/svelte/attachments">Try the tutorial</a></p>
+			`
+		}
 	]
 ])
