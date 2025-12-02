@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { isFuture } from 'date-fns'
 	import { pushState, preloadData, goto } from '$app/navigation'
 	import { page } from '$app/state'
 	import santaLogo from '$lib/images/santa-svelte.png'
 	import Modal from './Modal.svelte'
 	import DayContent from './DayContent.svelte'
+
+	let { data } = $props()
 
 	// Day icons for each topic (titles hidden to keep surprises secret)
 	const DAY_ICONS: Record<number, { icon: string; title: string }> = {
@@ -246,37 +247,20 @@
 		{ y: -8, rotate: 1.5 },
 	]
 
-	// Unlock each day at noon UTC on December 1-24
+	// Check if a day is locked using server-provided data
 	function isLocked(day: number): boolean {
-		const unlockDate = new Date(
-			`2025-12-${day.toString().padStart(2, '0')}T12:00:00Z`,
-		)
-		return isFuture(unlockDate)
+		return !data.unlockedDays.includes(day)
 	}
 
-	// Get the current day (most recently unlocked)
-	function getCurrentDay(): number {
-		const now = new Date()
-		const december = 11 // 0-indexed month
+	// The current day is the most recently unlocked day (for twinkle animation)
+	const currentDay = $derived(data.unlockedDays.length > 0 ? Math.max(...data.unlockedDays) : 0)
 
-		// Only relevant in December 2025
-		if (now.getFullYear() !== 2025 || now.getMonth() !== december) {
-			// Before December: no current day; After December: day 24
-			return now.getMonth() < december ? 0 : 24
-		}
-
-		const currentDate = now.getUTCDate()
-		const currentHour = now.getUTCHours()
-
-		// Days unlock at 12:00 UTC, so check if we're past that
-		if (currentHour >= 12) {
-			return Math.min(currentDate, 24)
-		} else {
-			return Math.max(currentDate - 1, 0)
-		}
+	interface DayData {
+		day: number
+		videoId: string
+		title: string
+		content: string
 	}
-
-	const currentDay = getCurrentDay()
 
 	// Handle click on calendar box - shallow routing
 	async function handleDayClick(e: MouseEvent, day: number) {
@@ -291,7 +275,7 @@
 		const result = await preloadData(href)
 
 		if (result.type === 'loaded' && result.status === 200) {
-			pushState(href, { selectedDay: result.data })
+			pushState(href, { selectedDay: result.data as DayData })
 		} else {
 			// Fallback to full navigation
 			goto(href)

@@ -1,12 +1,17 @@
-import { error } from '@sveltejs/kit'
-import type { PageLoad } from './$types'
-import { content } from '$lib/challenges/2025'
+import { error, redirect } from '@sveltejs/kit'
+import type { PageServerLoad } from './$types'
+import { content, isLocked } from '$lib/server/challenges/2025'
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageServerLoad = ({ params }) => {
 	const day = parseInt(params.day)
 
 	if (isNaN(day) || day < 1 || day > 24) {
 		error(404, 'Day not found')
+	}
+
+	// Redirect to naughty page if day is still locked
+	if (isLocked(day)) {
+		redirect(302, '/naughty')
 	}
 
 	const dayContent = content.get(day)
