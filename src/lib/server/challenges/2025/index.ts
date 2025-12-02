@@ -5,6 +5,17 @@ export interface DayContent {
 }
 
 /**
+ * Check if a day is still locked (not yet available)
+ * Days unlock at 12:00 UTC on their respective dates in December 2025
+ */
+export function isLocked(day: number): boolean {
+	const unlockDate = new Date(
+		`2025-12-${day.toString().padStart(2, '0')}T12:00:00Z`,
+	)
+	return unlockDate > new Date()
+}
+
+/**
  * Content for each day of Advent of Svelte 2025
  * Key: day number (1-24)
  * Value: content object with videoId, title, and description
