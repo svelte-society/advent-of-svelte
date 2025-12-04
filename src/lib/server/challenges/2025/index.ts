@@ -61,5 +61,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/@attach">Read the docs</a> · <a href="https://svelte.dev/tutorial/svelte/attach">Try the tutorial</a></p>
 			`
 		}
+	],
+	[
+		4,
+		{
+			videoId: 'yDy6jHrhRfg',
+			title: 'New Svelte Resources',
+			description: `
+				<p>Two shiny new presents have arrived for the Svelte community!</p>
+				<p>First up, the <a href="https://sveltesociety.dev">Svelte Society website</a> got a complete makeover. It's no longer just a static list — it's now a dynamic, living feed of everything happening in Svelte land: videos, libraries, events, recipes, and more. Best of all, you can submit content directly without opening PRs!</p>
+				<p>Second, the Svelte team launched <a href="https://svelte.dev/packages">svelte.dev/packages</a> — a curated collection of high-quality packages that work great with Svelte and SvelteKit. Official packages are marked with the Svelte logo so you know they're straight from Santa's workshop.</p>
+				<p>Think of Svelte Society as your community hub for discovery, and svelte.dev/packages as your official guide to vetted packages. Two great resources, one festive ecosystem!</p>
+				<p><a href="https://sveltesociety.dev">Svelte Society</a> · <a href="https://svelte.dev/packages">Svelte Packages</a> · <a href="https://sveltesociety.dev/submit">Submit Content</a></p>
+			`
+		}
 	]
 ])
