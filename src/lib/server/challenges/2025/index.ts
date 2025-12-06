@@ -91,5 +91,19 @@ export const content = new Map<number, DayContent>([
       <p><em>All holiday cheer depicted is real. All family dynamics are fictional. No cookies were harmed in the making of this video.</em></p>
 			`
     }
+  ],
+  [
+    6,
+    {
+      videoId: 'Wu3kcv3iKvg',
+      title: 'Async Svelte',
+      description: `
+				<p>We've been <em>awaiting</em> this moment! Just like Santa's elves finally delivering that long-promised gift, Svelte is ready to resolve a promise made on day one: async components are here.</p>
+				<p>Gone are the days of choosing between managing messy loading states inside components or drilling props through your tree like stringing lights on an endless garland. With Async Svelte, you can use the <code>await</code> keyword directly — in your script tags, inside <code>$derived</code> declarations, or right in your markup.</p>
+				<p>The magic? Everything stays coordinated. When state changes trigger async work, the UI won't update until all the promises have settled — no more janky, half-loaded experiences. It's like Santa's sleigh: all the reindeer move together, perfectly in sync!</p>
+				<p>Enable the experimental flag in your <code>svelte.config.js</code> and give it a whirl. Help the Svelte team iron out the last kinks before it becomes stable in Svelte 6!</p>
+				<p><a href="https://svelte.dev/docs/svelte/await-expressions">Read the docs</a></p>
+			`
+    }
   ]
 ])
