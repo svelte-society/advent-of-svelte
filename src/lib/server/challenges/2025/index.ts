@@ -105,5 +105,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/await-expressions">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    7,
+    {
+      videoId: 'Wu3kcv3iKvg',
+      title: 'Observability',
+      description: `
+				<p>Santa's workshop has gone enterprise! With millions of deliveries to track, even the North Pole needs proper observability — and now SvelteKit has full OpenTelemetry support to help you see exactly what's happening in your app.</p>
+				<p>Create an <code>instrumentation.server.ts</code> file, enable the experimental flags in your config, and suddenly all your <code>handle</code> hooks, <code>load</code> functions, form actions, and remote functions get beautiful traces. It's like having a magical map that shows every stop on Santa's route!</p>
+				<p>When something goes wrong (like an elf hiding questionable code in your naughty-or-nice checker), just grab the trace ID and follow it through your spans to find exactly where things went sideways. You'll see the full journey: from the initial request through <code>handle</code> to <code>resolve</code> and into your functions.</p>
+				<p>Add custom attributes to your spans with <code>setAttribute()</code> for extra context — because even Santa needs good logging when determining who's been naughty and who's been nice!</p>
+				<p><a href="https://svelte.dev/docs/kit/observability">Read the docs</a></p>
+			`
+    }
   ]
 ])
