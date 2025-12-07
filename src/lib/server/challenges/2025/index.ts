@@ -109,7 +109,7 @@ export const content = new Map<number, DayContent>([
   [
     7,
     {
-      videoId: 'Wu3kcv3iKvg',
+      videoId: 'NhdobVYdeYk',
       title: 'Observability',
       description: `
 				<p>Santa's workshop has gone enterprise! With millions of deliveries to track, even the North Pole needs proper observability — and now SvelteKit has full OpenTelemetry support to help you see exactly what's happening in your app.</p>
