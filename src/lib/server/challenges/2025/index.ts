@@ -119,5 +119,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/kit/observability">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    8,
+    {
+      videoId: 'umSpfw7Zbgc',
+      title: 'Editor Setup',
+      description: `
+				<p>Just like Santa's workshop needs the right tools for the job, your editor setup can make all the difference! Today we're unwrapping some gifts for your dev experience.</p>
+				<p>First up: <a href="https://github.com/sveltejs/vite-plugin-svelte/tree/main/packages/vite-plugin-svelte-inspector">Svelte Inspector</a>! With just three lines of config, you get a magical shortcut that lets you click any component in your browser and teleport directly to its source code. It's like having a GPS for your codebase!</p>
+				<p>Next, tame the .file madness in your project root. VS Code's file nesting feature lets you collapse related files together — check out <a href="https://github.com/antfu/vscode-file-nesting-config">Anthony Fu's epic nesting rules collection</a> and adjust to your workshop's needs.</p>
+				<p>Finally, the pièce de résistance: <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_customize-tab-labels">custom label patterns</a>! No more squinting at a dozen <code>+page.svelte</code> tabs. Transform them into meaningful names like "page (lucia)" or "layout (root)" — your keyboard navigation will thank you!</p>
+				<p><a href="https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode">Svelte for VS Code</a> · <a href="https://sveltesociety.dev/collection/editor-support-c85c080efc292a34">Editor Support Collection</a> · <a href="https://gist.github.com/fubits1/3af058646ab6b872139a6cbda138d582#file-settings-customlabels-json">Custom Labels Config</a></p>
+			`
+    }
   ]
 ])
