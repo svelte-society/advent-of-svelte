@@ -147,5 +147,89 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/testing">Read the docs</a> · <a href="https://svelte.dev/docs/cli/vitest">CLI setup guide</a></p>
 			`
     }
+  ],
+  [
+    11,
+    {
+      videoId: 'Ekhb5Ipuqks',
+      title: 'resolve and asset',
+      description: `
+				<p>The 404 monster lurks in every codebase, waiting to pounce on typos and broken links. But fear not — SvelteKit 2.26 brought two trusty helpers to keep your routes and assets safe: <code>resolve</code> and <code>asset</code> from <code>$app/paths</code>.</p>
+				<p>The <code>resolve</code> function is your type-safe compass for navigation. Pass it a route ID and SvelteKit validates it against your actual routes — typos light up red in your editor before they ever reach production. Even dynamic routes like <code>/tree/[name]</code> get proper parameter handling, ensuring every path leads somewhere real.</p>
+				<p>For static files, <code>asset</code> wraps your references to the <code>static</code> folder with autocomplete and validation. No more wondering if it's <code>/elf.svg</code> or <code>/elves.svg</code> — your editor knows what's in Santa's bag!</p>
+				<p>Pair these with ESLint (<code>npx sv add eslint</code>) to scan your entire codebase for unsafe routes. And when requirements change — like serving everything from <code>/advent-of-svelte-2025</code> — just update your config. All your <code>resolve</code> calls automatically include the new base path. The 404 monster doesn't stand a chance!</p>
+				<p><a href="https://svelte.dev/docs/kit/$app-paths">Read the docs</a></p>
+			`
+    }
+  ],
+  [
+    12,
+    {
+      videoId: 'XqlD3A_Btio',
+      title: 'Remote Functions: Queries',
+      description: `
+				<p>What if fetching server data felt as natural as calling a local function? Remote Functions make Santa's data pipeline dreams come true — no more threading props through layers of components like tangled Christmas lights!</p>
+				<p>Declare a <code>query</code> in a <code>.remote.ts</code> file by importing from <code>$app/server</code>, and suddenly you can fetch data right inside your components. During SSR it runs as a regular function; on the client, SvelteKit handles the fetch calls behind the scenes. Your database queries and secrets stay safe on the server — no accidental security leaks like closing over variables in other frameworks!</p>
+				<p>Combined with Svelte's async features, loading a children's wish list in Santa's workshop dashboard becomes delightfully simple: just <code>await</code> your query inside a <code>$derived</code> and iterate with <code>{#each}</code>. The result? Type-safe, secure, and granular data loading that's easy to reason about.</p>
+				<p>Validate your inputs with any Standard Schema library like Zod or Valibot for extra safety — because even Santa double-checks the naughty and nice lists!</p>
+				<p><a href="https://svelte.dev/docs/kit/remote-functions">Read the docs</a></p>
+			`
+    }
+  ],
+  [
+    13,
+    {
+      videoId: 'f_UBt3TxbkE',
+      title: 'Remote Functions: Forms',
+      description: `
+				<p>Yesterday we fetched data with queries — today we write it back with Remote Form Functions! Import <code>form</code> from <code>$app/server</code> in your <code>.remote.ts</code> file, define a schema, and you've got a type-safe form handler ready for action.</p>
+				<p>The schema does triple duty: it transforms raw <code>FormData</code> into a proper object, validates the input, and provides autocomplete when wiring up your form fields. Use the <code>fields</code> property to connect each input, then spread the form function onto your <code>&lt;form&gt;</code> element. That's it — Santa's wish list submission form is ready!</p>
+				<p>The best gift? Progressive enhancement comes standard. Your forms work without JavaScript, just like the classics. When JS is available, submissions happen seamlessly without full page reloads.</p>
+				<p>By default, a form submission refetches all queries to keep data fresh. Want to be more efficient? Add a <code>refresh</code> call inside your form handler for a single-flight mutation — the server sends back the updated data in the same response. One trip to the North Pole instead of two!</p>
+				<p><a href="https://svelte.dev/docs/kit/remote-functions#form">Read the docs</a></p>
+			`
+    }
+  ],
+  [
+    14,
+    {
+      videoId: '4NMAGKaPaD4',
+      title: 'Remote Functions: Prerender',
+      description: `
+				<p>Some data changes with every request, but other data only changes when you deploy. Why fetch it fresh every time? Remote Prerender Functions let you bake data into your build like cookies for Santa!</p>
+				<p>Import <code>prerender</code> from <code>$app/server</code> in your <code>.remote.ts</code> file, declare your function, and use it just like a query. The magic happens at build time: SvelteKit executes the function and saves the result to disk. In production, your server delivers a static file instead of running expensive database queries or API calls.</p>
+				<p>This unlocks partial prerendering at the data level, not just the page level. On Santa's workshop dashboard, for example, the comments list stays dynamic and fresh, while the overview stats — which only change per deployment — are prerendered and served instantly from the CDN.</p>
+				<p>Mix static and dynamic data on the same page with surgical precision. Stay tuned for more Remote Functions goodness!</p>
+				<p><a href="https://svelte.dev/docs/kit/remote-functions#prerender">Read the docs</a></p>
+			`
+    }
+  ],
+  [
+    15,
+    {
+      videoId: 'DUM1x1_WsGI',
+      title: 'Remote Functions: Commands',
+      description: `
+				<p>Sometimes you need to trigger server-side logic without a form — like when an elf clicks a button to mark a gift as wrapped. That's where Remote Command Functions come in!</p>
+				<p>Import <code>command</code> from <code>$app/server</code> in your <code>.remote.ts</code> file, define a schema for validation and type safety, and call it directly from your component. Unlike forms, commands require JavaScript — but they give you the flexibility to trigger mutations from any event handler.</p>
+				<p>By default, commands don't refresh any queries — you're in full control. Want the UI to update? Add a <code>refresh</code> call to fetch new data alongside the mutation. It's the same single-flight mutation pattern from form functions: one round trip to the server, mutation plus fresh data back in your hands.</p>
+				<p>With just a few lines of code, you get type-safe, input-validated remote commands. Perfect for those interactive dashboard moments when Santa needs to mark items as processed!</p>
+				<p><a href="https://svelte.dev/docs/kit/remote-functions#command">Read the docs</a></p>
+			`
+    }
+  ],
+  [
+    16,
+    {
+      videoId: 'qUfKrQjAXiM',
+      title: 'Remote Functions: Optimistic Updates',
+      description: `
+				<p>Even the fastest reindeer can't outrun network latency. When Santa's workshop dashboard feels sluggish because the server takes time to process updates, optimistic updates come to the rescue!</p>
+				<p>Building on yesterday's command example, we tackle the problem of slow responses. Instead of waiting for the server to confirm that a wish list item is processed, we update the UI immediately and let the server catch up.</p>
+				<p>Chain <code>.updates()</code> to your command call, pass in the query you want to update, and call <code>.withOverride()</code> on it. You receive the current state and return what the UI should show right now. The interface responds instantly — no more waiting for that strikethrough to appear!</p>
+				<p>The best part? Optimistic updates automatically revert when the request completes, whether it succeeds or fails. If something goes wrong, the UI snaps back to reality. Fast, smooth, and safe — just like Santa's sleigh on Christmas Eve!</p>
+				<p><a href="https://svelte.dev/docs/kit/remote-functions#command-Updating-queries">Read the docs</a></p>
+			`
+    }
   ]
 ])
