@@ -133,5 +133,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode">Svelte for VS Code</a> · <a href="https://sveltesociety.dev/collection/editor-support-c85c080efc292a34">Editor Support Collection</a> · <a href="https://gist.github.com/fubits1/3af058646ab6b872139a6cbda138d582#file-settings-customlabels-json">Custom Labels Config</a></p>
 			`
     }
+  ],
+  [
+    9,
+    {
+      videoId: 'O2ODcC9Gj1A',
+      title: 'Unit Testing',
+      description: `
+				<p>Even Santa checks his list twice — and now your Svelte code can get the same treatment! Unit testing in SvelteKit is powered by <a href="https://vitest.dev/">Vitest</a>, making it easier than ever to ensure your components and logic are on the nice list.</p>
+				<p>The best part? Svelte's reactive classes work beautifully with tests. Since <code>$state</code> in classes behaves just like regular JavaScript, you can test your stores and logic without any special mocking magic. Create a <code>.svelte.spec.ts</code> file, write your assertions, and watch Vitest's gorgeous UI light up green like a Christmas tree!</p>
+				<p>Whether you're over-engineering a Christmas wish list with a binary search tree (hey, no judgment — it's very testable!) or just making sure your naughty-or-nice checker works correctly, testing keeps your codebase merry and bright.</p>
+				<p>Run <code>npx sv add vitest</code> to get started, then create your test files right alongside your components. When things go wrong, Vitest shows you exactly what failed — like having an elf quality control inspector for every function!</p>
+				<p><a href="https://svelte.dev/docs/svelte/testing">Read the docs</a> · <a href="https://svelte.dev/docs/cli/vitest">CLI setup guide</a></p>
+			`
+    }
   ]
 ])
