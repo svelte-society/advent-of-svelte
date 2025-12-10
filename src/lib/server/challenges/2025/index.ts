@@ -149,6 +149,21 @@ export const content = new Map<number, DayContent>([
     }
   ],
   [
+    10,
+    {
+      videoId: 'oGpd2rvXgJg',
+      title: 'State in Class',
+      description: `
+				<p>From baroque aristocracies of abstract factory providers to the reactive revolution — JavaScript's relationship with classes has been, shall we say, complicated. But Svelte finds the pragmatic middle ground!</p>
+				<p>Use the <code>$state</code> rune directly in class fields to create reactive properties. When you need more control — like clamping a belief meter between 0 and 100 — make the field private and wrap it in a getter and setter. The compiler transforms these into efficient get/set methods on the class prototype.</p>
+				<p>Add custom methods like <code>believe()</code> and <code>doubt()</code> to encapsulate your logic. Just remember: when passing methods as event handlers, <code>this</code> binding matters! Either use arrow functions in your class definition or wrap the call in an inline function.</p>
+				<p>For computed values, <code>$derived</code> works beautifully in classes too — perfect for determining if Santa's belief level has reached critical status. You can even use <code>$state</code> inside the constructor when assigning to properties for the first time.</p>
+				<p>Like Santa traversing the globe, bolstered by belief and hindered by doubt, your classes can now be both elegant and reactive!</p>
+				<p><a href="https://svelte.dev/docs/svelte/$state#Classes">Read the docs</a></p>
+			`
+    }
+  ],
+  [
     11,
     {
       videoId: 'Ekhb5Ipuqks',
