@@ -246,5 +246,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/kit/remote-functions#command-Updating-queries">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    17,
+    {
+      videoId: '2FOkmgsOYyI',
+      title: '$state.eager',
+      description: `
+				<p>When async work is happening in your Svelte app, the UI waits for everything to settle before updating — like Santa's reindeer moving in perfect sync. But sometimes you want immediate feedback!</p>
+				<p>Imagine Santa's naughty-and-nice list with tabs. When you click a tab to switch views, async data fetching begins. Without <code>$state.eager</code>, the active tab indicator won't update until the data loads — leaving users confused about whether their click registered.</p>
+				<p>Enter <code>$state.eager(value)</code>! This rune tells Svelte: "Give me the latest value right now, even if async work is still in progress." Wrap your state reference with it, and the UI updates instantly while the data loads in the background.</p>
+				<p>Use this sparingly — only for providing immediate visual feedback in response to user actions. In most cases, letting Svelte coordinate updates provides a smoother experience. But for navigation indicators, tab switches, and loading states, <code>$state.eager</code> is the perfect gift!</p>
+				<p><a href="https://svelte.dev/docs/svelte/$state#$state.eager">Read the docs</a></p>
+			`
+    }
   ]
 ])
