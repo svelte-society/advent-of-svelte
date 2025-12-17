@@ -260,5 +260,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/$state#$state.eager">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    18,
+    {
+      videoId: 'WHvNIr6Xhmw',
+      title: 'fork',
+      description: `
+				<p>Yesterday we used <code>$state.eager</code> to show immediate feedback when switching tabs. But what if we could go even further — preloading data before the user even clicks?</p>
+				<p>In SvelteKit, when you hover over a link, data fetching starts automatically because the framework assumes you're about to navigate. The <code>fork</code> function brings this same magic to your own components!</p>
+				<p>Import <code>fork</code> from <code>svelte</code> and pass it a function that modifies state. The state changes happen in an off-screen DOM — fetching starts, but nothing visually changes yet. When the user commits to the action (like clicking), call <code>fork.commit()</code> and the pre-loaded changes apply instantly.</p>
+				<p>The result? Hover over a tab for a couple seconds, then click — and the content appears immediately! If the user navigates elsewhere instead, call <code>fork.discard()</code> to clean up. It's like Santa's elves preparing gifts in a secret workshop, ready to deliver the moment you ask!</p>
+				<p><a href="https://svelte.dev/docs/svelte/svelte#fork">Read the docs</a></p>
+			`
+    }
   ]
 ])
