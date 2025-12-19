@@ -274,5 +274,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/svelte#fork">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    19,
+    {
+      videoId: '40lRu-urNIQ',
+      title: 'Smart Form Uploads',
+      description: `
+				<p>Santa's workshop handles millions of digital gifts now — but what happens when an elf forgets to fill in the recipient's name on a one-gigabyte Android Studio download? With the old approach, the server had to unpack the entire file just to discover that tiny validation error. Talk about a lump of coal!</p>
+				<p>The latest SvelteKit brings a clever gift: a custom protocol that moves file content <em>after</em> the headers in form submissions. Now the server can validate all your text fields first — like checking if that name input is filled in — without waiting to unpack massive files.</p>
+				<p>In the browser's network tab, you'll still see the same upload time (can't change physics!), but the server responds almost instantly with validation errors. No more waiting for gigabytes to transfer just to hear "please enter a name."</p>
+				<p>The best part? You don't have to change anything in your code. Just update SvelteKit to the latest version, and your forms automatically get faster validation — like Santa's sleigh getting a turbo boost on Christmas Eve!</p>
+				<p><a href="https://svelte.dev/docs/kit/form-actions">Read the docs</a></p>
+			`
+    }
   ]
 ])
