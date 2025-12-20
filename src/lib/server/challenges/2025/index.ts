@@ -288,5 +288,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/kit/form-actions">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    20,
+    {
+      videoId: 'wZNBU3sPJNU',
+      title: 'Out of Order Streaming',
+      description: `
+				<p>When Santa's elves are preparing gifts in the workshop, they don't wait for one present to be wrapped before starting the next — they all work in parallel! Svelte's Out of Order Streaming brings that same Christmas magic to async components.</p>
+				<p>Imagine components A, B, and C are siblings, each waiting on their own data — like elves fetching different parts of a toy. Without coordination, you'd expect them to load one after another. But Svelte's compiler is smarter than that! It mounts all siblings together and fires off their async operations simultaneously. A one-second wait, a two-second wait, and another two-second wait? They all resolve in just two seconds total!</p>
+				<p>This magic cascades through your entire component tree, not just siblings. Parent and child components with async work all fire their promises at once — like every elf in Santa's workshop starting their tasks the moment the clock strikes!</p>
+				<p>Combine this with <code>&lt;svelte:boundary&gt;</code> to add loading states, and each component streams in independently as its data arrives. A, B, and C each appear the instant they're ready, no waiting for slowpokes. It's the gift that keeps on giving — especially when paired with Remote Functions!</p>
+				<p><a href="https://svelte.dev/docs/svelte/await-expressions">Read the docs</a></p>
+			`
+    }
   ]
 ])
