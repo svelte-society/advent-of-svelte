@@ -302,5 +302,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/await-expressions">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    21,
+    {
+      videoId: 'ouM0cjYM7KU',
+      title: 'createContext',
+      description: `
+				<p>Santa's naughty-and-nice list app needs notifications — but threading a notification function through every layer of components is like untangling a mile of Christmas lights! That's where <code>createContext</code> comes in.</p>
+				<p>The old way was a bit of a ceremony: import <code>getContext</code> and <code>setContext</code> from Svelte, create a Symbol to avoid string collisions, then export typed wrapper functions just to get proper TypeScript support. Ho-ho-hold my eggnog — there's a better way!</p>
+				<p>With <code>createContext</code>, you call it once with your type, and it hands you back a tuple of <code>[getContext, setContext]</code> functions, already typed and ready to use. No symbols, no strings, no boilerplate. In your layout, set the notification function; in any deeply nested component, call <code>getContext()</code> and it just works!</p>
+				<p>It's like Santa having a direct hotline to every elf in the workshop — no matter how deep in the toy factory they are. When Rich Harris gets added to the nice list, that notification pops up at the top of the screen instantly!</p>
+				<p><a href="https://svelte.dev/docs/svelte/context#Type-safe-context">Read the docs</a></p>
+			`
+    }
   ]
 ])
