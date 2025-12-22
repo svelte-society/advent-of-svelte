@@ -316,5 +316,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://svelte.dev/docs/svelte/context#Type-safe-context">Read the docs</a></p>
 			`
     }
+  ],
+  [
+    22,
+    {
+      videoId: 'YEbzLOKftSw',
+      title: 'Svelte Communities',
+      description: `
+				<p>Santa's network spans the globe — and so does the Svelte community! From Barcelona to Berlin, Chicago to Vienna, developers are gathering to share knowledge, swap stories, and celebrate the framework we all love.</p>
+				<p>Each city brings its own holiday flavor. Berlin just held their first Svelte meetup in a long time. Chicago runs monthly sessions covering everything from accessibility to AI. Barcelona keeps it cozy with casual coffee chats — no slides, just good conversations and warm cups.</p>
+				<p>Want to find your local Svelte family? Head to <a href="https://sveltesociety.dev/events">sveltesociety.dev/events</a> — it's like Santa's map of the whole Svelte world! See what's coming up, where it is, and when. One click and you're in.</p>
+				<p>No meetup in your city yet? Keep an eye out — like stockings hung by the fire, new communities are popping up all the time!</p>
+				<p><a href="https://sveltesociety.dev/events">Find Events</a></p>
+			`
+    }
   ]
 ])
