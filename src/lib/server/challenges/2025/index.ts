@@ -330,5 +330,19 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://sveltesociety.dev/events">Find Events</a></p>
 			`
     }
+  ],
+  [
+    23,
+    {
+      videoId: 'hqyGef_HPjY',
+      title: 'Svelte MCP',
+      description: `
+				<p>"I'm sorry, I can't do that." Sound familiar? When AI models try to write Svelte 5 code, they often stumble over runes and new syntax — like an elf who missed the memo about this year's toy designs. But fear not! The Svelte MCP (Model Context Protocol) server is here to save the day!</p>
+				<p>Run <code>npx sv add mcp</code> and choose your editor and setup. The CLI wraps everything up with a bow — an instructions file for your AI and the required configuration. Now your LLM has a direct line to the Svelte documentation, like Santa checking the official Nice List!</p>
+				<p>The magic happens with the Svelte Autofixer. When your AI writes code, the MCP server reviews it and sends back suggestions: "Use <code>onclick</code> not <code>on:click</code>", "Try <code>$state</code> instead of writable stores." The AI iterates until the code is squeaky clean — even older models like GPT-4.1 that have never seen Svelte 5!</p>
+				<p>Once your component is polished, ask for a Playground link and test it instantly in your browser. From confused AI to working Advent calendar in minutes — now that's Christmas magic!</p>
+				<p><a href="https://svelte.dev/docs/mcp">Read the docs</a></p>
+			`
+    }
   ]
 ])
