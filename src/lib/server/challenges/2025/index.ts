@@ -330,5 +330,33 @@ export const content = new Map<number, DayContent>([
 				<p><a href="https://sveltesociety.dev/events">Find Events</a></p>
 			`
     }
+  ],
+  [
+    23,
+    {
+      videoId: 'hqyGef_HPjY',
+      title: 'Svelte MCP',
+      description: `
+				<p>"I'm sorry, I can't do that." Even HAL 9000 needs a little help sometimes! When AI models try to write Svelte 5 code, they stumble over runes like reindeer on an icy rooftop. Enter the Svelte MCP — Santa's secret weapon for teaching old models new tricks!</p>
+				<p>Run <code>npx sv add mcp</code> and watch the CLI work its holiday magic. It creates an instructions file (like a letter to Santa, but for your AI) and wires up everything with a festive bow. Your LLM now has a direct sleigh-line to the official Svelte documentation!</p>
+				<p>The real Christmas miracle? The Svelte Autofixer! Like Santa's quality-control elves, it reviews your AI's code and whispers corrections: "Use <code>onclick</code>, not <code>on:click</code>!" The AI iterates until the code sparkles brighter than tinsel — even GPT-4.1, which has never unwrapped Svelte 5 before!</p>
+				<p>When your component is polished and ready to go under the tree, ask for a Playground link to test it instantly. From confused robot to working Advent calendar faster than you can say "Ho ho ho!" — that's the gift of the Svelte MCP!</p>
+				<p><a href="https://svelte.dev/docs/mcp">Read the docs</a></p>
+			`
+    }
+  ],
+  [
+    24,
+    {
+      videoId: 'tO5aa2vlLQg',
+      title: 'hydratable',
+      description: `
+				<p>Christmas Eve is here! Santa's countdown app looks perfect — until you realize the server is in San Francisco and you're not. When the page loads, the time flickers like a candle in a winter storm. The server says one thing, the client says another, and suddenly your beautiful countdown looks like it got tangled in the tree lights!</p>
+				<p>Enter <code>hydratable</code> — Svelte's gift for keeping server and client in perfect harmony. Wrap your value in this low-level API with a unique key, and whatever the server computes gets picked up during hydration. No more flickering, no more timezone confusion — just smooth, seamless Christmas magic!</p>
+				<p>The real present? This works with promises too! Fetch data on the server, and the client receives it wrapped and ready — no need to make the trip to the North Pole twice. SvelteKit uses this under the hood for remote functions, but now you can unwrap it yourself for special cases.</p>
+				<p>And with that, our Advent journey comes to an end. From <code>$inspect.trace()</code> to <code>hydratable</code>, we've unwrapped 24 days of Svelte magic together. Have a happy Christmas, and thank you for following along!</p>
+				<p><a href="https://svelte.dev/docs/svelte/hydratable">Read the docs</a></p>
+			`
+    }
   ]
 ])
